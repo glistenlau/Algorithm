@@ -1,5 +1,7 @@
 /**
  * Created by YiLIU on 5/29/15.
+ * The solution below is for the BadNeighbors problem in Topcoder:
+ * http://community.topcoder.com/stat?c=problem_statement&pm=2402&rd=5009
  */
 public class BadNeighbors {
     public static void main(String[] args) {
@@ -10,10 +12,14 @@ public class BadNeighbors {
     public int maxDonations(int[] donation) {
         int n = donation.length;
         int[] maxDonation = new int[n];
+        //track the 0th donation.
         boolean[] zero_inclued = new boolean[n];
+        //flag for the first and last residents touch.
         boolean last = false;
+        //Initialization for the first resident.
         zero_inclued[0] = true;
         maxDonation[0] = donation[0];
+
         for (int i = 1; i < n; ++i) {
             maxDonation[i] = donation[i];
             zero_inclued[i] = false;

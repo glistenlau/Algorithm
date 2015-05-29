@@ -1,0 +1,24 @@
+public class MissingRanges {
+	public List<String>
+	       	missingRanges(int[] ia) {
+		int i = 0, v = 0;
+		List<String> output = new ArrayList<String>();
+		if(s.length() == 0)
+			output.add("0->99")
+		else {
+			for(int j = 0; j < s.length(); j++) {
+				if(ia[j] == v) 
+					v++;
+				else {
+					i = j - 1;
+					diff = ia[j] - j;
+					if(diff == 1)
+						output.add("" + j);
+					else
+						output.add("" + (i + 1) + "->" + (ai[j] - 1));
+					v = ai[j] + 1;
+				}
+			}
+		}
+		return output;
+	}

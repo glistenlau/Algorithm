@@ -23,7 +23,7 @@ public class ChessMetricTest {
     Assert.assertEquals(size.length, numMove.length, result.length);
 
     for(int i = 0; i < size.length; ++i) {
-      Assert.assertEquals(testClass.howMany(size[i], start[i], end[i], numMove[i]), result[i]);
+      Assert.assertEquals(result[i], testClass.howMany(size[i], start[i], end[i], numMove[i]));
     }
 
   }

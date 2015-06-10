@@ -13,7 +13,6 @@ public class FindMinimumInRotatedSortedArray {
       } else
         right = mid;
       }
-    }
     return nums[left];
   }
 }

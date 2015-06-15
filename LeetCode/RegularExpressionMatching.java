@@ -4,6 +4,36 @@ import java.util.Arrays;
  * Created by YiLIU on 6/13/15.
  */
 public class RegularExpressionMatching {
+  public boolean isMatchR(String s, String p) {
+    int m = s.length();
+    int n = p.length();
+
+    if (m == 0) {
+      if (n % 2 != 0){
+        return false;
+      } else {
+        for (int i = 1; i < n; i += 2) {
+          if (p.charAt(i) != '*') {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    if (n == 0) {
+      return false;
+    }
+
+    if (n > 1 && p.charAt(1) == '*') {
+      return isMatchR(s, p.substring(2)) || ((s.charAt(0)
+          == p.charAt(0) || p.charAt(0) == '.') && isMatchR(s.substring(1), p));
+    } else {
+      return (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.') && isMatchR(s
+          .substring(1), p.substring(1));
+    }
+  }
+
   public boolean isMatch(String s, String p) {
     int m = s.length();
     int n = p.length();

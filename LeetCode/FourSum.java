@@ -6,7 +6,52 @@ import java.util.List;
  * Created by YiLIU on 6/15/15.
  */
 public class FourSum {
-  public List<List<Integer>> fourSum(int[] nums, int target) {
+  public List<List<Integer>> fourSum(int[]nums, int target) {
+    if (nums == null || nums.length < 4) {
+      return null;
+    }
+
+    List<List<Integer>> result = new ArrayList<>();
+    Arrays.sort(nums);
+
+    for (int i = 0; i < nums.length; ++i) {
+      if (i > 0 && nums[i] == nums[i - 1]) {
+        continue;
+      }
+      for (int j = i + 1; j < nums.length; ++j) {
+        if (j > i + 1 && nums[j] == nums[j - 1]) {
+          continue;
+        }
+        List<Integer> temp = new ArrayList<>();
+        int left = j + 1;
+        int right = nums.length - 1;
+        while (left < right) {
+          int sum = nums[i] + nums[j] + nums[left] + nums[right];
+          if (sum == target) {
+            temp.add(nums[i]);
+            temp.add(nums[j]);
+            temp.add(nums[left]);
+            temp.add(nums[right]);
+            result.add(temp);
+            break;
+          } else if (sum < target) {
+            ++left;
+            while (left < right && nums[left] == nums[left - 1]) {
+              ++left;
+            }
+          } else {
+            --right;
+            while (left < right && nums[right] == nums[right + 1]) {
+              --right;
+            }
+          }
+        }
+      }
+    }
+    return result;
+  }
+
+  public List<List<Integer>> fourSumR(int[] nums, int target) {
     Arrays.sort(nums);
     return helper(nums, 0, target, new ArrayList<Integer>(), new ArrayList<>
         ());

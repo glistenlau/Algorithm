@@ -1,10 +1,5 @@
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-import com.sun.tools.internal.ws.wsdl.document.jaxws.*;
-import com.sun.tools.internal.ws.wsdl.document.jaxws.Exception;
-
 import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
+import java.util.EmptyStackException;
 
 /**
  * Created by YiLIU on 6/15/15.
@@ -12,7 +7,7 @@ import java.util.NoSuchElementException;
 public class ThreeSumClosest {
   public int threeSumClosest(int[] nums, int target) {
     if (nums.length < 3) {
-      return 0;
+      throw new EmptyStackException();
     }
     Arrays.sort(nums);
     int closest = Math.abs(nums[0] + nums[1] + nums[nums.length - 1] - target);

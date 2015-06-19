@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/DP/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/LeetCode/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LintCode" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/LeetCode/solarized" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -5,8 +5,8 @@ public class BinaryTreeMaximumPathSum {
     private int max = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-        pathSum(root);
-        return max;
+        ResultType result = helper(root);
+        return result.maxPath;
     }
 
     private int pathSum(TreeNode root) {
@@ -20,4 +20,35 @@ public class BinaryTreeMaximumPathSum {
         int maxBranch = Math.max(leftBranch, rightBranch);
         return root.val + maxBranch > root.val ? root.val + maxBranch : root.val;
     }
+
+    private class ResultType {
+        int singlePath, maxPath;
+        ResultType(int singlePath, int maxPath) {
+            this.singlePath = singlePath;
+            this.maxPath = maxPath;
+        }
+    }
+
+    private ResultType helper(TreeNode root) {
+        if (root == null) {
+            return new ResultType(0, Integer.MIN_VALUE);
+        }
+
+        ResultType left = helper(root.left);
+        ResultType right = helper(root.right);
+
+        int singlePath = Math.max(left.singlePath, right.singlePath) + root.val;
+        singlePath = Math.max(singlePath, 0);
+        int maxPath = Math.max(left.maxPath, right.maxPath);
+        maxPath = Math.max(maxPath, left.singlePath + right.singlePath + root.val);
+        return new ResultType(singlePath, maxPath);
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(3);
+        System.out.println(new BinaryTreeMaximumPathSum().maxPathSum(root));
+    }
+
 }

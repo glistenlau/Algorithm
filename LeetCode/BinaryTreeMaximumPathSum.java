@@ -20,14 +20,4 @@ public class BinaryTreeMaximumPathSum {
         int maxBranch = Math.max(leftBranch, rightBranch);
         return root.val + maxBranch > root.val ? root.val + maxBranch : root.val;
     }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }

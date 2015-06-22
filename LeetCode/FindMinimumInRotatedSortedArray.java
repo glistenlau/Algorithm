@@ -4,6 +4,9 @@
 public class FindMinimumInRotatedSortedArray {
   public int findMin(int[] num) {
     // write your code here
+    if (num == null || num.length == 0) {
+      return Integer.MIN_VALUE;
+    }
     int left = 0;
     int right = num.length - 1;
     while (left + 1 < right) {

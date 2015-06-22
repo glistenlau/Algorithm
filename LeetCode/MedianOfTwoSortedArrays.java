@@ -40,6 +40,30 @@ public class MedianOfTwoSortedArrays {
     }
   }
 
+  private int kth(int[] nums1, int startA, int[] nums2, int startB, int k) {
+    if (startA >= nums1.length) {
+      return nums2[startB + k - 1];
+    }
+    if (startB >= nums2.length) {
+      return nums1[startA + k - 1];
+    }
+
+    if (k == 1) {
+      return Math.min(nums1[startA], nums2[startB]);
+    }
+
+    int A_key = startA + k / 2 - 1 < nums1.length ? nums1[startA + k / 2 - 1] :
+        Integer.MAX_VALUE;
+    int B_key = startB + k / 2 - 1 < nums2.length ? nums2[startB + k / 2 - 1] :
+        Integer.MAX_VALUE;
+
+    if (A_key < B_key) {
+      return kth(nums1, startA + k / 2, nums2, startB, k - k / 2);
+    } else {
+      return kth(nums1, startA, nums2, startB + k / 2, k - k / 2);
+    }
+  }
+
   public static void main(String[] args) {
     int[] nums1 = {1, 2};
     int[] nums2 = {1, 1};

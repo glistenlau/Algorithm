@@ -2,17 +2,18 @@
  * Created by YiLIU on 6/9/15.
  */
 public class FindMinimumInRotatedSortedArray {
-  public int findMin(int[] nums) {
-    int n = nums.length;
+  public int findMin(int[] num) {
+    // write your code here
     int left = 0;
-    int right = n - 1;
-    while (left < right && nums[left] >= nums[right]) {
-      int mid = left / 2 + right / 2;
-      if (nums[mid] > nums[right]) {
-        left = mid + 1;
-      } else
+    int right = num.length - 1;
+    while (left + 1 < right) {
+      int mid = left + (right - left) / 2;
+      if (num[mid] > num[right]) {
+        left = mid;
+      } else {
         right = mid;
       }
-    return nums[left];
+    }
+    return num[left] < num[right] ? num[left] : num[right];
   }
 }

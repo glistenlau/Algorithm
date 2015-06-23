@@ -1,0 +1,23 @@
+class Solution:
+    def isPalindrome(self, x):
+        if x < 0:
+            return False
+        copy = x
+        count = 0
+        while copy >= 10:
+            copy /= 10
+            count += 1
+        copy = x
+        while count >= 0:
+            left = copy / 10 ** count - (copy / 10 ** (count + 1)) * 10
+            count -= 1
+
+            if count >= 0:
+                right = copy % 10
+                copy /= 10
+                count -= 1
+                if left != right:
+                    return False
+        return True
+
+print Solution().isPalindrome(-2147483648)

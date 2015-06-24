@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/MinimumDepthOfBinaryTree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/BinaryTreePostorderTraversal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -51,7 +51,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1435167474000" expanded="true" signature="0:481" placeholder="/**...*/" />
               </folding>
             </state>
           </provider>
@@ -63,7 +63,9 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1435174544000" expanded="true" signature="0:511" placeholder="/**...*/" />
+                <marker date="1435174544000" expanded="true" signature="1018:1162" placeholder="{...}" />
+                <marker date="1435174544000" expanded="true" signature="1244:1516" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -74,18 +76,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimumDepthOfBinaryTree.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MinimumDepthOfBinaryTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/MinimumDepthOfBinaryTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25531915">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinaryTreePostorderTraversal.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/BinaryTreePostorderTraversal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73758864">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -119,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LeetCode/RegularExpressionMatching.java" />
         <option value="$PROJECT_DIR$/LeetCode/ContainerWithMostWater.java" />
         <option value="$PROJECT_DIR$/LeetCode/LongestCommonPrefix.java" />
         <option value="$PROJECT_DIR$/LeetCode/ThreeSum.java" />
@@ -170,6 +179,7 @@
         <option value="$PROJECT_DIR$/LintCode/SearchRangeInBinarySearchTree.java" />
         <option value="$PROJECT_DIR$/LintCode/BinarySearchTreeIterator.java" />
         <option value="$PROJECT_DIR$/LintCode/MinimumDepthOfBinaryTree.java" />
+        <option value="$PROJECT_DIR$/LintCode/BinaryTreePostorderTraversal.java" />
       </list>
     </option>
   </component>
@@ -896,7 +906,7 @@
         <state vertical-scroll-proportion="0.78014183">
           <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,7 +932,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1435167474000" expanded="true" signature="0:481" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -932,7 +942,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1435174544000" expanded="true" signature="0:511" placeholder="/**...*/" />
+            <marker date="1435174544000" expanded="true" signature="1018:1162" placeholder="{...}" />
+            <marker date="1435174544000" expanded="true" signature="1244:1516" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -941,16 +953,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/MinimumDepthOfBinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25531915">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/BinaryTreePostorderTraversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73758864">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

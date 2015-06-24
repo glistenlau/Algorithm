@@ -44,14 +44,14 @@ public class Solution {
     if (root == null) {
       return;
     }
+    if (root.val > k1) {
+      search(root.left, k1, k2, result);
+    }
     if (root.val >= k1 && root.val <= k2) {
-      search(root.left, k1, k2, result);
       result.add(root.val);
+    }
+    if (root.val < k2) {
       search(root.right, k1, k2, result);
-    } else if (root.val < k1) {
-      search(root.right, k1, k2, result);
-    } else {
-      search(root.left, k1, k2, result);
     }
   }
 }

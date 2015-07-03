@@ -1,79 +1,38 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 /**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
+ * Definition for ListNode.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int val) {
  *         this.val = val;
- *         this.left = this.right = null;
- *     }
- * }
- */
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
+ *         this.next = null;
  *     }
  * }
  */
 public class temp {
   /**
-   * @param root:  The root of the binary search tree.
-   * @param value: Remove the node with given value.
-   * @return: The root of the binary search tree after removal.
+   * @param head: The head of linked list.
+   * @return: The new head of reversed linked list.
    */
-  public TreeNode removeNode(TreeNode root, int value) {
+  public ListNode reverse(ListNode head) {
     // write your code here
-    if (root == null) {
+    if (head == null) {
       return null;
     }
-
-    if (root.val == value) {
-      if (root.left != null && root.right != null) {
-        TreeNode swap = findMax(root.left);
-        if (swap.left != null) {
-          swap.left = removeNode(root.left, swap.val);
-          swap.right = root.right;
-        } else {
-          swap.left = removeNode(root.left, swap.val);
-          swap.right = root.right;
-        }
-        return swap;
-      } else if (root.left != null) {
-        return root.left;
-      } else if (root.right != null) {
-        return root.right;
-      } else {
-        return null;
-      }
+    if (head.next == null) {
+      return head;
     }
-
-    root.left = removeNode(root.left, value);
-    root.right = removeNode(root.right, value);
-
-    return root;
-  }
-
-  private TreeNode findMax(TreeNode root) {
-    if (root == null || root.right == null) {
-      return root;
-    }
-
-    return findMax(root.right);
+    ListNode nextNode = head.next;
+    ListNode pre = reverse(nextNode);
+    nextNode.next = new ListNode(head.val);
+    return pre;
   }
 
   public static void main(String[] args) {
-    TreeNode test = new BinaryTreeSerialization().deserialize("20,1,40,#,#,35");
-    TreeNode result = new temp().removeNode(test, 20);
-    return;
+    ListNode test = new ListNode(0);
+    test.next = new ListNode(1);
+    test.next.next = new ListNode(2);
+    new temp().reverse(test);
   }
-
 }
+

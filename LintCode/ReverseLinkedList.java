@@ -32,4 +32,20 @@ public class Solution {
     }
     return cur.next;
   }
+
+  // Recursion
+  public ListNode reverse(ListNode head) {
+    // write your code here
+    if (head == null) {
+      return null;
+    }
+    if (head.next == null) {
+      return head;
+    }
+    ListNode nextNode = head.next;
+    ListNode pre = reverse(nextNode);
+    head.next = null;
+    nextNode.next = head;
+    return pre;
+  }
 }

@@ -11,36 +11,32 @@
  */
 public class temp {
   /**
-   * @param head: The head of linked list.
-   * @return: The new head of reversed linked list.
+   * @param head: The head of linked list
    */
-  public static ListNode deleteDuplicates(ListNode head) {
-    // write your code here
-    ListNode dummy = new ListNode(0);
-    ListNode preD = null;
-    ListNode cur = dummy;
-    while (head != null) {
-      if (preD != null && head.val == preD.val) {
-        head = head.next;
-      } else if (head.next != null && head.val == head.next.val) {
-        preD = head;
-        head = head.next.next;
-      } else {
-        cur.next = head;
-        cur = cur.next;
-        head = head.next;
-      }
+  private ListNode binarySearch(ListNode head, ListNode target) {
+    if (head == null || head.next == null) {
+      return head;
     }
-    return dummy.next;
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode fast = head.next;
+    while (fast != null && fast.next != null) {
+      fast = fast.next.next;
+      head = head.next;
+    }
+    if (head.next.val < target.val) {
+      return binarySearch(head.next, target);
+    } else {
+      head.next = null;
+      return binarySearch(dummy.next, target);
+    }
   }
 
   public static void main(String[] args) {
-    ListNode test = new ListNode(0);
-    test.next = new ListNode(1);
-    test.next.next = new ListNode(2);
-    test.next.next.next = new ListNode(2);
-    test.next.next.next.next = new ListNode(2);
-    ListNode result = new temp().deleteDuplicates(test);
+    ListNode test = new ListNode(Integer.MIN_VALUE);
+    test.next = new ListNode(-1);
+    test.next.next = new ListNode(1);
+    ListNode result = new temp().binarySearch(test, new ListNode(-2));
     return;
   }
 }

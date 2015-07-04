@@ -45,18 +45,17 @@ public class Solution {
     }
     ListNode dummy = new ListNode(0);
     dummy.next = head;
-    ListNode slow = head;
     ListNode fast = head.next;
+    head = dummy;
     while (fast != null && fast.next != null) {
       fast = fast.next.next;
       slow = slow.next;
     }
-    if (slow.val < target.val) {
-      return binarySearch(slow, target);
+    if (slow.next.val < target.val) {
+      return binarySearch(slow.next, target);
     } else {
       slow.next = null;
-      slow = null;
-      return binarySearch(head, target);
+      return binarySearch(dummy.next, target);
     }
   }
 }

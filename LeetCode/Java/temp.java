@@ -13,40 +13,63 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  public ListNode reverseBetween(ListNode head, int m, int n) {
-    // write your code here
-    if (m >= n || head == null) {
+  public ListNode sortList(ListNode head) {
+    if (head == null) {
       return null;
+    }
+    int size = 0;
+    ListNode curt = head;
+    while (curt != null) {
+      curt = curt.next;
+      size += 1;
+    }
+    return merge(head, size);
+  }
+
+  private ListNode merge(ListNode head, int size) {
+    if (size <= 1) {
+      return head;
     }
     ListNode dummy = new ListNode(0);
     dummy.next = head;
     head = dummy;
-    for (int i = 1; i < m; i++) {
+    for (int i = 1; i < (size + 1) / 2; i++) {
       head = head.next;
-      if (head == null) {
-        return null;
+    }
+    ListNode rStart = head.next.next;
+    head.next.next = null;
+    ListNode left = merge(dummy.next, (size + 1) / 2);
+    ListNode right = merge(rStart, size - (size + 1) / 2);
+
+    return combine(left, right);
+  }
+
+  private ListNode combine(ListNode left, ListNode right) {
+    ListNode dummy = new ListNode(0);
+    ListNode head = dummy;
+    while (left != null && right != null) {
+      if (left.val < right.val) {
+        head.next = new ListNode(left.val);
+        left = left.next;
+        head = head.next;
+      } else {
+        head.next = new ListNode(right.val);
+        right = right.next;
+        head = head.next;
       }
     }
-    ListNode preM = head;
-    ListNode mNode = head.next;
-    ListNode nNode = mNode, postnNode = mNode.next;
-    for (int i = m; i < n; i++) {
-      if (postnNode == null) {
-        return null;
-      }
-      ListNode temp = postnNode.next;
-      postnNode.next = nNode;
-      nNode = postnNode;
-      postnNode = temp;
+    if (left != null) {
+      head.next = left;
     }
-    mNode.next = postnNode;
-    preM.next = nNode;
+    if (right != null) {
+      head.next = right;
+    }
     return dummy.next;
   }
 
   public static void main(String[] args) {
-    ListNode test = new ListNode(Integer.MIN_VALUE).serilization("3760->2881->7595->3904->5069->4421->8560->8879->8488->5040->5792->56->1007->2270->3403->6062");
-    ListNode result = new temp().reverseBetween(test, 2, 7);
+    ListNode test = new ListNode(Integer.MIN_VALUE).serilization("21->25->25->31->4");
+    ListNode result = new temp().sortList(test);
     return;
   }
 }

@@ -13,30 +13,40 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  private ListNode binarySearch(ListNode head, ListNode target) {
-    if (head == null || head.next == null) {
-      return head;
+  public ListNode reverseBetween(ListNode head, int m, int n) {
+    // write your code here
+    if (m >= n || head == null) {
+      return null;
     }
     ListNode dummy = new ListNode(0);
     dummy.next = head;
-    ListNode fast = head.next;
-    while (fast != null && fast.next != null) {
-      fast = fast.next.next;
+    head = dummy;
+    for (int i = 1; i < m; i++) {
       head = head.next;
+      if (head == null) {
+        return null;
+      }
     }
-    if (head.next.val < target.val) {
-      return binarySearch(head.next, target);
-    } else {
-      head.next = null;
-      return binarySearch(dummy.next, target);
+    ListNode preM = head;
+    ListNode mNode = head.next;
+    ListNode nNode = mNode, postnNode = mNode.next;
+    for (int i = m; i < n; i++) {
+      if (postnNode == null) {
+        return null;
+      }
+      ListNode temp = postnNode.next;
+      postnNode.next = nNode;
+      nNode = postnNode;
+      postnNode = temp;
     }
+    mNode.next = postnNode;
+    preM.next = nNode;
+    return dummy.next;
   }
 
   public static void main(String[] args) {
-    ListNode test = new ListNode(Integer.MIN_VALUE);
-    test.next = new ListNode(-1);
-    test.next.next = new ListNode(1);
-    ListNode result = new temp().binarySearch(test, new ListNode(-2));
+    ListNode test = new ListNode(Integer.MIN_VALUE).serilization("3760->2881->7595->3904->5069->4421->8560->8879->8488->5040->5792->56->1007->2270->3403->6062");
+    ListNode result = new temp().reverseBetween(test, 2, 7);
     return;
   }
 }

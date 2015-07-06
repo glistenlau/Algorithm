@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/LinkedListCycleII.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/RotateList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -47,14 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedListCycleII.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkedListCycleII.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/LinkedListCycleII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91078067">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RotateList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/RotateList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11895911">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LintCode/ConstructBinaryTreeFromPreorderAndInorderTraversal.java" />
         <option value="$PROJECT_DIR$/LintCode/TwoStringsAreAnagrams.java" />
         <option value="$PROJECT_DIR$/LintCode/ConstructBinaryTreeFromInorderAndPostorderTraversal.java" />
         <option value="$PROJECT_DIR$/LintCode/BinaryTreeZigzagLevelOrderTraversal.java" />
@@ -136,6 +145,7 @@
         <option value="$PROJECT_DIR$/LintCode/MergeKSortedLists.java" />
         <option value="$PROJECT_DIR$/LintCode/ReorderList.java" />
         <option value="$PROJECT_DIR$/LintCode/LinkedListCycleII.java" />
+        <option value="$PROJECT_DIR$/LintCode/RotateList.java" />
       </list>
     </option>
   </component>
@@ -735,13 +745,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LeetCode/Java/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/Java/ThreeSumClosest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1103,11 +1106,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/LinkedListCycleII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91078067">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/RotateList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11895911">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

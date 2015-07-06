@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for ListNode.
  * public class ListNode {
@@ -13,59 +16,50 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  public ListNode sortList(ListNode head) {
-    if (head == null) {
-      return null;
+  public class Solution {
+    /**
+     * @param s: A string
+     * @return: A list of lists of string
+     */
+    public List<List<String>> partition(String s) {
+      // write your code here
+      List<List<String>> result = new ArrayList<>();
+      if (s == null || s.length() == 0) {
+        return result;
+      }
+      helper(s, 0, new ArrayList<String>(), result);
+      return result;
     }
-    int size = 0;
-    ListNode curt = head;
-    while (curt != null) {
-      curt = curt.next;
-      size += 1;
-    }
-    return merge(head, size);
-  }
 
-  private ListNode merge(ListNode head, int size) {
-    if (size <= 1) {
-      return head;
-    }
-    ListNode dummy = new ListNode(0);
-    dummy.next = head;
-    head = dummy;
-    for (int i = 1; i < (size + 1) / 2; i++) {
-      head = head.next;
-    }
-    ListNode rStart = head.next.next;
-    head.next.next = null;
-    ListNode left = merge(dummy.next, (size + 1) / 2);
-    ListNode right = merge(rStart, size - (size + 1) / 2);
-
-    return combine(left, right);
-  }
-
-  private ListNode combine(ListNode left, ListNode right) {
-    ListNode dummy = new ListNode(0);
-    ListNode head = dummy;
-    while (left != null && right != null) {
-      if (left.val < right.val) {
-        head.next = new ListNode(left.val);
-        left = left.next;
-        head = head.next;
-      } else {
-        head.next = new ListNode(right.val);
-        right = right.next;
-        head = head.next;
+    private void helper(String s, int start, List<String> taken, List<List<String>> result) {
+      if (start == s.length() + 1) {
+        result.add(new ArrayList<String>(taken));
+        return;
+      }
+      for (int i = start + 1; i <= s.length(); i++) {
+        if (!isPalindrome(s.substring(start, i))) {
+          continue;
+        }
+        taken.add(s.substring(start, i));
+        helper(s, i, taken, result);
+        taken.remove(taken.size() - 1);
       }
     }
-    if (left != null) {
-      head.next = left;
+
+    private boolean isPalindrome(String s) {
+      int left = 0;
+      int right = s.length() - 1;
+      while(left < right) {
+        if (s.charAt(left) != s.charAt(right)) {
+          return false;
+        }
+        left += 1;
+        right -= 1;
+      }
+      return true;
     }
-    if (right != null) {
-      head.next = right;
-    }
-    return dummy.next;
   }
+
 
   public static void main(String[] args) {
     ListNode test = new ListNode(Integer.MIN_VALUE).serilization("21->25->25->31->4");

@@ -1,20 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Definition for ListNode.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
- * }
+ * k Sum II
+ * http://www.lintcode.com/en/problem/k-sum-ii/
+ *
+ * Given n unique integers, number k(1<=k<=n) and target. Find all possible k
+ * integers where their sum is target.
+ *
+ * Example
+ * Given [1, 2, 3, 4], k = 2, target = 5, [1, 4] and [2, 3] are possible
+ * solutions.
  */
-public class temp {
+
+public class Solution {
   /**
-   * @param head: The head of linked list
+   * @param A: an integer array.
+   * @param k: a positive integer (k <= length(A))
+   * @param target: a integer
+   * @return a list of lists of integer
    */
   public ArrayList<ArrayList<Integer>> kSumII(int A[], int k, int target) {
     // write your code here
@@ -35,19 +36,15 @@ public class temp {
     }
 
     for (int i = pos; i < A.length; i++) {
+      if (A[i] + sum > target) {
+        continue;
+      }
       sum += A[i];
       taken.add(A[i]);
       kSumHelper(A, k, target, i + 1, sum, taken, result);
       taken.remove(taken.size() - 1);
       sum -= A[i];
     }
-  }
-
-
-  public static void main(String[] args) {
-    int[] A = {1, 2, 3, 4};
-    ArrayList<ArrayList<Integer>> ressult = new temp().kSumII(A, 2, 5);
-    return;
   }
 }
 

@@ -1,22 +1,19 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 /**
- * Definition for ListNode.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
- * }
+ * N-Queens II
+ * http://www.lintcode.com/en/problem/n-queens-ii/
+ * Follow up for N-Queens problem.
+ * Now, instead ouputting board configurations, return the total number of
+ * distinct solutions.
+ *
+ * Example
+ * For n = 4, there are 2 distinct solutions.
  */
-public class temp {
+
+class Solution {
   /**
-   * @param head: The head of linked list
+   * Calculate the total number of distinct N-Queen solutions.
+   * @param n: The number of queens.
+   * @return: The total number of distinct solutions.
    */
   public int totalNQueens(int n) {
     if (n == 0) {
@@ -53,21 +50,4 @@ public class temp {
     return true;
 
   }
-
-
-  public static void main(String[] args) {
-    Set<String> dict = new HashSet<String>();
-    dict.add("hot");
-    dict.add("cog");
-    dict.add("dog");
-    dict.add("tot");
-    dict.add("hog");
-    dict.add("hop");
-    dict.add("pot");
-    dict.add("dot");
-    int[] A = {1, 2, 3, 4};
-    int result = new temp().totalNQueens(4);
-    System.out.println(result);
-  }
-}
-
+};

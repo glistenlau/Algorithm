@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Definition for ListNode.
@@ -16,38 +18,60 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  public ArrayList<ArrayList<Integer>> kSumII(int A[], int k, int target) {
+  public int ladderLength(String start, String end, Set<String> dict) {
     // write your code here
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-    if (A == null || A.length == 0) {
-      return result;
+    if (start == null || end == null ) {
+      return -1;
     }
-    kSumHelper(A, k, target, 0, 0, new ArrayList<Integer>(), result);
+    if (differ(start, end) < 2) {
+      return differ(start, end) + 1;
+    }
+    if (dict.contains(start)) {
+      dict.remove(start);
+    }
+    int result = Integer.MAX_VALUE - 1;
+    for (int i = 0; i < start.length(); i++) {
+      for (char c = 'a'; c <= 'z'; c++) {
+        String curt = start.substring(0, i) + Character.toString(c) + start.substring(i + 1, start.length());
+        if (!dict.contains(curt)) {
+          continue;
+        } else {
+          dict.remove(curt);
+          result = Math.min(result, ladderLength(curt, end, dict) + 1);
+        }
+      }
+    }
     return result;
   }
 
-  private void kSumHelper(int[] A, int k, int target, int pos, int sum, ArrayList<Integer> taken, ArrayList<ArrayList<Integer>> result) {
-    if (taken.size() == k) {
-      if (sum == target) {
-        result.add(new ArrayList<Integer>(taken));
+  private int differ(String s1, String s2) {
+    if (s1.length() != s2.length()) {
+      return Integer.MAX_VALUE;
+    }
+    int count = 0;
+    for (int i = 0; i < s1.length(); i++) {
+      if (s1.charAt(i) != s2.charAt(i)) {
+        count += 1;
       }
-      return;
     }
-
-    for (int i = pos; i < A.length; i++) {
-      sum += A[i];
-      taken.add(A[i]);
-      kSumHelper(A, k, target, i + 1, sum, taken, result);
-      taken.remove(taken.size() - 1);
-      sum -= A[i];
-    }
+    return count;
   }
 
 
   public static void main(String[] args) {
+    Set<String> dict = new HashSet<String>();
+    dict.add("hot");
+    dict.add("cog");
+    dict.add("dog");
+    dict.add("tot");
+    dict.add("hog");
+    dict.add("hop");
+    dict.add("pot");
+    dict.add("dot");
     int[] A = {1, 2, 3, 4};
-    ArrayList<ArrayList<Integer>> ressult = new temp().kSumII(A, 2, 5);
-    return;
+    int result = new temp().ladderLength("hot",
+        "dog", dict);
+    System.out.println(result);
   }
 }
 

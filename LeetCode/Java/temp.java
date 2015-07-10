@@ -88,6 +88,8 @@ public class temp {
 
 
   public static void main(String[] args) {
+    Scanner sacn = new Scanner();
+    System.in.read(sacn);
     Set<String> dict = new HashSet<String>();
     dict.add("hot");
     dict.add("cog");

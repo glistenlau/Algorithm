@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/ProductOfArrayExcludeItself.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/FirstMissingPositive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/Java/temp.java" afterPath="$PROJECT_DIR$/LeetCode/Java/temp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -49,20 +50,21 @@
         <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding>
-                <marker date="1436561893000" expanded="true" signature="27:244" placeholder="/**...*/" />
-                <marker date="1436561893000" expanded="true" signature="271:326" placeholder="/**...*/" />
-                <marker date="1436561893000" expanded="true" signature="413:1644" placeholder="{...}" />
-                <marker date="1436561893000" expanded="true" signature="462:476" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="589:597" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="642:650" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="1740:2778" placeholder="{...}" />
-                <marker date="1436561893000" expanded="true" signature="1793:1810" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="1850:1858" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="1910:1918" placeholder="&lt;~&gt;" />
-                <marker date="1436561893000" expanded="true" signature="2837:3251" placeholder="{...}" />
-                <marker date="1436561893000" expanded="true" signature="2939:2947" placeholder="&lt;~&gt;" />
+                <element signature="e#836#844#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstMissingPositive.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/FirstMissingPositive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16934802">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,14 +110,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductOfArrayExcludeItself.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductOfArrayExcludeItself.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/ProductOfArrayExcludeItself.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13729978">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,16 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="N-QueensII.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LintCode/N-QueensII.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -166,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LintCode/LongestIncreasingSubsequence.java" />
         <option value="$PROJECT_DIR$/LintCode/LongestCommonSubsequence.java" />
         <option value="$PROJECT_DIR$/LintCode/LongestCommonSubstring.java" />
         <option value="$PROJECT_DIR$/LintCode/LongestIncreasingContinuousSubsequence.java" />
@@ -211,12 +200,13 @@
         <option value="$PROJECT_DIR$/LintCode/WordLadderII.java" />
         <option value="$PROJECT_DIR$/LintCode/RemoveElement.java" />
         <option value="$PROJECT_DIR$/LintCode/Rehasing.java" />
-        <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
         <option value="$PROJECT_DIR$/LintCode/atoi.java" />
         <option value="$PROJECT_DIR$/LintCode/SubarraySum.java" />
         <option value="$PROJECT_DIR$/LintCode/SubarraySumCloseset.java" />
         <option value="$PROJECT_DIR$/LintCode/4Sum.java" />
         <option value="$PROJECT_DIR$/LintCode/ProductOfArrayExcludeItself.java" />
+        <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
+        <option value="$PROJECT_DIR$/LintCode/FirstMissingPositive.java" />
       </list>
     </option>
   </component>
@@ -409,7 +399,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.atoi">
+  <component name="RunManager" selected="Application.temp">
     <configuration default="false" name="RemoveDuplicatesFromSortedArrayII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="RemoveDuplicatesFromSortedArrayII" />
@@ -705,8 +695,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.atoi" />
-        <item index="1" class="java.lang.String" itemvalue="Application.temp" />
+        <item index="0" class="java.lang.String" itemvalue="Application.temp" />
+        <item index="1" class="java.lang.String" itemvalue="Application.atoi" />
         <item index="2" class="java.lang.String" itemvalue="Application.Permutations" />
         <item index="3" class="java.lang.String" itemvalue="Application.MergeSortedArray" />
         <item index="4" class="java.lang.String" itemvalue="Application.RemoveDuplicatesFromSortedArrayII" />
@@ -743,7 +733,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17161717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.59961313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31871837" sideWeight="0.59961313" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11748173" sideWeight="0.40232107" order="7" side_tool="false" content_ui="tabs" x="67" y="483" width="1034" height="107" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5841393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1021" y="268" width="505" height="537" />
@@ -828,7 +818,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>103</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -844,8 +834,14 @@
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="71" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -854,13 +850,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LintCode/LongestCommonSubstring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/LongestIncreasingContinuousSubsequence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1201,27 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <marker date="1436561893000" expanded="true" signature="27:244" placeholder="/**...*/" />
-            <marker date="1436561893000" expanded="true" signature="271:326" placeholder="/**...*/" />
-            <marker date="1436561893000" expanded="true" signature="413:1644" placeholder="{...}" />
-            <marker date="1436561893000" expanded="true" signature="462:476" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="589:597" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="642:650" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="1740:2778" placeholder="{...}" />
-            <marker date="1436561893000" expanded="true" signature="1793:1810" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="1850:1858" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="1910:1918" placeholder="&lt;~&gt;" />
-            <marker date="1436561893000" expanded="true" signature="2837:3251" placeholder="{...}" />
-            <marker date="1436561893000" expanded="true" signature="2939:2947" placeholder="&lt;~&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/Java/atoi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66045725">
@@ -1264,8 +1232,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/ProductOfArrayExcludeItself.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13729978">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="e#836#844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/FirstMissingPositive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16934802">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

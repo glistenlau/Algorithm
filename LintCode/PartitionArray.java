@@ -18,6 +18,8 @@ public class Solution {
    *@param k: As description
    *return: The index after partition
    */
+
+  // O(n) Time and O(1) Space
   public int partitionArray(int[] nums, int k) {
     if (nums == null || nums.length == 0) {
       return 0;

@@ -15,25 +15,53 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  public int firstMissingPositive(int[] A) {
-    if (A == null || A.length == 0) {
-      return 1;
+  public int partitionArray(int[] nums, int k) {
+    if (nums == null || nums.length == 0) {
+      return 0;
     }
-    for (int i = 0; i < A.length; i++) {
-      if (A[i] > 0 && A[i] <= A.length) {
-        if (A[i] != i + 1) {
-          int temp = A[A[i] - 1];
-          A[A[i] - 1] = A[i];
-          A[i] = temp;
+    int small = 0;
+    int equal = 0;
+    int great = 0;
+    for (int num: nums) {
+      small += num < k ? 1 : 0;
+      equal += num == k ? 1 : 0;
+      great += num > k ? 1 : 0;
+    }
+    int i = 0;
+    int si = 0;
+    int ei = small;
+    int gi = small + equal;
+    while (i < nums.length) {
+      if (nums[i] < k) {
+        if (i >= small) {
+          swap(nums, i, si);
+          si++;
+        } else {
+          i++;
+        }
+      } else if (nums[i] > k) {
+        if (i < equal + small) {
+          swap(nums, i, gi);
+          gi++;
+        } else {
+          i++;
+        }
+      } else {
+        if (i >= small && i < equal + small) {
+          i++;
+        } else {
+          swap(nums, i, ei);
+          ei++;
         }
       }
     }
-    for (int i = 0; i < A.length; i++) {
-      if (A[i] != i + 1) {
-        return i + 1;
-      }
-    }
-    return A.length + 1;
+    return small;
+  }
+
+  private void swap(int[] nums, int a, int b) {
+    int temp = nums[a];
+    nums[a] = nums[b];
+    nums[b] = temp;
   }
 
 
@@ -50,8 +78,8 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {2, 1};
-    int result = new temp().firstMissingPositive(A);
+    int[] A = {9,9,9,8,9,8,7,9,8,8,8,9,8,9,8,8,6,9};
+    int result = new temp().partitionArray(A, 9);
     System.out.println(result);
   }
 }

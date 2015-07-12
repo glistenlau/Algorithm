@@ -24,10 +24,12 @@ public class Solution {
     stack2 = new Stack<Integer>();
   }
 
+  //O(1)
   public void push(int element) {
     stack1.push(element);
   }
 
+  //Average O(1)
   public int pop() {
     if (stack2.isEmpty()) {
       while(!stack1.isEmpty()){
@@ -37,6 +39,7 @@ public class Solution {
     return stack2.pop();
   }
 
+  //Average O(1)
   public int top() {
     if (stack2.isEmpty()) {
       while(!stack1.isEmpty()){

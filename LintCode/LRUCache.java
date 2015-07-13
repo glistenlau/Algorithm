@@ -1,17 +1,21 @@
-import java.util.*;
-
 /**
- * Definition for ListNode.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
- * }
+ * LRU Cache
+ * www.lintcode.com/en/problem/lru-cache/
+ *
+ * Design and implement a data structure for Least Recently Used(LRU) cache.
+ * It should support the following operations: get and set.
+ *
+ * get(key) - Get the value (will always be positive) of the key if the key
+ * exists in the cache, otherwise return -1.
+ *
+ * set(key, value) - Set or insert the value if the key is not already
+ * present. When the cache reached its capacity, it should invalidate the
+ * least recently used item before inserting a new item.
  */
-public class temp {
+
+public class Solution {
+
+  // @param capacity, an integer
   private class doubleList {
     int key;
     int val;
@@ -38,7 +42,7 @@ public class temp {
       return -1;
     }
     doubleList curt = tail;
-    while (tail.prev != head) {
+    while (curt.prev != head) {
       if (curt.prev.key == key) {
         if (curt.prev.next != tail) {
           doubleList temp = curt.prev;
@@ -65,7 +69,6 @@ public class temp {
       head.val++;
       return;
     }
-
     int v = get(key);
     if (v != -1) {
       tail.prev.val = value;
@@ -92,26 +95,6 @@ public class temp {
     head.next = head.next.next;
     head.next.prev = head;
     head.val--;
-  }
-
-
-
-
-
-
-  public static void main(String[] args) {
-    Set<String> dict = new HashSet<String>();
-    dict.add("hot");
-    dict.add("cog");
-    dict.add("dog");
-    dict.add("tot");
-    dict.add("hog");
-    dict.add("hop");
-    dict.add("pot");
-    dict.add("dot");
-    int[] A = {1, 2, 3, 4, 5};
-    int[] result = new temp().medianII(A);
-    System.out.println(result);
   }
 }
 

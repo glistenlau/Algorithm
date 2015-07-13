@@ -15,29 +15,38 @@ public class temp {
   /**
    * @param head: The head of linked list
    */
-  public int threeSumClosest(int[] numbers, int target) {
-    if (numbers == null || numbers.length < 3) {
-      return 0;
+  public int[] medianII(int[] nums) {
+    // write your code here
+    int[] result = new int[nums.length];
+    if (nums == null || nums.length == 0) {
+      return result;
     }
-    Arrays.sort(numbers);
-    int min = Integer.MAX_VALUE;
-    for (int i = 0; i < numbers.length; i++) {
-      int left = i + 1;
-      int right = numbers.length - 1;
-      while (left < right) {
-        int sum = numbers[i] + numbers[left] + numbers[right];
-        min = Math.abs(sum - target) < Math.abs(min - target) ? sum : min;
-        if (sum == target) {
-          return target;
-        } else if (sum < target) {
-          left++;
-        } else {
-          right--;
-        }
+
+    Queue<Integer> minQ = new PriorityQueue<Integer>();
+    Queue<Integer> maxQ = new PriorityQueue<Integer>(maxQueueCom);
+    int mid = nums[0];
+    result[0] = mid;
+
+    for (int i = 1; i < nums.length; i++) {
+      if (nums[i] < mid) {
+        minQ.offer(nums[i]);
+      } else {
+        maxQ.offer(nums[i]);
       }
+      if (minQ.size() - maxQ.size() > 0) {
+        maxQ.offer(mid);
+        mid = minQ.poll();
+      }
+      if (maxQ.size() - minQ.size() > 1) {
+        minQ.offer(mid);
+        mid = maxQ.poll();
+      }
+      result[i] = mid;
     }
-    return min;
+    return result;
   }
+
+  public Comparator<Integer> maxQueueCom = (o1, o2) -> o2 - o1;
 
 
 
@@ -53,8 +62,8 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {1,0,-1,-1,-1,-1,0,1,1,1,2};
-    int result = new temp().threeSumClosest(A, 7);
+    int[] A = {1, 2, 3, 4, 5};
+    int[] result = new temp().medianII(A);
     System.out.println(result);
   }
 }

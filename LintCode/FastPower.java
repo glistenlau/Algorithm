@@ -6,7 +6,7 @@
  *
  * Example
  * For 2 ^ 31 % 3 = 2.
- * FOr 100 ^ 1000 % 1000 = 0.
+ * For 100 ^ 1000 % 1000 = 0.
  */
 
 class Solution {

@@ -12,47 +12,51 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int maxTwoSubArrays(ArrayList<Integer> nums) {
-    if (nums == null || nums.size() == 0) {
-      return 0;
-    }
-    int[] first = findMax(nums, 0, nums.size());
-    int[] left = findMax(nums, 0, first[1] + 1);
-    int[] right = findMax(nums, first[2] + 1, nums.size());
-    return first[0] + Math.max(left[0], right[0]);
-  }
+    public int maxDiffSubArrays(ArrayList<Integer> nums) {
+      int[] leftMax = new int[nums.size()];
+      int[] leftMin = new int[nums.size()];
+      int[] rightMax = new int[nums.size()];
+      int[] rightMin = new int[nums.size()];
 
-  private int[] findMax(ArrayList<Integer> nums, int start, int end) {
-
-    int[] result = new int[3];
-    if (end - start == 0) {
-      return result;
-    }
-    int[] sum = new int[end - start];
-    sum[start] = nums.get(start);
-    for (int i = 1; i < end - start; i++) {
-      sum[i] = sum[i - 1] + nums.get(i);
-    }
-
-    int min = 0;
-    int max = Integer.MIN_VALUE;
-    int minIndex = -1;
-    int maxIndex = 0;
-    for (int i = 0; i < end - start; i++) {
-      if (sum[i] - min > max) {
-        max = sum[i] - min;
-        maxIndex = i;
+      int sum = 0;
+      int minSum = 0;
+      int maxSum = 0;
+      int min = Integer.MAX_VALUE;
+      int max = Integer.MIN_VALUE;
+      for (int i = 0; i < nums.size(); i++) {
+        sum += nums.get(i);
+        max = Math.max(max, sum - minSum);
+        min = Math.min(min, sum - maxSum);
+        maxSum = Math.max(sum, maxSum);
+        minSum = Math.min(sum, minSum);
+        leftMax[i] = max;
+        leftMin[i] = min;
       }
-      if (sum[i] < min) {
-        min = sum[i];
-        minIndex = i;
+
+      sum = 0;
+      minSum = 0;
+      maxSum = 0;
+      min = Integer.MAX_VALUE;
+      max = Integer.MIN_VALUE;
+      for (int i = nums.size() - 1; i >= 0; i--) {
+        sum += nums.get(i);
+        max = Math.max(max, sum - minSum);
+        min = Math.min(min, sum - maxSum);
+        maxSum = Math.max(sum, maxSum);
+        minSum = Math.min(sum, minSum);
+        rightMax[i] = max;
+        rightMin[i] = min;
       }
+
+      max = -1;
+      for (int i = 0; i < nums.size() - 1; i++) {
+        max = Math.max(max, Math.abs(leftMax[i] - rightMin[i + 1]));
+        max = Math.max(max, Math.abs(leftMin[i] - rightMax[i + 1]));
+      }
+      return max;
     }
-    result[0] = max;
-    result[1] = minIndex;
-    result[2] = maxIndex;
-    return result;
-  }
+
+
 
   public static void main(String[] args) {
     Set<String> dict = new HashSet<String>();
@@ -64,12 +68,12 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {1,3,-1,2,-1,2};
+    int[] A = {1, 2, -3, 1};
     ArrayList<Integer> B = new ArrayList<Integer>();
     for (int n: A) {
       B.add(n);
     }
-    int result = new temp().maxTwoSubArrays(B);
+    int result = new temp().maxDiffSubArrays(B);
     System.out.println(result);
   }
 }

@@ -12,92 +12,47 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class doubleList {
-    int key;
-    int val;
-    doubleList prev;
-    doubleList next;
-    public doubleList(int key, int val) {
-      this.key = key;
-      this.val = val;
-      prev = null;
-      prev = next;
+  public int maxTwoSubArrays(ArrayList<Integer> nums) {
+    if (nums == null || nums.size() == 0) {
+      return 0;
     }
+    int[] first = findMax(nums, 0, nums.size());
+    int[] left = findMax(nums, 0, first[1] + 1);
+    int[] right = findMax(nums, first[2] + 1, nums.size());
+    return first[0] + Math.max(left[0], right[0]);
   }
 
-  doubleList head;
-  doubleList tail;
+  private int[] findMax(ArrayList<Integer> nums, int start, int end) {
 
-  public Solution(int capacity) {
-    head = new doubleList(-1, 0);
-    tail = new doubleList(-1, capacity);
-  }
-
-  public int get(int key) {
-    if (head.val == 0) {
-      return -1;
+    int[] result = new int[3];
+    if (end - start == 0) {
+      return result;
     }
-    doubleList curt = tail;
-    while (tail.prev != head) {
-      if (curt.prev.key == key) {
-        if (curt.prev.next != tail) {
-          doubleList temp = curt.prev;
-          curt.prev = curt.prev.prev;
-          curt.prev.next = curt;
-          temp.prev = tail.prev;
-          temp.next = tail;
-          tail.prev.next = temp;
-          tail.prev = temp;
-        }
-        return tail.prev.val;
+    int[] sum = new int[end - start];
+    sum[start] = nums.get(start);
+    for (int i = 1; i < end - start; i++) {
+      sum[i] = sum[i - 1] + nums.get(i);
+    }
+
+    int min = 0;
+    int max = Integer.MIN_VALUE;
+    int minIndex = -1;
+    int maxIndex = 0;
+    for (int i = 0; i < end - start; i++) {
+      if (sum[i] - min > max) {
+        max = sum[i] - min;
+        maxIndex = i;
       }
-      curt = curt.prev;
-    }
-    return -1;
-  }
-
-  public void set(int key, int value) {
-    if (head.val == 0) {
-      head.next = new doubleList(key, value);
-      head.next.prev = head;
-      head.next.next = tail;
-      tail.prev = head.next;
-      head.val++;
-      return;
-    }
-
-    int v = get(key);
-    if (v != -1) {
-      tail.prev.val = value;
-    } else {
-      if (head.val == tail.val) {
-        deleteLeast();
-        insertRecent(key, value);
-      } else {
-        insertRecent(key, value);
+      if (sum[i] < min) {
+        min = sum[i];
+        minIndex = i;
       }
     }
+    result[0] = max;
+    result[1] = minIndex;
+    result[2] = maxIndex;
+    return result;
   }
-
-  private void insertRecent(int key, int val) {
-    doubleList temp = new doubleList(key, val);
-    temp.prev = tail.prev;
-    temp.next = tail;
-    tail.prev.next = temp;
-    tail.prev = temp;
-    head.val++;
-  }
-
-  private void deleteLeast() {
-    head.next = head.next.next;
-    head.next.prev = head;
-    head.val--;
-  }
-
-
-
-
-
 
   public static void main(String[] args) {
     Set<String> dict = new HashSet<String>();
@@ -109,8 +64,12 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {1, 2, 3, 4, 5};
-    int[] result = new temp().medianII(A);
+    int[] A = {1,3,-1,2,-1,2};
+    ArrayList<Integer> B = new ArrayList<Integer>();
+    for (int n: A) {
+      B.add(n);
+    }
+    int result = new temp().maxTwoSubArrays(B);
     System.out.println(result);
   }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/MinimumSubarray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/MaximumSubarray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -25,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LRUCache.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LintCode/LRUCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CheckPowerOf2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/CheckPowerOf2.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,14 +95,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimumSubarray.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MinimumSubarray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/MinimumSubarray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2733485">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaximumSubarray.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/MaximumSubarray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20501138">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LintCode/InsertionSortList.java" />
         <option value="$PROJECT_DIR$/LintCode/ConvertSortedListToBinarySearchTree.java" />
         <option value="$PROJECT_DIR$/LeetCode/Java/ListNode.java" />
         <option value="$PROJECT_DIR$/LeetCode/Java/ListNodeSerilization.java" />
@@ -204,6 +201,7 @@
         <option value="$PROJECT_DIR$/LintCode/MajorityNumberII.java" />
         <option value="$PROJECT_DIR$/LintCode/MajorityNumberIII.java" />
         <option value="$PROJECT_DIR$/LintCode/MinimumSubarray.java" />
+        <option value="$PROJECT_DIR$/LintCode/MaximumSubarray.java" />
       </list>
     </option>
   </component>
@@ -843,13 +841,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LintCode/RemoveDuplicatesFromSortedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3846154">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/CopyListWithRandomPointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3605948">
@@ -1229,11 +1220,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/MinimumSubarray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2733485">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/MaximumSubarray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20501138">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

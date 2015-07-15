@@ -12,17 +12,19 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int fastPower(int a, int b, int n) {
-    if (n == 0) {
-      return 1 % b;
-    }
-    long product = fastPower(a, b, n / 2);
-    product = (product * product) % b;
-      if (n % 2 == 1) {
-        product = (product * a) % b;
-      }
-    return (int)product;
+  public int updateBits(int n, int m, int i, int j) {
+    int copy = n;
+    copy = copy >>> i;
+    copy = copy << i;
+    copy = n - copy;
+    m = m << i;
+    m = m + copy;
+    n = n >>> j;
+    n = n << j;
+    n = n + m;
+    return n;
   }
+
 
 
 
@@ -41,7 +43,7 @@ public class temp {
     for (int n: A) {
       B.add(n);
     }
-    int result = new temp().fastPower(2, 2147483647, 2147483647);
+    int result = new temp().updateBits(1,-1,0,31);
     System.out.println(result);
   }
 }

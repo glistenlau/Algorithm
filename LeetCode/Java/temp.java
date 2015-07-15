@@ -12,18 +12,39 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int updateBits(int n, int m, int i, int j) {
-    int copy = n;
-    copy = copy >>> i;
-    copy = copy << i;
-    copy = n - copy;
-    m = m << i;
-    m = m + copy;
-    n = n >>> j;
-    n = n << j;
-    n = n + m;
-    return n;
+  public String binaryRepresentation(String n) {
+    if (n == null || n.length() == 0) {
+      return "ERROR";
+    }
+
+    StringBuilder intStr = new StringBuilder();
+    StringBuilder decStr = new StringBuilder();
+    double decPart = Double.parseDouble(n.substring(n.indexOf('.')));
+
+    while(decPart > 0.0) {
+      if (decStr.length() > 31) {
+        return "ERROR";
+      }
+      decPart *= 2.0;
+      if (decPart >= 1.0) {
+        decStr.append(1);
+        decPart -= 1.0;
+      } else {
+        decStr.append(0);
+      }
+    }
+   int intPart = Integer.parseInt(n.substring(0, n.indexOf('.')));
+    while (intPart > 0) {
+      intStr.insert(0, intPart % 2);
+      intPart /= 2;
+    }
+    if (decStr.length() == 0) {
+      return intStr.toString();
+    } else {
+      return intStr.toString() + "." + decStr.toString();
+    }
   }
+
 
 
 
@@ -43,7 +64,7 @@ public class temp {
     for (int n: A) {
       B.add(n);
     }
-    int result = new temp().updateBits(1,-1,0,31);
+    String result = new temp().binaryRepresentation("11.25");
     System.out.println(result);
   }
 }

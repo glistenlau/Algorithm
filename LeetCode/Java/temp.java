@@ -12,37 +12,29 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String binaryRepresentation(String n) {
-    if (n == null || n.length() == 0) {
-      return "ERROR";
+  public int maxSubArray(ArrayList<Integer> nums, int k) {
+    if (nums == null || nums.size() < k) {
+      return 0;
     }
 
-    StringBuilder intStr = new StringBuilder();
-    StringBuilder decStr = new StringBuilder();
-    double decPart = Double.parseDouble(n.substring(n.indexOf('.')));
+    int[][] localMax = new int[k + 1][nums.size() + 1];
+    int[][] globalMax = new int[k + 1][nums.size() + 1];
 
-    while(decPart > 0.0) {
-      if (decStr.length() > 31) {
-        return "ERROR";
+    for (int i = 1; i <= k; i++) {
+      localMax[i][i - 1] = Integer.MIN_VALUE;
+    }
+
+    for (int i = 1; i <= k; i++) {
+      for (int j = i; j <= nums.size(); j++) {
+        localMax[i][j] = Math.max(localMax[i][j - 1], globalMax[i - 1][j - 1] ) + nums.get(j - 1);
+        if (j == i) {
+          globalMax[i][j] = localMax[i][j];
+        } else {
+          globalMax[i][j] = Math.max(globalMax[i][j - 1], localMax[i][j]);
+        }
       }
-      decPart *= 2.0;
-      if (decPart >= 1.0) {
-        decStr.append(1);
-        decPart -= 1.0;
-      } else {
-        decStr.append(0);
-      }
     }
-   int intPart = Integer.parseInt(n.substring(0, n.indexOf('.')));
-    while (intPart > 0) {
-      intStr.insert(0, intPart % 2);
-      intPart /= 2;
-    }
-    if (decStr.length() == 0) {
-      return intStr.toString();
-    } else {
-      return intStr.toString() + "." + decStr.toString();
-    }
+    return globalMax[k][nums.size()];
   }
 
 
@@ -59,12 +51,12 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {1, 2, -3, 1};
+    int[] A = {-1,-2,-3,-100,-1,-50};
     ArrayList<Integer> B = new ArrayList<Integer>();
     for (int n: A) {
       B.add(n);
     }
-    String result = new temp().binaryRepresentation("11.25");
+    int result = new temp().maxSubArray(B, 3);
     System.out.println(result);
   }
 }

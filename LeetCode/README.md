@@ -9,7 +9,7 @@ LeetCode Solution
 |3|[Longest Substring Without Reapting Characters][3]|O(n)|O(1)|Medium|
 |4|[Median of Two Sorted Arrays][4]|O(log(m + n))|O(1)|Hard|
 |5|[Longest Palindromic Substring][5]|O(n^2)|O(1)|Medium|
-|6|[ZigZag Conversion](6.ZigZag Conversion/Solution.java)|O(n)|O(1)|Easy|
+|6|[ZigZag Conversion](6.ZigZag Conversion/)|O(n)|O(1)|Easy|
 
 [1]: https://leetcode.com/problems/two-sum/
 [2]: https://leetcode.com/problems/add-two-numbers/

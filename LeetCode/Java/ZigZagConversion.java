@@ -8,21 +8,23 @@ public class ZigZagConversion {
     boolean falling = true;
     int n = s.length();
     int count = 0;
-      for (int i = 0; i < numRows; ++i) {
-        while (count < n) {
-          result.append(s.charAt(count));
-          if (i == 0) {
-            count += (numRows - i - 1) * 2;
-          } else if (i == numRows - 1) {
-            count += i * 2;
-          } else {
-            count += falling ? (numRows - i - 1) * 2 : i * 2;
-            falling = !falling;
-          }
+
+    for (int i = 0; i < numRows; ++i) {
+      while (count < n) {
+        result.append(s.charAt(count));
+        if (i == 0) {
+          count += (numRows - i - 1) * 2;
+        } else if (i == numRows - 1) {
+          count += i * 2;
+        } else {
+          count += falling ? (numRows - i - 1) * 2 : i * 2;
+          falling = !falling;
         }
-        count = i + 1;
-        falling = true;
       }
+      count = i + 1;
+      falling = true;
+    }
+
     return result.toString();
   }
 

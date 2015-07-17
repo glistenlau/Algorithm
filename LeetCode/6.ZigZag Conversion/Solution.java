@@ -11,6 +11,7 @@ public class Solution {
 
     while (left <= right) {
       int n = 0;
+
       while (n * ln < s.length()) {
         if ((left == 0 || left == right) && n * ln + left < s.length()) {
           result.append(s.charAt(n * ln + left));

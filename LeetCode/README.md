@@ -13,5 +13,4 @@ LeetCode Solution
 |7|[Reverse Integer](7.Reverse Integer/)|O(n)|O(1)|Easy|
 |8|[String to Integer (atoi)](8.String to Integer (atoi))|O(n)|O(1)|Easy|
 |9|[Palindrome Number](9.Palindrome Number)|O(n)|O(1)|Easy|
-|10|[Regular Expression Matching](10.Regular Expression Matching)|O(mn)|O(mn)
-|Hard|
+|10|[Regular Expression Matching](10.Regular Expression Matching)|O(mn)|O(mn)|Hard|

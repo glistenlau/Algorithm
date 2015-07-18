@@ -15,3 +15,7 @@ LeetCode Solution
 |9|[Palindrome Number](9.Palindrome Number)|O(n)|O(1)|Easy|
 |10|[Regular Expression Matching](10.Regular Expression Matching)|O(mn)|O(mn)|Hard|
 |11|[Container With Most Water](11.Container With Most Water/|O(n)|O(1)|Medium|
+|12|[Integer to Roman](12.Integer to Roman)|O(n)|O(1)|Medium|
+|13|[Roman to Integer](13.Roman to Integer)|O(n)|O(1)|Easy|
+|14|[Longest Common Prefix](14.Longest Common Prefix)|O(kn)|O(1)|Easy|
+|15|[3Sum](15.3Sum)|O(n^2)|O(1)|Medium|

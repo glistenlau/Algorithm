@@ -1,17 +1,12 @@
-import java.util.*;
-
 /**
- * Definition for ListNode.
+ * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
+ *     ListNode(int x) { val = x; }
  * }
  */
-public class temp {
+public class Solution {
   public ListNode reverseKGroup(ListNode head, int k) {
     ListNode dummy = new ListNode(0);
     dummy.next = head;
@@ -49,33 +44,4 @@ public class temp {
     }
     return dummy.next;
   }
-
-
-
-
-
-  public static void main(String[] args) {
-    Set<String> dict = new HashSet<String>();
-    dict.add("hot");
-    dict.add("cog");
-    dict.add("dog");
-    dict.add("tot");
-    dict.add("hog");
-    dict.add("hop");
-    dict.add("pot");
-    dict.add("dot");
-    int[] A = {-1,-2,-3,-100,-1,-50};
-
-    ArrayList<Integer> B = new ArrayList<Integer>();
-    for (int n: A) {
-      B.add(n);
-    }
-    ListNode head = new ListNode(1);
-    head.next = new ListNode(2);
-    ListNode result = new temp().reverseKGroup(head, 2);
-    List<Integer> a1 = new ArrayList<>(B);
-    List<Integer> a2 = new ArrayList<>(B);
-    System.out.println();
-  }
 }
-

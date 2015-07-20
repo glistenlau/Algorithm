@@ -26,6 +26,6 @@
 |20|[Valid Parentheses](020.Valid Parentheses/)|O(n)|O(n)|Easy|
 |21|[Merge Two Sorted Lists](021.Merge Two Sorted Lists/)|O(n)|O(1)|Easy|
 |22|[Generate Parentheses](022.Generate Parentheses/)|O(2*n)|O(2n!)|Medium|
-|23|[Merge k Sorted Lists](023.Merge k Sorted Lists/)|O(knlogn)|O(k)|Hard|
+|23|[Merge k Sorted Lists](023.Merge k Sorted Lists/)|O(knlogk)|O(k)|Hard|
 |24|[Swap Nodes in Pairs](024.Swap Nodes in Pairs/)|O(n)|O(1)|Medium|
 |25|[Reverse Nodes in k-Group](025.Reverse Nodes in k-Group/)|O(n)|O(1)|Hard|

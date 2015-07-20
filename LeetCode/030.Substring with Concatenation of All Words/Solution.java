@@ -1,17 +1,4 @@
-import java.util.*;
-
-/**
- * Definition for ListNode.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
- * }
- */
-public class temp {
+public class Solution {
   public List<Integer> findSubstring(String s, String[] words) {
     List<Integer> result = new ArrayList<Integer>();
     if (words == null || words.length == 0) {
@@ -58,40 +45,4 @@ public class temp {
 
     return false;
   }
-
-
-
-
-
-
-  public static void main(String[] args) {
-    String[] temp = {"word","good","best","good"};
-    Set<String> dict = new HashSet<String>();
-    dict.add("hot");
-    dict.add("cog");
-    dict.add("dog");
-    dict.add("tot");
-    dict.add("hog");
-    dict.add("hop");
-    dict.add("pot");
-    dict.add("dot");
-    int[] A = {-1,-2,-3,-100,-1,-50};
-    int a = Integer.MIN_VALUE;
-    int b = -2;
-    b = b >>> 1;
-    a = a >> 1;
-
-    ArrayList<Integer> B = new ArrayList<Integer>();
-    for (int n: A) {
-      B.add(n);
-    }
-    ListNode head = new ListNode(1);
-    boolean check = dict.contains("hot");
-    head.next = new ListNode(2);
-    List<Integer> result = new temp().findSubstring("wordgoodgoodgoodbestword", temp);
-    List<Integer> a1 = new ArrayList<>(B);
-    List<Integer> a2 = new ArrayList<>(B);
-    System.out.println();
-  }
 }
-

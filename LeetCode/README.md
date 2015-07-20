@@ -1,4 +1,4 @@
-LeetCode Solution
+(LeetCode Solution
 ---
 在这里会把LeetCode中的题目的代码贴出来，也会尽量更新每题的解题思路，持续施工中，让我们一起刷起来，拿到Dream offer！
 
@@ -20,7 +20,12 @@ LeetCode Solution
 |14|[Longest Common Prefix](014.Longest Common Prefix/)|O(kn)|O(1)|Easy|
 |15|[3Sum](015.3Sum/)|O(n^2)|O(1)|Medium|
 |16|[3Sum Closest](016.3Sum Closest/)|O(n^2)|O(1)|Medium|
-|17|[Letter Combinations of a Phone Number](017.Letter Combinations of a Phone Number)|O(4^n)|O(n!)|Medium|
-|18|[4Sum](018.4Sum)|O(n^3)|O(1)|Medium|
-|19|[Remove Nth Node From End of List](019.Remove Nth Node From End of List)|O(n)|O(1)|Easy|
-|20|[Valid Parentheses](020.Valid Parentheses)|O(n)|O(n)|Easy|
+|17|[Letter Combinations of a Phone Number](017.Letter Combinations of a Phone Number/)|O(4^n)|O(n!)|Medium|
+|18|[4Sum](018.4Sum/)|O(n^3)|O(1)|Medium|
+|19|[Remove Nth Node From End of List](019.Remove Nth Node From End of List/)|O(n)|O(1)|Easy|
+|20|[Valid Parentheses](020.Valid Parentheses/)|O(n)|O(n)|Easy|
+|21|[Merge Two Sorted Lists](021.Merge Two Sorted Lists/)|O(n)|O(1)|Easy|
+|22|[Generate Parentheses](022.Generate Parentheses/)|O(2*n)|O(2n!)|Medium|
+|23|[Merge k Sorted Lists](023.Merge k Sorted Lists/)|O(knlogn)|O(k)|Hard|
+|24|[Swap Nodes in Pairs](024.Swap Nodes in Pairs/)|O(n)|O(1)|Medium|
+|25|[Reverse Nodes in k-Group](025.Reverse Nodes in k-Group/)|O(n)|O(1)|Hard|

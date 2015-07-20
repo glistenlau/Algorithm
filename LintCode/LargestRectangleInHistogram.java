@@ -18,6 +18,7 @@ public class Solution {
     }
     Stack<Integer> myStack = new Stack<Integer>();
     int max = 0;
+
     for (int i = 0; i <= height.length; i++) {
       int curt = i == height.length ? -1: height[i];
       while(!myStack.isEmpty() && curt <= height[myStack.peek()]) {
@@ -27,6 +28,7 @@ public class Solution {
       }
       myStack.push(i);
     }
+
     return max;
   }
 }

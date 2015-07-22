@@ -1,4 +1,4 @@
-(LeetCode Solution
+LeetCode Solution
 ---
 在这里会把LeetCode中的题目的代码贴出来，也会尽量更新每题的解题思路，持续施工中，让我们一起刷起来，拿到Dream offer！
 

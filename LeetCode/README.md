@@ -39,3 +39,8 @@
 |33|[Search in Rotated Sorted Array](033.Search in Rotated Sorted Array/)|O(logn)|O(1)|Hard|
 |34|[Search for a Range](034.Search for a Range/)|O(logn)|O(1)|Medium|
 |35|[Search Insert Position](035.Search Insert Position/)|O(logn)|O(1)|Medium|
+|36|[Valid Sudoku](036.Valid Sudoku/)|O(9)|O(27)|Easy|
+|37|[Sudoku Solver](037.Sudoku Solver/)|O()|O(1)|Hard|
+|38|[Count and Say](038.Count and Say/)|O(n)|O(1)|Easy|
+|39|[Combination Sum](039.Combination Sum/)|O(n^n)|O(n)|Medium|
+|40|[Combination Sum II](040.Combination Sum II)|O(n!)|O(n)|Medium|

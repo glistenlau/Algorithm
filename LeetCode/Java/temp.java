@@ -12,52 +12,36 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<Integer> findSubstring(String s, String[] words) {
-    List<Integer> result = new ArrayList<Integer>();
-    if (words == null || words.length == 0) {
-      return result;
+  public int firstMissingPositive(int[] nums) {
+    if (nums == null || nums.length == 0) {
+      return 0;
     }
-    int num = words[0].length();
-    HashMap<String, Integer> lookup = new HashMap<String, Integer>();
-    for (String str : words) {
-      if (!lookup.containsKey(str)) {
-        lookup.put(str, 1);
-      } else {
-        lookup.put(str, lookup.get(str) + 1);
+
+    int i = 0;
+    while (i < nums.length) {
+      while (nums[i] != i && i > 0 && i < nums.length && nums[i] > 0 && nums[i] < nums.length) {
+        int temp = nums[nums[i]];
+        nums[nums[i]] = nums[i];
+        nums[i] = temp;
+      }
+      i++;
+    }
+
+    for (i = 1; i < nums.length; i++) {
+      if (nums[i] != i) {
+        return i;
       }
     }
+    return nums.length;
 
-    for (int i = 0; i <= s.length() - num * words.length; i++) {
-      String curt = s.substring(i, i + num);
-      if (lookup.containsKey(curt)) {
-        lookup.put(curt, lookup.get(curt) - 1);
-        if (helper(s, i + words[0].length(), num, lookup, words.length - 1)) {
-          result.add(i);
-        }
-        lookup.put(curt, lookup.get(curt) + 1);
-      }
-    }
-    return result;
   }
 
-  private boolean helper(String s, int index, int num, HashMap<String, Integer> lookup, int count) {
-    if (count == 0) {
-      return true;
-    }
-    if (index + num > s.length()) {
-      return false;
-    }
 
-    String curt = s.substring(index, index + num);
-    if (lookup.containsKey(curt) && lookup.get(curt) > 0) {
-      lookup.put(curt, lookup.get(curt) - 1);
-      boolean isValid = helper(s, index + num, num, lookup, count - 1);
-      lookup.put(curt, lookup.get(curt) + 1);
-      return isValid;
-    }
 
-    return false;
-  }
+
+
+
+
 
 
 
@@ -75,11 +59,23 @@ public class temp {
     dict.add("hop");
     dict.add("pot");
     dict.add("dot");
-    int[] A = {-1,-2,-3,-100,-1,-50};
+    char[][] sodoku = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+        {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+        {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+        {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+        {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+        {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+        {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+        {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+        {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+    int[] A = {3, 4, -1, 1};
     int a = Integer.MIN_VALUE;
     int b = -2;
     b = b >>> 1;
     a = a >> 1;
+    Queue<Set<String>> myQueue = new LinkedList<>();
+    myQueue.add(dict);
+    dict.remove("hot");
 
     ArrayList<Integer> B = new ArrayList<Integer>();
     for (int n: A) {
@@ -88,7 +84,7 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    List<Integer> result = new temp().findSubstring("wordgoodgoodgoodbestword", temp);
+    System.out.println(new temp().firstMissingPositive(A));
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
     System.out.println();

@@ -29,3 +29,13 @@
 |23|[Merge k Sorted Lists](023.Merge k Sorted Lists/)|O(knlogk)|O(k)|Hard|
 |24|[Swap Nodes in Pairs](024.Swap Nodes in Pairs/)|O(n)|O(1)|Medium|
 |25|[Reverse Nodes in k-Group](025.Reverse Nodes in k-Group/)|O(n)|O(1)|Hard|
+|26|[Remove Duplicates from Sorted Array](026.Remove Duplicates from Sorted Array/|O(n)|O(1)|Easy|
+|27|[Remove Element](027.Remove Element)|O(n)|O(1)|Easy|
+|28|[Implement strStr()](028.Implemet strStr())|Sol.1:O(mn), Sol.2:O(m + n)|Sol.1:O(1), Sol.2:O(m)|Easy|
+|29|[Divide Two Integers](029.Divide Two Integers)|O(n)|O(1)|Medium|
+|30|[Substring with Concatenation of All Words](030.Substring with Concatenation of All Words)|O(kn)|O(kl)|Hard|
+|31|[Next Permutation](031.Next Permutation)|O(n)|O(1)|Medium|
+|32|[Longest Valid Parentheses](032.Longest Valid Parentheses)|O(n)|O(n)|Hard|
+|33|[Search in Rotated Sorted Array](033.Search in Rotated Sorted Array)|O(logn)|O(1)|Hard|
+|34|[Search for a Range](034.Search for a Range)|O(logn)|O(1)|Medium|
+|35|[Search Insert Position](035.Search Insert Position)|O(logn)|O(1)|Medium|

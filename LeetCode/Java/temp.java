@@ -12,29 +12,34 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int firstMissingPositive(int[] nums) {
-    if (nums == null || nums.length == 0) {
-      return 0;
+  public String multiply(String num1, String num2) {
+    if(num1 == null || num2 == null || num1.length() == 0 || num2.length() == 0 || num1 == "0" || num2 == "0") {
+      return "0";
     }
-
-    int i = 0;
-    while (i < nums.length) {
-      while (nums[i] != i && i > 0 && i < nums.length && nums[i] > 0 && nums[i] < nums.length) {
-        int temp = nums[nums[i]];
-        nums[nums[i]] = nums[i];
-        nums[i] = temp;
+    StringBuilder sb = new StringBuilder();
+    int n = num1.length() + num2.length() - 2;;
+    int carry = 0;
+    int sum;
+    for (int i = n; i >= 0; i--) {
+      sum = carry;
+      for(int i1 = 0; i1 < num1.length(); i1++) {
+        int i2 = i - i1;
+        if (i2 >= 0 && i2 < num2.length()) {
+          sum += Character.getNumericValue(num1.charAt(i1)) * Character.getNumericValue(num2.charAt(i2));
+        }
       }
-      i++;
+      carry = sum / 10;
+      sum %= 10;
+      sb.insert(0, sum);
     }
-
-    for (i = 1; i < nums.length; i++) {
-      if (nums[i] != i) {
-        return i;
-      }
+    while (carry != 0) {
+      sum = carry % 10;
+      carry /= 10;
+      sb.insert(0, sum);
     }
-    return nums.length;
-
+    return sb.toString();
   }
+
 
 
 
@@ -68,7 +73,7 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {3, 4, -1, 1};
+    int[] A = {0,1,0,2,1,0,1,3,2,1,2,1};
     int a = Integer.MIN_VALUE;
     int b = -2;
     b = b >>> 1;
@@ -84,7 +89,7 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    System.out.println(new temp().firstMissingPositive(A));
+    System.out.println(new temp().multiply("9133", "0"));
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
     System.out.println();

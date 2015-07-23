@@ -47,3 +47,4 @@ LeetCode Solution
 |41|[First Missing Positive](041.First Missing Positive)|O(n)|O(1)|Medium|
 |42|[Trapping Rain Water](042.Trapping Rain Water)|O(n)|O(n)|Hard|
 |43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
+|44|[Wildcard Matching](044.Wildcard Matching)|O(n^2)|O(n^2)|Hard|

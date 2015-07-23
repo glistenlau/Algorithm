@@ -12,43 +12,26 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String multiply(String num1, String num2) {
-    if(num1 == null || num2 == null || num1.length() == 0 || num2.length() == 0 || num1 == "0" || num2 == "0") {
-      return "0";
+  public boolean isMatch(String s, String p) {
+    boolean[][] isMatch = new boolean[p.length() + 1][s.length() + 1];
+
+    isMatch[0][0] = true;
+    for (int i = 1; i <= p.length(); i++) {
+      isMatch[i][0] = isMatch[i - 1][0] && p.charAt(i - 1) == '*';
     }
-    StringBuilder sb = new StringBuilder();
-    int n = num1.length() + num2.length() - 2;;
-    int carry = 0;
-    int sum;
-    for (int i = n; i >= 0; i--) {
-      sum = carry;
-      for(int i1 = 0; i1 < num1.length(); i1++) {
-        int i2 = i - i1;
-        if (i2 >= 0 && i2 < num2.length()) {
-          sum += Character.getNumericValue(num1.charAt(i1)) * Character.getNumericValue(num2.charAt(i2));
+
+    for (int i = 1; i <= p.length(); i++) {
+      for (int j = 1; j <= s.length(); j++) {
+        if (p.charAt(i - 1) != '*') {
+          isMatch[i][j] = isMatch[i - 1][j - 1] && (p.charAt(i - 1) == s.charAt(j - 1) || p.charAt(i - 1) == '?');
+        } else {
+          isMatch[i][j] = isMatch[i - 1][j] || isMatch[i][j - 1];
         }
       }
-      carry = sum / 10;
-      sum %= 10;
-      sb.insert(0, sum);
     }
-    while (carry != 0) {
-      sum = carry % 10;
-      carry /= 10;
-      sb.insert(0, sum);
-    }
-    return sb.toString();
+
+    return isMatch[p.length()][s.length()];
   }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -89,7 +72,14 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    System.out.println(new temp().multiply("9133", "0"));
+    System.out.println(new temp().isMatch("aa","a"));
+    System.out.println(new temp().isMatch("aa","aa"));
+    System.out.println(new temp().isMatch("aaa","aa"));
+    System.out.println(new temp().isMatch("aa","*"));
+    System.out.println(new temp().isMatch("aa","a*"));
+    System.out.println(new temp().isMatch("aa","?*"));
+    System.out.println(new temp().isMatch("aab","c*a*b"));
+
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
     System.out.println();

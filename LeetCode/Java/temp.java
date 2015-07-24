@@ -12,31 +12,23 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<List<Integer>> permute(int[] nums) {
-    LinkedList<List<Integer>> result = new LinkedList<List<Integer>>();
-    if (nums == null || nums.length == 0) {
-      return result;
+  public void rotate(int[][] matrix) {
+    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+      return;
     }
 
-    result.add(new ArrayList<Integer>());
+    int length = matrix.length;
 
-    for (int n: nums) {
-
-      int size = result.size();
-      for (int i = 0; i < size; i++) {
-
-        List<Integer> curt = result.pollFirst();
-        for (int j = 0; j <= curt.size(); j++) {
-          List<Integer> temp = new ArrayList<Integer>(curt);
-          temp.add(j, n);
-          result.add(temp);
-        }
+    for (int i = 0; i < length / 2; i++) {
+      for (int j = 0; j < (length + 1) / 2; j++){
+        int tmp = matrix[i][j];
+        matrix[i][j] = matrix[length - j - 1][i];
+        matrix[length -j - 1][i] = matrix[length - i - 1][length - j - 1];
+        matrix[length - i - 1][length - j - 1] = matrix[j][length - i - 1];
+        matrix[j][length - i - 1] = tmp;
       }
     }
-
-    return result;
   }
-
 
 
 
@@ -61,7 +53,8 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {1, 2, 3};
+    int[] A = {3,3,0,0,2,3,2};
+    int[][] matrix1 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
 
     Queue<Set<String>> myQueue = new LinkedList<>();
     myQueue.add(dict);
@@ -74,7 +67,8 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    System.out.println(new temp().permute(A));
+    new temp().rotate(matrix1);
+//    System.out.println(new temp().rotate(matrix1));
 
 
     List<Integer> a1 = new ArrayList<>(B);

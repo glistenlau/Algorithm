@@ -12,22 +12,41 @@ import java.util.*;
  * }
  */
 public class temp {
-  public void rotate(int[][] matrix) {
-    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-      return;
+  public List<String> anagrams(String[] strs) {
+    List<String> result = new ArrayList<String>();
+    if (strs == null || strs.length == 0) {
+      return result;
     }
 
-    int length = matrix.length;
+    HashMap<Integer, List<String>> myMap = new HashMap<Integer, List<String>>();
 
-    for (int i = 0; i < length / 2; i++) {
-      for (int j = 0; j < (length + 1) / 2; j++){
-        int tmp = matrix[i][j];
-        matrix[i][j] = matrix[length - j - 1][i];
-        matrix[length -j - 1][i] = matrix[length - i - 1][length - j - 1];
-        matrix[length - i - 1][length - j - 1] = matrix[j][length - i - 1];
-        matrix[j][length - i - 1] = tmp;
+    for (String str: strs) {
+      int[] counts = new int[26];
+      for (int i = 0 ; i < str.length(); i++) {
+        counts[str.charAt(i) - 'a']++;
+      }
+      int hash = getHash(counts);
+      if (!myMap.containsKey(hash)) {
+        myMap.put(hash, new ArrayList<String>());
+      }
+      myMap.get(hash).add(str);
+    }
+
+    for (List<String> ana: myMap.values()) {
+      if (ana.size() > 1) {
+        result.addAll(ana);
       }
     }
+    return result;
+  }
+
+  private int getHash(int[] counts) {
+    int a = 31;
+    int hash = 0;
+    for (int count: counts) {
+      hash = hash * a + count;
+    }
+    return hash;
   }
 
 
@@ -67,7 +86,7 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    new temp().rotate(matrix1);
+    new temp().anagrams(temp);
 //    System.out.println(new temp().rotate(matrix1));
 
 

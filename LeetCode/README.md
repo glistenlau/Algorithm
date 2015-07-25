@@ -49,8 +49,8 @@ LeetCode Solution
 |43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
 |44|[Wildcard Matching](044.Wildcard Matching)|O(n^2)|O(n^2)|Hard|
 |45|[Jump Game II](045.Jump Game II)|O(n)|O(1)|Hard|
-|46|[Permutations](046.Permutations)|O(n^n)|O(n)|Medium|
-|47|[Permutations II](047.Permutations II)|O(n!)|O(n)|Hard|
+|46|[Permutations](046.Permutations)|O(n * n!)|O(n)|Medium|
+|47|[Permutations II](047.Permutations II)|O(n * n!)|O(n)|Hard|
 |48|[Rotate Image](048.Rotate Image)|O(n)|O(1)|Medium|
 |49|[Anagrams](049.Anagrams)|O(kn)|O(n)|Medium|
-|50|[Pow(x, n)](050.Pow(x, n))|O(logn)|O(logn)|Medium|
+|50|[Pow(x, n)](050.Pow(x, n))|O(logn)|O(1)|Medium|

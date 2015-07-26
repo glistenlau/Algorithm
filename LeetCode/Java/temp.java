@@ -12,41 +12,28 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<String> anagrams(String[] strs) {
-    List<String> result = new ArrayList<String>();
-    if (strs == null || strs.length == 0) {
-      return result;
+  public int maxSubArray(int[] nums) {
+    if (nums == null || nums.length == 0) {
+      return 0;
     }
 
-    HashMap<Integer, List<String>> myMap = new HashMap<Integer, List<String>>();
+    int[] sums = new int[nums.length];
 
-    for (String str: strs) {
-      int[] counts = new int[26];
-      for (int i = 0 ; i < str.length(); i++) {
-        counts[str.charAt(i) - 'a']++;
-      }
-      int hash = getHash(counts);
-      if (!myMap.containsKey(hash)) {
-        myMap.put(hash, new ArrayList<String>());
-      }
-      myMap.get(hash).add(str);
+    sums[0] = nums[0];
+
+    for (int i = 1; i < nums.length; i++) {
+      sums[i] = sums[i - 1] + nums[i];
     }
 
-    for (List<String> ana: myMap.values()) {
-      if (ana.size() > 1) {
-        result.addAll(ana);
-      }
-    }
-    return result;
-  }
+    int min = Integer.MAX_VALUE;
+    int max = Integer.MIN_VALUE;
 
-  private int getHash(int[] counts) {
-    int a = 31;
-    int hash = 0;
-    for (int count: counts) {
-      hash = hash * a + count;
+    for (int i = 0; i < sums.length; i++) {
+      min = Math.min(min, sums[i]);
+      max = Math.max(max, sums[i]);
     }
-    return hash;
+
+    return max - min;
   }
 
 
@@ -86,8 +73,7 @@ public class temp {
     ListNode head = new ListNode(1);
     boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    new temp().anagrams(temp);
-//    System.out.println(new temp().rotate(matrix1));
+    System.out.println(new temp().totalNQueens(4));
 
 
     List<Integer> a1 = new ArrayList<>(B);

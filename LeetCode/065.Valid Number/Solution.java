@@ -3,99 +3,50 @@ public class Solution {
     if (s == null || s.length() == 0) {
       return false;
     }
+    int n = s.length();
+    int left = 0;
+    int right = n - 1;
 
-    int i = 0;
-
-    while(i < s.length() && s.charAt(i) == ' ') {
-      i++;
+    while(left < right && s.charAt(left) == ' ') {
+      left++;
+    }
+    while(left < right && s.charAt(right) == ' ') {
+      right--;
     }
 
-    validType check = checkValid(s, i, false);
-
-    if (check.isValid) {
-      i = check.index;
-    } else {
-      return false;
+    if(s.charAt(left) == '+' || s.charAt(left) == '-') {
+      left++;
     }
 
-    if (i < s.length() && s.charAt(i) == 'e') {
-      i++;
-      check = checkValid(s, i, false);
+    boolean num = false;
+    boolean dot = false;
+    boolean exp = false;
 
-      if (check.isValid && !check.dot) {
-        i = check.index;
+    for (int i = left; i <= right; i++) {
+      char c = s.charAt(i);
+      if (Character.isDigit(c)) {
+        num = true;
+      } else if (c == '.') {
+        if (exp || dot) {
+          return false;
+        } else {
+          dot = true;
+        }
+      } else if (c == 'e') {
+        if (!num || exp) {
+          return false;
+        }
+        num = false;
+        exp = true;
+      } else if (c == '+' || c == '-') {
+        if (num || s.charAt(i - 1) != 'e') {
+          return false;
+        }
       } else {
         return false;
       }
-
     }
 
-    while(i < s.length() && s.charAt(i) == ' ') {
-      i++;
-    }
-
-    return i == s.length();
-  }
-
-  private validType checkValid(String s, int i, boolean dot) {
-    boolean sym = false;
-
-    while (i < s.length() && !Character.isDigit(s.charAt(i))) {
-      char c = s.charAt(i);
-
-      if (c == '+' || c == '-' || c == '.') {
-        if (c == '+' || c == '-') {
-          if (sym || dot) {
-            return new validType(false, dot, i);
-          } else {
-            sym = true;
-          }
-        }
-        if (c == '.') {
-          if (dot) {
-            return new validType(false, dot, i);
-          }
-          dot = true;
-        }
-        i++;
-      } else {
-        return new validType(false, dot, i);
-      }
-
-    }
-
-    if (i == s.length() || !Character.isDigit(s.charAt(i))) {
-      return new validType(false, dot, i);
-    }
-
-    while (i < s.length() && Character.isDigit(s.charAt(i))) {
-      i++;
-    }
-
-    if (i < s.length() && s.charAt(i) == '.') {
-      if (dot) {
-        return new validType(false, dot, i);
-      } else {
-        i++;
-        dot = true;
-        while (i < s.length() && Character.isDigit(s.charAt(i))) {
-          i++;
-        }
-      }
-    }
-
-    return new validType(true, dot, i);
-  }
-
-  private class validType {
-    boolean isValid;
-    boolean dot;
-    int index;
-
-    public validType(boolean isValid, boolean dot, int index) {
-      this.isValid = isValid;
-      this.dot = dot;
-      this.index = index;
-    }
+    return num;
   }
 }

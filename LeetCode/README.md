@@ -54,3 +54,13 @@ LeetCode Solution
 |48|[Rotate Image](048.Rotate Image)|O(n)|O(1)|Medium|
 |49|[Anagrams](049.Anagrams)|O(kn)|O(n)|Medium|
 |50|[Pow(x, n)](050.Pow(x, n))|O(logn)|O(1)|Medium|
+|51|[N-Queens](051.N-Queens)|O(n!)|O(n)|Hard|
+|52|[N-Queens II](052.N-Queens II)|O(n!)|O(n)|Hard|
+|53|[Maximum Subarray](053.Maximum Subarray)|O(n)|O(1)|Medium|
+|54|[Spiral Matrix](054.Spiral Matrix)|O(mn)|O(1)|Medium|
+|55|[Jump Game](055.Jump Game)|O(n)|O(1)|Medium|
+|56|[Merge Intervals](056.Merge Intervals)|O(nlogn)|O(n)|Hard|
+|57|[Insert Interval](057.Insert Interval)|O(n)|O(n)|Hard|
+|58|[Length of Last Word](058.Length of Last Word)|O(n)|O(1)|Easy|
+|59|[Spiral Matrix II](059.Spiral Matrix II)|O(n^2)|O(n)|Medium|
+|60|[Permutation Sequence](060.Permutation Sequence)|O(n)|O(n)|Medium|

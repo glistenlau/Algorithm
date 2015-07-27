@@ -31,7 +31,7 @@ LeetCode Solution
 |25|[Reverse Nodes in k-Group](025.Reverse Nodes in k-Group/)|O(n)|O(1)|Hard|
 |26|[Remove Duplicates from Sorted Array](026.Remove Duplicates from Sorted Array/)|O(n)|O(1)|Easy|
 |27|[Remove Element](027.Remove Element/)|O(n)|O(1)|Easy|
-|28|[Implement strStr()](028.Implemet strStr()/)|Sol.1:O(mn),  Sol.2:O(m + n)|Sol.1:O(1),  Sol.2:O(m)|Easy|
+|28|[Implement strStr()](028.Implemet strStr()/)|Sol.1:O(mn)<br>Sol.2:O(m + n)|Sol.1:O(1)<br>Sol.2:O(m)|Easy|
 |29|[Divide Two Integers](029.Divide Two Integers/)|O(n)|O(1)|Medium|
 |30|[Substring with Concatenation of All Words](030.Substring with Concatenation of All Words/)|O(kn)|O(kl)|Hard|
 |31|[Next Permutation](031.Next Permutation/)|O(n)|O(1)|Medium|

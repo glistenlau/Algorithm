@@ -12,32 +12,41 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
-    List<Interval> result = new ArrayList<Interval>();
-    if (intervals == null || intervals.size() == 0) {
-      result.add(newInterval);
-      return result;
+  private int getLength(ListNode head) {
+    int length = 0;
+    while (head != null) {
+      length ++;
+      head = head.next;
+    }
+    return length;
+  }
+
+  public ListNode rotateRight(ListNode head, int n) {
+    if (head == null) {
+      return null;
     }
 
-    boolean inserted = false;
-    for (Interval iv: intervals) {
-      if (!inserted) {
-        if ( iv.end < newInterval.start) {
-          result.add(iv);
-        } else if (newInterval.end < iv.start) {
-          result.add(newInterval);
-          result.add(iv);
-          inserted = true;
-        } else {
-          newInterval.start = Math.min(newInterval.start, iv.start);
-          newInterval.end = Math.max(newInterval.end, iv.end);
-        }
-      }
-      else {
-        result.add(iv);
-      }
+    int length = getLength(head);
+    n = n % length;
+
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    head = dummy;
+
+    ListNode tail = dummy;
+    for (int i = 0; i < n; i++) {
+      head = head.next;
     }
-    return result;
+
+    while (head.next != null) {
+      tail = tail.next;
+      head = head.next;
+    }
+
+    head.next = dummy.next;
+    dummy.next = tail.next;
+    tail.next = null;
+    return dummy.next;
   }
 
 
@@ -45,7 +54,7 @@ public class temp {
 
 
   public static void main(String[] args) {
-String[] temp = {"dissenter","residents","overturns","turnovers"};
+    String[] temp = {"dissenter","residents","overturns","turnovers"};
     Set<String> dict = new HashSet<String>();
     dict.add("hot");
     dict.add("cog");
@@ -82,9 +91,12 @@ String[] temp = {"dissenter","residents","overturns","turnovers"};
       B.add(n);
     }
     ListNode head = new ListNode(1);
-    boolean check = dict.contains("hot");
     head.next = new ListNode(2);
-    System.out.println(new temp().insert(test, new Interval(4, 9)));
+    head.next.next = new ListNode(3);
+    head.next.next.next = new ListNode(4);
+    head.next.next.next.next = new ListNode(5);
+    boolean check = dict.contains("hot");
+    System.out.println(new temp().rotateRight(head, 0));
 
 
     List<Integer> a1 = new ArrayList<>(B);

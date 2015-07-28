@@ -46,7 +46,7 @@ LeetCode Solution
 |40|[Combination Sum II](040.Combination Sum II)|O(n!)|O(n)|Medium|
 |41|[First Missing Positive](041.First Missing Positive)|O(n)|O(1)|Medium|
 |42|[Trapping Rain Water](042.Trapping Rain Water)|O(n)|O(n)|Hard|
-(|43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
+|43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
 |44|[Wildcard Matching](044.Wildcard Matching)|O(n^2)|O(n^2)|Hard|
 |45|[Jump Game II](045.Jump Game II)|O(n)|O(1)|Hard|
 |46|[Permutations](046.Permutations)|O(n * n!)|O(n)|Medium|

@@ -31,7 +31,7 @@ LeetCode Solution
 |25|[Reverse Nodes in k-Group](025.Reverse Nodes in k-Group/)|O(n)|O(1)|Hard|
 |26|[Remove Duplicates from Sorted Array](026.Remove Duplicates from Sorted Array/)|O(n)|O(1)|Easy|
 |27|[Remove Element](027.Remove Element/)|O(n)|O(1)|Easy|
-|28|[Implement strStr()](028.Implemet strStr()/)|Sol.1:O(mn)<br>Sol.2:O(m + n)|Sol.1:O(1)<br>Sol.2:O(m)|Easy|
+|28|[Implement strStr()](028.Implemet strStr()/)|Sol.1: O(mn)<br>Sol.2: O(m + n)|Sol.1: O(1)<br>Sol.2: O(m)|Easy|
 |29|[Divide Two Integers](029.Divide Two Integers/)|O(n)|O(1)|Medium|
 |30|[Substring with Concatenation of All Words](030.Substring with Concatenation of All Words/)|O(kn)|O(kl)|Hard|
 |31|[Next Permutation](031.Next Permutation/)|O(n)|O(1)|Medium|
@@ -46,7 +46,7 @@ LeetCode Solution
 |40|[Combination Sum II](040.Combination Sum II)|O(n!)|O(n)|Medium|
 |41|[First Missing Positive](041.First Missing Positive)|O(n)|O(1)|Medium|
 |42|[Trapping Rain Water](042.Trapping Rain Water)|O(n)|O(n)|Hard|
-|43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
+(|43|[Multiply Strings](043.Multiply Strings)|O(n^2)|O(1)|Medium|
 |44|[Wildcard Matching](044.Wildcard Matching)|O(n^2)|O(n^2)|Hard|
 |45|[Jump Game II](045.Jump Game II)|O(n)|O(1)|Hard|
 |46|[Permutations](046.Permutations)|O(n * n!)|O(n)|Medium|
@@ -57,10 +57,20 @@ LeetCode Solution
 |51|[N-Queens](051.N-Queens)|O(n!)|O(n)|Hard|
 |52|[N-Queens II](052.N-Queens II)|O(n!)|O(n)|Hard|
 |53|[Maximum Subarray](053.Maximum Subarray)|O(n)|O(1)|Medium|
-|54|[Spiral Matrix](054.Spiral Matrix)|O(mn)|O(mn)|Medium|
+|54|[Spiral Matrix](054.Spiral Matrix)|O(mn)|O(1)|Medium|
 |55|[Jump Game](055.Jump Game)|O(n)|O(1)|Medium|
 |56|[Merge Intervals](056.Merge Intervals)|O(nlogn)|O(n)|Hard|
 |57|[Insert Interval](057.Insert Interval)|O(n)|O(n)|Hard|
 |58|[Length of Last Word](058.Length of Last Word)|O(n)|O(1)|Easy|
-|59|[Spiral Matrix II](059.Spiral Matrix II)|O(n^2)|O(n^2)|Medium|
+|59|[Spiral Matrix II](059.Spiral Matrix II)|O(n^2)|O(1)|Medium|
 |60|[Permutation Sequence](060.Permutation Sequence)|O(n)|O(n)|Medium|
+|61|[Rotate List](061.Rotate List)|O(n)|O(1)|Medium|
+|62|[Unique Paths](062.Unique Paths)|O(mn)|O(mn)|Medium|
+|63|[Unique Paths II](063.Unique Paths II)|O(mn)|O(mn)|Medium|
+|64|[Minimum Path Sum](064.Minimum Path Sum)|O(mn)|O(mn)|Medium|
+|65|[Valid Number](065.Valid Number)|O(n)|O(1)|Hard|
+|66|[Plus One](066.Plus One)|O(n)|O(1)|Easy|
+|67|[Add Binary](067.Add Binary)|O(m + n)|O(1)|Easy|
+|68|[Text Justification](068.Text Justification)|O(n)|O(n)|Hard|
+|69|[Sqrt(x)](069.Sqrt(x))|O(logx)|O(1)|Medium|
+|70|[Climbing Stairs](070.Climbing Stairs)|O(n)|O(1)|Easy|

@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Definition for ListNode.
  * public class ListNode {
- *     int val;
+ *     int val
  *     ListNode next;
  *     ListNode(int val) {
  *         this.val = val;
@@ -12,88 +12,26 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isNumber(String s) {
-    if (s == null || s.length() == 0) {
-      return false;
+  public int mySqrt(int x) {
+    int left = 1;
+    int right = x;
+    while (left + 1 < right) {
+      int mid = left + (right - left) / 2;
+      double square = (double)mid * mid;
+      if (square == x) {
+        return mid;
+      } else if (square < x) {
+        left = mid;
+      } else {
+        right = mid;
+      }
     }
-    int i = 0;
-    while(i < s.length() && s.charAt(i) == ' ') {
-      i++;
-    }
-    validType check = checkValid(s, i, false);
-    if (check.isValid) {
-      i = check.index;
+    if ((double)right * right <= x) {
+      return right;
     } else {
-      return false;
+      return left;
     }
 
-    if (i < s.length() && s.charAt(i) == 'e') {
-      i++;
-      check = checkValid(s, i, false);
-      if (check.isValid && !check.dot) {
-        i = check.index;
-      } else {
-        return false;
-      }
-    }
-    while(i < s.length() && s.charAt(i) == ' ') {
-      i++;
-    }
-    return i == s.length();
-  }
-
-  private validType checkValid(String s, int i, boolean dot) {
-    boolean sym = false;
-    while (i < s.length() && !Character.isDigit(s.charAt(i))) {
-      char c = s.charAt(i);
-      if (c == '+' || c == '-' || c == '.') {
-        if (c == '+' || c == '-') {
-          if (sym || dot) {
-            return new validType(false, dot, i);
-          } else {
-            sym = true;
-          }
-        }
-        if (c == '.') {
-          if (dot) {
-            return new validType(false, dot, i);
-          }
-          dot = true;
-        }
-        i++;
-      } else {
-        return new validType(false, dot, i);
-      }
-    }
-    if (i == s.length() || !Character.isDigit(s.charAt(i))) {
-      return new validType(false, dot, i);
-    }
-    while (i < s.length() && Character.isDigit(s.charAt(i))) {
-      i++;
-    }
-    if (i < s.length() && s.charAt(i) == '.') {
-      if (dot) {
-        return new validType(false, dot, i);
-      } else {
-        i++;
-        dot = true;
-        while (i < s.length() && Character.isDigit(s.charAt(i))) {
-          i++;
-        }
-      }
-    }
-    return new validType(true, dot, i);
-  }
-
-  private class validType {
-    boolean isValid;
-    boolean dot;
-    int index;
-    public validType(boolean isValid, boolean dot, int index) {
-      this.isValid = isValid;
-      this.dot = dot;
-      this.index = index;
-    }
   }
 
 
@@ -144,7 +82,8 @@ public class temp {
     head.next.next.next = new ListNode(4);
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
-System.out.println(new temp().isNumber("    +6.3e6.3    "));
+    String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+    System.out.println(new temp().mySqrt(Integer.MAX_VALUE));
 
 
     List<Integer> a1 = new ArrayList<>(B);

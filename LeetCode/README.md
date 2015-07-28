@@ -74,3 +74,8 @@ LeetCode Solution
 |68|[Text Justification](068.Text Justification)|O(n)|O(n)|Hard|
 |69|[Sqrt(x)](069.Sqrt(x))|O(logx)|O(1)|Medium|
 |70|[Climbing Stairs](070.Climbing Stairs)|O(n)|O(1)|Easy|
+|71|[Simplify Path](071.Simplify Path)|O(n)|O(n)|Medium|
+|72|[Edit Distance](072.Edit Distance)|O(mn)|O(mn)|Hard|
+|73|[Set Matrix Zeroes](073.Set Matrix Zeroes)|O(n)|O(1)|Medium|
+|74|[Search a 2D Matrix](074.Search a 2D Matrix)|O(logn)|O(1)|Medium|
+|75|[Sort Colors](075.Sort Colors)|O(n)|O(1)|Medium|

@@ -12,32 +12,44 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int removeDuplicates(int[] nums) {
-    if (nums == null || nums.length < 3) {
-      return nums.length;
+  public int maximalRectangle(char[][] matrix) {
+    if (matrix == null || matrix.length == 0) {
+      return 0;
     }
 
-    int r = 2;
-    int pre = nums[1];
-    int prePre = nums[0];
-    for (int i = 2; i < nums.length; i++) {
-      if (nums[i] == pre && nums[i] == prePre) {
-        continue;
+    int maxArea = 0;
+    int[] histogram = new int[matrix[0].length];
+
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[0].length; j++) {
+        if (matrix[i][j] == '0') {
+          histogram[j] = 0;
+        } else {
+          histogram[j] = histogram[j] + 1;
+        }
       }
-      if (r != i) {
-        nums[r] = nums[i];
-      }
-      prePre = pre;
-      pre = nums[i];
-      r++;
+
+      maxArea = Math.max(maxArea, maxHistogram(histogram));
     }
-    return r;
+
+    return maxArea;
   }
 
+  private int maxHistogram(int[] height) {
+    int maxArea = 0;
+    Stack<Integer> myStack = new Stack<Integer>();
 
-
-
-
+    for (int i = 0; i <= height.length; i++) {
+      int aft = i == height.length? Integer.MIN_VALUE: height[i];
+      while (!myStack.isEmpty() && aft < height[myStack.peek()]) {
+        int h = height[myStack.pop()];
+        int w = myStack.isEmpty()? i: i - myStack.peek() - 1;
+        maxArea = Math.max(maxArea, h * w);
+      }
+      myStack.push(i);
+    }
+    return maxArea;
+  }
 
 
 
@@ -61,7 +73,7 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {1, 2, 2, 2};
+    int[] A = {1, 1, 1, 1, 1, 1, 1};
     int[][] matrix1 = {{0, 0, 0, 5}, {4, 3, 1, 4}, {0, 1, 1, 4}, {1, 2, 1, 3}, {0, 0, 1, 1}};
 
     List<Interval> test = new ArrayList<>();
@@ -79,13 +91,13 @@ public class temp {
       B.add(n);
     }
     ListNode head = new ListNode(1);
-    head.next = new ListNode(2);
-    head.next.next = new ListNode(3);
+    head.next = new ListNode(1);
+    head.next.next = new ListNode(1);
     head.next.next.next = new ListNode(4);
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-    new temp().removeDuplicates(A);
+    System.out.println(new temp().deleteDuplicates(head));
 
 
     List<Integer> a1 = new ArrayList<>(B);

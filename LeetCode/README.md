@@ -84,3 +84,9 @@ LeetCode Solution
 |78|[Subsets](078.Subsets)|O(2^n)|O(n)|Medium|
 |79|[Word Search](079.Word Search)|O(n^2)|O(n)|Medium|
 |80|[Remove Duplicates from Sorted Array II](080.Remove Duplicates from Sorted Array II)|O(n)|O(1)|Medium|
+|81|[Search in Rotated Sorted Array II](081.Search in Rotated Sorted Array II)|O(n)|O(1)|Medium|
+|82|[Remove Duplicates from Sorted List II](082.Remove Duplicates from Sorted List II)|O(n)|O(1)|Medium|
+|83|[Remove Duplicates from Sorted List](083.Remove Duplicates from Sorted List)|O(n)|O(1)|Easy|
+|84|[Largest Rectangle in Histogram](084.Largest Rectangle in Histogram)|O(n)|O(n)|Hard|
+|85|[Maximal Rectangle](085.Maximal Rectangle)|Sol.1:O(mn)^2<br>Sol.2:O(mn^2)|Sol.1:O(1)<br>Sol.2:O(n)|Hard|
+

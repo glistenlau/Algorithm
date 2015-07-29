@@ -88,5 +88,5 @@ LeetCode Solution
 |82|[Remove Duplicates from Sorted List II](082.Remove Duplicates from Sorted List II)|O(n)|O(1)|Medium|
 |83|[Remove Duplicates from Sorted List](083.Remove Duplicates from Sorted List)|O(n)|O(1)|Easy|
 |84|[Largest Rectangle in Histogram](084.Largest Rectangle in Histogram)|O(n)|O(n)|Hard|
-|85|[Maximal Rectangle](085.Maximal Rectangle)|Sol.1:O(mn)^2<br>Sol.2:O(mn^2)|Sol.1:O(1)<br>Sol.2:O(n)|Hard|
+|85|[Maximal Rectangle](085.Maximal Rectangle)|Sol.1:O((mn)^2)<br>Sol.2:O(mn^2)|Sol.1:O(1)<br>Sol.2:O(n)|Hard|
 

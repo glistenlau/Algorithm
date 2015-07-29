@@ -79,3 +79,8 @@ LeetCode Solution
 |73|[Set Matrix Zeroes](073.Set Matrix Zeroes)|O(n)|O(1)|Medium|
 |74|[Search a 2D Matrix](074.Search a 2D Matrix)|O(logn)|O(1)|Medium|
 |75|[Sort Colors](075.Sort Colors)|O(n)|O(1)|Medium|
+|76|[Minimum Window Substring](076.Minimum Window Substring)|O(n)|O(n)|Hard|
+|77|[Combinations](077.Combinations)|O(2^n)|O(k)|Medium|
+|78|[Subsets](078.Subsets)|O(2^n)|O(n)|Medium|
+|79|[Word Search](079.Word Search)|O(n^2)|O(n)|Medium|
+|80|[Remove Duplicates from Sorted Array II](080.Remove Duplicates from Sorted Array II)|O(n)|O(1)|Medium|

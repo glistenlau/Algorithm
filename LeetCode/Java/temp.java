@@ -12,61 +12,29 @@ import java.util.*;
  * }
  */
 public class temp {
-  public void setZeroes(int[][] matrix) {
-    if (matrix == null || matrix.length == 0) {
-      return;
+  public int removeDuplicates(int[] nums) {
+    if (nums == null || nums.length < 3) {
+      return nums.length;
     }
-    boolean[] row = new boolean[matrix.length];
-    boolean[] col = new boolean[matrix[0].length];
 
-    for (int i = 0; i < matrix.length; i++) {
-      if (row[i]) {
+    int r = 2;
+    int pre = nums[1];
+    int prePre = nums[0];
+    for (int i = 2; i < nums.length; i++) {
+      if (nums[i] == pre && nums[i] == prePre) {
         continue;
       }
-      for (int j = 0; j < matrix[0].length; j++) {
-        if (col[j]) {
-          continue;
-        }
-        if (matrix[i][j] == 0) {
-          row[i] = true;
-          col[j] = true;
-          zeroRow(matrix, i, row, col);
-          zeroCol(matrix, j, row, col);
-          break;
-        }
+      if (r != i) {
+        nums[r] = nums[i];
       }
+      prePre = pre;
+      pre = nums[i];
+      r++;
     }
+    return r;
   }
 
-  private void zeroCol(int[][] matrix, int col, boolean[] setRow, boolean[] setCol) {
-    for (int i = 0; i < matrix.length; i++) {
-      if (setRow[i]) {
-        continue;
-      }
-      if(matrix[i][col] == 0) {
-        setRow[i] = true;
-        zeroRow(matrix, i, setRow, setCol);
-      }
-    }
-    for (int i = 0; i < matrix.length; i++) {
-      matrix[i][col] = 0;
-    }
-  }
 
-  private void zeroRow(int[][] matrix, int row, boolean[] setRow, boolean[] setCol) {
-    for (int j = 0; j < matrix[row].length; j++) {
-      if (setCol[j]) {
-        continue;
-      }
-      if (matrix[row][j] == 0) {
-        setCol[j] = true;
-        zeroCol(matrix, j, setRow, setCol);
-      }
-    }
-    for (int j = 0; j < matrix[row].length; j++) {
-      matrix[row][j] = 0;
-    }
-  }
 
 
 
@@ -93,7 +61,7 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {3,3,0,0,2,3,2};
+    int[] A = {1, 2, 2, 2};
     int[][] matrix1 = {{0, 0, 0, 5}, {4, 3, 1, 4}, {0, 1, 1, 4}, {1, 2, 1, 3}, {0, 0, 1, 1}};
 
     List<Interval> test = new ArrayList<>();
@@ -117,7 +85,7 @@ public class temp {
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-    new temp().setZeroes(matrix1);
+    new temp().removeDuplicates(A);
 
 
     List<Integer> a1 = new ArrayList<>(B);

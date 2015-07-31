@@ -89,4 +89,15 @@ LeetCode Solution
 |83|[Remove Duplicates from Sorted List](083.Remove Duplicates from Sorted List)|O(n)|O(1)|Easy|
 |84|[Largest Rectangle in Histogram](084.Largest Rectangle in Histogram)|O(n)|O(n)|Hard|
 |85|[Maximal Rectangle](085.Maximal Rectangle)|Sol.1:O((mn)^2)<br>Sol.2:O(mn^2)|Sol.1:O(1)<br>Sol.2:O(n)|Hard|
+|86|[Partition List](086.Partition List)|O(n)|O(1)|Medium|
+|87|[Scramble String](087.Scramble String)|O(2^n)|O(n^2)|Hard|
+|88|[Merge Sorted Array](088.Merge Sorted Array)|O(n + m)|O(1)|Easy|
+|89|[Gray Code](089.Gray Code)|O(2^n)|O(1)|Medium|
+|90|[Subsets II](090.Subsets II)|O(2^n)|O(n)|Medium|
+|91|[Decode Ways](091.Decode Ways)|O(n)|O(1)|Medium|
+|92|[Reverse Linked List II](092.Reverse Linked List II)|O(n)|O(1)|Medium|
+|93|[Restore IP Addresses](093.Restore IP Addresses)|O(81)|O(1)|Medium|
+|94|[Binary Tree Inorder Traversal](094.Binary Tree Inorder Traversal)|O(n)|O(n)|Medium|
+|95|[Unique Binary Search Trees II](095.Unique Binary Seach Trees II)|O(n^2)|O(n)|Medium|
+|96|[Unique Binary Search Trees](096.Unique Binary Search Trees)|O(n^2)|O(n)|Medium
 

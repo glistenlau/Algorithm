@@ -12,44 +12,17 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int maximalRectangle(char[][] matrix) {
-    if (matrix == null || matrix.length == 0) {
-      return 0;
-    }
-
-    int maxArea = 0;
-    int[] histogram = new int[matrix[0].length];
-
-    for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[0].length; j++) {
-        if (matrix[i][j] == '0') {
-          histogram[j] = 0;
-        } else {
-          histogram[j] = histogram[j] + 1;
-        }
+  public int numTrees(int n) {
+    int[] trees = new int[n + 1];
+    trees[0] = 1;
+    for (int i = 1; i <= n; i++) {
+      for (int j = 0; j <= i - 1; j++) {
+        trees[i] += trees[j] * trees[i - 1 - j];
       }
-
-      maxArea = Math.max(maxArea, maxHistogram(histogram));
     }
-
-    return maxArea;
+    return trees[n];
   }
 
-  private int maxHistogram(int[] height) {
-    int maxArea = 0;
-    Stack<Integer> myStack = new Stack<Integer>();
-
-    for (int i = 0; i <= height.length; i++) {
-      int aft = i == height.length? Integer.MIN_VALUE: height[i];
-      while (!myStack.isEmpty() && aft < height[myStack.peek()]) {
-        int h = height[myStack.pop()];
-        int w = myStack.isEmpty()? i: i - myStack.peek() - 1;
-        maxArea = Math.max(maxArea, h * w);
-      }
-      myStack.push(i);
-    }
-    return maxArea;
-  }
 
 
 
@@ -91,13 +64,13 @@ public class temp {
       B.add(n);
     }
     ListNode head = new ListNode(1);
-    head.next = new ListNode(1);
-    head.next.next = new ListNode(1);
+    head.next = new ListNode(2);
+    head.next.next = new ListNode(3);
     head.next.next.next = new ListNode(4);
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-    System.out.println(new temp().deleteDuplicates(head));
+    System.out.println(new temp().restoreIpAddresses("010010"));
 
 
     List<Integer> a1 = new ArrayList<>(B);

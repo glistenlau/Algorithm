@@ -102,5 +102,5 @@ LeetCode Solution
 |96|[Unique Binary Search Trees](096.Unique Binary Search Trees)|O(n^2)|O(n)|Medium|
 |97|[Interleaving String](097.Interleaving String)|O(mn)|O(mn)|Hard|
 |98|[Validate Binary Search Tree](098.Validate Binary Search Tree)|O(n)|O(1)|Medium|
-|99|[Recover Binary Search Tree])099.Recover Binary Search Tree)|O(n)|O(1)|Hard|
+|99|[Recover Binary Search Tree](099.Recover Binary Search Tree)|O(n)|O(1)|Hard|
 |100|[Same Tree](100.Same Tree)|O(n)|O(1)|Easy|

@@ -99,5 +99,8 @@ LeetCode Solution
 |93|[Restore IP Addresses](093.Restore IP Addresses)|O(81)|O(1)|Medium|
 |94|[Binary Tree Inorder Traversal](094.Binary Tree Inorder Traversal)|O(n)|O(n)|Medium|
 |95|[Unique Binary Search Trees II](095.Unique Binary Seach Trees II)|O(n^2)|O(n)|Medium|
-|96|[Unique Binary Search Trees](096.Unique Binary Search Trees)|O(n^2)|O(n)|Medium
-
+|96|[Unique Binary Search Trees](096.Unique Binary Search Trees)|O(n^2)|O(n)|Medium|
+|97|[Interleaving String](097.Interleaving String)|O(mn)|O(mn)|Hard|
+|98|[Validate Binary Search Tree](098.Validate Binary Search Tree)|O(n)|O(1)|Medium|
+|99|[Recover Binary Search Tree])099.Recover Binary Search Tree)|O(n)|O(1)|Hard|
+|100|[Same Tree](100.Same Tree)|O(n)|O(1)|Easy|

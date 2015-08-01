@@ -12,15 +12,31 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int numTrees(int n) {
-    int[] trees = new int[n + 1];
-    trees[0] = 1;
-    for (int i = 1; i <= n; i++) {
-      for (int j = 0; j <= i - 1; j++) {
-        trees[i] += trees[j] * trees[i - 1 - j];
-      }
+  public boolean isSymmetric(TreeNode root) {
+    if (root == null) {
+      return true;
     }
-    return trees[n];
+    return isSymmetric(root.left, root.right);
+  }
+
+  private boolean isSymmetric(TreeNode left, TreeNode right) {
+    if (left == null || right == null) {
+      return left == right;
+    }
+
+    if (left.val != right.val) {
+      return false;
+    }
+
+    if (!isSymmetric(left.left, right.right)) {
+      return false;
+    }
+
+    if (!isSymmetric(left.right, right.left)) {
+      return false;
+    }
+
+    return true;
   }
 
 
@@ -49,6 +65,10 @@ public class temp {
     int[] A = {1, 1, 1, 1, 1, 1, 1};
     int[][] matrix1 = {{0, 0, 0, 5}, {4, 3, 1, 4}, {0, 1, 1, 4}, {1, 2, 1, 3}, {0, 0, 1, 1}};
 
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(3);
+
     List<Interval> test = new ArrayList<>();
     test.add(new Interval(1, 2));
     test.add(new Interval(3, 5));
@@ -70,7 +90,7 @@ public class temp {
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-    System.out.println(new temp().restoreIpAddresses("010010"));
+    new temp().recoverTree(root);
 
 
     List<Integer> a1 = new ArrayList<>(B);

@@ -104,3 +104,13 @@ LeetCode Solution
 |98|[Validate Binary Search Tree](098.Validate Binary Search Tree)|O(n)|O(1)|Medium|
 |99|[Recover Binary Search Tree](099.Recover Binary Search Tree)|O(n)|O(1)|Hard|
 |100|[Same Tree](100.Same Tree)|O(n)|O(1)|Easy|
+|101|[Symmetric Tree](101.Symmetric Tree)|O(n)|O(1)|Easy|
+|102|[Binary Tree Level Order Traversal](102.Binary Tree Level Order Traversal)|O(n)|O(1)|Easy|
+|103|[Binary Tree Zigzag Level Order Traversal](103.Binary Tree Zigzag Level Order Traversal)|O(n)|O(1)|Medium|
+|104|[Maximum Depth of Binary Tree](104.Maximum Depth of Binary Tree)|O(n)|O(1)|Easy|
+|105|[Construct Binary Tree from Preorder and Inorder Traversal](105.Construct Binary Tree from Preorder and Inorder Traversal)|O(n^2)|O(1)|Medium|
+|106|[Construct Binary Tree from Inorder and Postorder Traversal](106.Construct Binary Tree from Inorder and Postorder Traversal)|O(n^2)|O(1)|Medium|
+|107|[Binary Tree Level Order Traversal II](107.Binary Tree Level Order Traversal II)|O(n)|O(1)|Easy|
+|108|[Convert Sorted Array to Binary Search Tree](108.Convert Sorted Array to Binary Search Tree)|O(n)|O(logn)|Medium|
+|109|[Convert Sorted List to Binary Search Tree](109.Convert Sorted List to Binary Search Tree)|O(n^2)|O(logn)|Medium|
+|110|[Balanced Binary Tree](110.Balanced Binary Tree)|O(n)|O(logn)|Easy

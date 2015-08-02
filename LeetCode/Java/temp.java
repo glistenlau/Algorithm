@@ -12,34 +12,24 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isSymmetric(TreeNode root) {
+  public boolean isBalanced(TreeNode root) {
+    return depth(root) != -1;
+  }
+
+  private int depth(TreeNode root) {
     if (root == null) {
-      return true;
+      return 0;
     }
-    return isSymmetric(root.left, root.right);
+
+    int left = depth(root.left);
+    int right = depth(root.right);
+
+    if (left == -1 || right == -1) {
+      return -1;
+    }
+
+    return Math.abs(left - right) < 2? Math.max(left, right): -1;
   }
-
-  private boolean isSymmetric(TreeNode left, TreeNode right) {
-    if (left == null || right == null) {
-      return left == right;
-    }
-
-    if (left.val != right.val) {
-      return false;
-    }
-
-    if (!isSymmetric(left.left, right.right)) {
-      return false;
-    }
-
-    if (!isSymmetric(left.right, right.left)) {
-      return false;
-    }
-
-    return true;
-  }
-
-
 
 
   public static void main(String[] args) {
@@ -62,12 +52,14 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {1, 1, 1, 1, 1, 1, 1};
+    int[] A = {1, 2, 3, 4, 5, 6, 7};
     int[][] matrix1 = {{0, 0, 0, 5}, {4, 3, 1, 4}, {0, 1, 1, 4}, {1, 2, 1, 3}, {0, 0, 1, 1}};
 
     TreeNode root = new TreeNode(1);
     root.left = new TreeNode(2);
     root.right = new TreeNode(3);
+    root.left.left = new TreeNode(4);
+    root.right.right = new TreeNode(5);
 
     List<Interval> test = new ArrayList<>();
     test.add(new Interval(1, 2));
@@ -90,7 +82,10 @@ public class temp {
     head.next.next.next.next = new ListNode(5);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-    new temp().recoverTree(root);
+    int[] pre = {1, 2, 5, 6, 3, 7, 8};
+    int[] in = {5, 2, 6, 1, 7, 3, 8};
+    int[] post = {5, 6, 2, 7, 8, 3, 1};
+    TreeNode re = new temp().sortedListToBST(head);
 
 
     List<Integer> a1 = new ArrayList<>(B);

@@ -124,3 +124,4 @@ LeetCode Solution
 |118|[Pascal's Triangle](118.Pascal's Triangle)|O(n^2)|O(1)|Easy|
 |119|[Pascal's Triangle II](119.Pascal's Triangle II)|O(n^2)|O(k)|Easy|
 |120|[Triangle](120.Triangle)|O(n^2)|O(n)|Medium|
+|124|[Binary Tree Maximum Path Sum](121.Binary Tree Maximum Path Sum)|O(n)|O(logn)|Hard|

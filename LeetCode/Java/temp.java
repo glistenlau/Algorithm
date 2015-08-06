@@ -12,18 +12,31 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int minimumTotal(List<List<Integer>> triangle) {
-    int[] sums = new int[triangle.size()];
-    for (int r = triangle.size() - 1; r >= 0; r--) {
-      for (int c = 0; c < triangle.get(r).size(); c++) {
-        if (r == triangle.size() - 1) {
-          sums[c] = triangle.get(r).get(c);
-        } else {
-          sums[c] = triangle.get(r).get(c) + Math.min(sums[c], sums[c + 1]);
-        }
-      }
+  private class ResultType{
+    int lineMax;
+    int max;
+    public ResultType(int lineMax, int max) {
+      this.lineMax = lineMax;
+      this.max = max;
     }
-    return sums[0];
+  }
+  public int maxPathSum(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+    return pathSum(root).max;
+  }
+  private ResultType pathSum(TreeNode root) {
+    if (root == null) {
+      return new ResultType(0, Integer.MIN_VALUE);
+    }
+    ResultType left = pathSum(root.left);
+    ResultType right = pathSum(root.right);
+
+    int lineSum = Math.max(root.val, root.val + Math.max(left.lineMax, right.lineMax));
+    int max = root.val + (left.lineMax > 0? left.lineMax: 0) + (right.lineMax > 0? right.lineMax: 0);
+    max = Math.max(max, Math.max(left.max, right.max));
+    return new ResultType(lineSum, max);
   }
 
 
@@ -89,7 +102,7 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().getRow(5);
+    int re = new temp().maxPathSum(root);
 
 
     List<Integer> a1 = new ArrayList<>(B);

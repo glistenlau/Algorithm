@@ -113,4 +113,14 @@ LeetCode Solution
 |107|[Binary Tree Level Order Traversal II](107.Binary Tree Level Order Traversal II)|O(n)|O(1)|Easy|
 |108|[Convert Sorted Array to Binary Search Tree](108.Convert Sorted Array to Binary Search Tree)|O(n)|O(logn)|Medium|
 |109|[Convert Sorted List to Binary Search Tree](109.Convert Sorted List to Binary Search Tree)|O(n^2)|O(logn)|Medium|
-|110|[Balanced Binary Tree](110.Balanced Binary Tree)|O(n)|O(logn)|Easy
+|110|[Balanced Binary Tree](110.Balanced Binary Tree)|O(n)|O(logn)|Easy|
+|111|[Minimum Depth of Binary Tree](111.Minimum Depth of Binary Tree)|O(n)|O(logn)|Easy|
+|112|[Path Sum](112.Path Sum)|O(n)|O(logn)|Easy|
+|113|[Path Sum II](113.Path Sum II)|O(n)|O(logn)|Medium|
+|114|[Flatten Binary Tree to Linked List](114.Flatten Binary Tree to Linked List)|O(n)|O(logn)|Medium|
+|115|[Distinct Subsequences](115.Distinct Subsequences)|O(mn)|O(mn)|Hard|
+|116|[Populating Next Right Pointers in Each Node](116.Populating Next Right Pointers in Each Node)|O(n)|O(1)|Medium|
+|117|[Populating Next Right Pointers in Each Node II](117.Populating Next Right Pointers in Each Node II)|O(n)|O(1)|Hard|
+|118|[Pascal's Triangle](118.Pascal's Triangle)|O(n^2)|O(1)|Easy|
+|119|[Pascal's Triangle II](119.Pascal's Triangle II)|O(n^2)|O(k)|Easy|
+|120|[Triangle](120.Triangle)|O(n^2)|O(n)|Medium|

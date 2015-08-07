@@ -124,4 +124,8 @@ LeetCode Solution
 |118|[Pascal's Triangle](118.Pascal's Triangle)|O(n^2)|O(1)|Easy|
 |119|[Pascal's Triangle II](119.Pascal's Triangle II)|O(n^2)|O(k)|Easy|
 |120|[Triangle](120.Triangle)|O(n^2)|O(n)|Medium|
+|121|[Best Time to Buy and Sell Stock](121.Best Time to Buy and Sell Stock)|O(n)|O(1)|Medium|
+|122|[Best Time to Buy and Sell Stock II](122.Best Time to Buy and Sell Stock II)|O(n)|O(1)|Medium|
+|123|[Best Time to Buy and Sell Stock III](123.Best Time to Buy and Sell Stock III)|O(n)|O(n)|Hard|
 |124|[Binary Tree Maximum Path Sum](121.Binary Tree Maximum Path Sum)|O(n)|O(logn)|Hard|
+|125|[Valid Palindrome](125.Valid Palindrome)|O(n)|O(1)|Easy|

@@ -12,32 +12,35 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class ResultType{
-    int lineMax;
-    int max;
-    public ResultType(int lineMax, int max) {
-      this.lineMax = lineMax;
-      this.max = max;
+  public boolean isPalindrome(String s) {
+    if (s == null || s.length() == 0) {
+      return true;
     }
-  }
-  public int maxPathSum(TreeNode root) {
-    if (root == null) {
-      return 0;
-    }
-    return pathSum(root).max;
-  }
-  private ResultType pathSum(TreeNode root) {
-    if (root == null) {
-      return new ResultType(0, Integer.MIN_VALUE);
-    }
-    ResultType left = pathSum(root.left);
-    ResultType right = pathSum(root.right);
 
-    int lineSum = Math.max(root.val, root.val + Math.max(left.lineMax, right.lineMax));
-    int max = root.val + (left.lineMax > 0? left.lineMax: 0) + (right.lineMax > 0? right.lineMax: 0);
-    max = Math.max(max, Math.max(left.max, right.max));
-    return new ResultType(lineSum, max);
+    int left = 0;
+    int right = s.length() - 1;
+
+    while(left < right) {
+      while (left < right && !isAN(s.charAt(left))) {
+        left++;
+      }
+      while (left < right && !isAN(s.charAt(right))) {
+        right--;
+      }
+      if (s.charAt(left) != s.charAt(right)) {
+        return false;
+      }
+      left++;
+      right--;
+    }
+
+    return true;
   }
+
+  private boolean isAN(char c) {
+    return Character.isLetterOrDigit(c);
+  }
+
 
 
 
@@ -61,7 +64,7 @@ public class temp {
         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {1, 2, 3, 4, 5, 6, 7};
+    int[] A = {8,3,6,2,8,8,8,4,2,0,7,2,9,4,9};
     int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
 
     TreeNode root = new TreeNode(1);
@@ -102,7 +105,7 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    int re = new temp().maxPathSum(root);
+    int re = new temp().maxProfit(A);
 
 
     List<Integer> a1 = new ArrayList<>(B);

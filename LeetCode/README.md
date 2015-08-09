@@ -129,3 +129,10 @@ LeetCode Solution
 |123|[Best Time to Buy and Sell Stock III](123.Best Time to Buy and Sell Stock III)|O(n)|O(n)|Hard|
 |124|[Binary Tree Maximum Path Sum](121.Binary Tree Maximum Path Sum)|O(n)|O(logn)|Hard|
 |125|[Valid Palindrome](125.Valid Palindrome)|O(n)|O(1)|Easy|
+|126|[Word Ladder II](126.Word Ladder II)|O(2^n)|O(n)|Hard|
+|127|[Word Ladder](127.Word Ladder)|O(n)|O(n)|Medium|
+|129|[Sum Root to Leaf Numbers](129.Sum Root to Leaf Numbers)|O(n)|O(logn)|Medium|
+|144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
+|145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
+
+

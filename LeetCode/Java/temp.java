@@ -12,78 +12,57 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<List<String>> findLadders(String start, String end, Set<String> dict) {
-    List<List<String>> result = new ArrayList<List<String>>();
-    HashMap<String, Integer> map = new HashMap<String, Integer>();
-    int minStep = buildMap(start, end, dict, map);
-    if (minStep == 0) {
-      return result;
-    }
-    List<String> taken = new ArrayList<String>();
-    taken.add(start);
-    dfs(start, end, map, result, minStep, taken);
-    return result;
-  }
-
-  private int buildMap(String start, String end, Set<String> dict, HashMap<String, Integer> map) {
-    Queue<String> myQ = new LinkedList<String>();
-    myQ.offer(end);
-    dict.remove(end);
-    int len = 1;
-    while(!myQ.isEmpty()) {
-      int size = myQ.size();
-      for (int i = 0; i < size; i++) {
-        char[] curt = myQ.poll().toCharArray();
-        for (int j = 0; j < curt.length; j++) {
-          char pre = curt[j];
-          for (char c = 'a'; c <= 'z'; c++) {
-            curt[j] = c;
-            String newStr = new String(curt);
-            if (newStr.equals(start)) {
-              return len + 1;
-            }
-            if (dict.contains(newStr)) {
-              myQ.offer(newStr);
-              map.put(newStr, len + 1);
-              dict.remove(newStr);
-            }
-          }
-          curt[j] = pre;
-        }
-      }
-      len++;
-    }
-    return 0;
-  }
-
-  private void dfs(String start, String end, HashMap<String, Integer> map, List<List<String>> result, int minS, List<String> taken) {
-    int n = taken.size();
-    if (n == minS) {
+  public void solve(char[][] board) {
+    if (board == null || board.length == 0 || board[0].length == 0) {
       return;
     }
+    int m = board.length;
+    int n = board[0].length;
+    Queue<Integer> myQ = new LinkedList<Integer>();
 
-    char[] curt = start.toCharArray();
-    for (int i = 0; i < curt.length; i++) {
-      char pre = curt[i];
-      for (char c = 'a'; c <= 'z'; c++) {
-        curt[i] = c;
-        String newStr = new String(curt);
-        if (newStr.equals(end)) {
-          taken.add(end);
-          result.add(new ArrayList<String>(taken));
-          taken.remove(taken.size() - 1);
-          return;
-        }
-        if (map.containsKey(newStr) && map.get(newStr) == minS - n) {
-          map.remove(newStr);
-          taken.add(newStr);
-          dfs(newStr, end, map, result, minS, taken);
-          taken.remove(taken.size() - 1);
+    for (int i = 0; i < m; i++) {
+      enqueue(board, i, 0, myQ);
+      enqueue(board, i, n - 1, myQ);
+    }
+
+    for (int j = 1; j < n; j++) {
+      enqueue(board, 0, j, myQ);
+      enqueue(board, m - 1, j, myQ);
+    }
+
+    while (!myQ.isEmpty()) {
+      int curIndex = myQ.poll();
+      int r = curIndex / n;
+      int c = curIndex % n;
+
+      board[r][c] = 'B';
+
+      enqueue(board, r - 1, c, myQ);
+      enqueue(board, r + 1, c, myQ);
+      enqueue(board, r, c - 1, myQ);
+      enqueue(board, r, c + 1, myQ);
+    }
+
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+        if (board[i][j] == 'B') {
+          board[i][j] = 'O';
+        } else if (board[i][j] == 'O') {
+          board[i][j] = 'X';
         }
       }
-      curt[i] = pre;
     }
   }
+
+  private void enqueue(char[][] board, int r, int c, Queue<Integer> myQ) {
+    if (r >= 0 && r < board.length && c >= 0 && c < board[0].length && board[r][c] == 'O') {
+      myQ.offer(r * board[0].length + c);
+    }
+  }
+
+
+
+
 
 
 
@@ -98,16 +77,19 @@ public class temp {
     for (int i = 0; i < temp.length; i++) {
       dict.add(temp[i]);
     }
-    char[][] sodoku = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
-        {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-        {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-        {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-        {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-        {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-        {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-        {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-        {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-    int[] A = {8,3,6,2,8,8,8,4,2,0,7,2,9,4,9};
+
+    String[] strA = {"O"};
+    char[][] board = new char[strA.length][strA[0].length()];
+    int i = 0;
+    for (String str: strA) {
+      board[i++] = str.toCharArray();
+    }
+
+    char[][] sodoku = {{'X', 'X', 'X', 'X'},
+        {'X', 'O', 'O', 'X'},
+        {'X', 'X', 'O', 'X'},
+        {'X', 'O', 'X', 'X'}};
+    int[] A = {100, 4, 200, 1, 3, 2};
     int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
 
     TreeNode root = new TreeNode(1);
@@ -146,7 +128,7 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().findLadders("hit", "cog", dict);
+    new temp().solve(board);
 
 
     List<Integer> a1 = new ArrayList<>(B);

@@ -131,7 +131,9 @@ LeetCode Solution
 |125|[Valid Palindrome](125.Valid Palindrome)|O(n)|O(1)|Easy|
 |126|[Word Ladder II](126.Word Ladder II)|O(2^n)|O(n)|Hard|
 |127|[Word Ladder](127.Word Ladder)|O(n)|O(n)|Medium|
+|128|[Longest Consecutive Sequence](128.Longest Consecutive Sequence)|O(n)|O(n)|Hard|
 |129|[Sum Root to Leaf Numbers](129.Sum Root to Leaf Numbers)|O(n)|O(logn)|Medium|
+|130|[Surrounded Regions ](130.Surrounded Regions)|O(mn)|O(mn)|Hard|
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
 

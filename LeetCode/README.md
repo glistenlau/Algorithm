@@ -133,7 +133,12 @@ LeetCode Solution
 |127|[Word Ladder](127.Word Ladder)|O(n)|O(n)|Medium|
 |128|[Longest Consecutive Sequence](128.Longest Consecutive Sequence)|O(n)|O(n)|Hard|
 |129|[Sum Root to Leaf Numbers](129.Sum Root to Leaf Numbers)|O(n)|O(logn)|Medium|
-|130|[Surrounded Regions ](130.Surrounded Regions)|O(mn)|O(mn)|Hard|
+|130|[Surrounded Regions](130.Surrounded Regions)|O(mn)|O(mn)|Hard|
+|131|[Palindrome Partitioning](131.Palindrome Partitioning)|O(n^2)|O(n)|Medium|
+|132|[Palindrome Partitioning II](132.Palindrome Partitioning II)|O(n^2)|O(n^2)|Hard|
+|133|[Clone Graph](133.Clone Graph)|O(n)|O(1)|Medium|
+|134|[Gas Station](134.Gas Station)|O(n)|O(1)|Medium|
+|135|[Candy](135.Candy)|O(n)|O(n)|Hard|
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
 

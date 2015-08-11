@@ -12,59 +12,19 @@ import java.util.*;
  * }
  */
 public class temp {
-  public void solve(char[][] board) {
-    if (board == null || board.length == 0 || board[0].length == 0) {
-      return;
-    }
-    int m = board.length;
-    int n = board[0].length;
-    Queue<Integer> myQ = new LinkedList<Integer>();
+  public int candy(int[] ratings) {
+    int[] candyNum = new int[ratings.length];
 
-    for (int i = 0; i < m; i++) {
-      enqueue(board, i, 0, myQ);
-      enqueue(board, i, n - 1, myQ);
+    for (int i = 0; i < ratings.length; i++) {
+      candyNum[i] = 1;
     }
 
-    for (int j = 1; j < n; j++) {
-      enqueue(board, 0, j, myQ);
-      enqueue(board, m - 1, j, myQ);
-    }
-
-    while (!myQ.isEmpty()) {
-      int curIndex = myQ.poll();
-      int r = curIndex / n;
-      int c = curIndex % n;
-
-      board[r][c] = 'B';
-
-      enqueue(board, r - 1, c, myQ);
-      enqueue(board, r + 1, c, myQ);
-      enqueue(board, r, c - 1, myQ);
-      enqueue(board, r, c + 1, myQ);
-    }
-
-    for (int i = 0; i < m; i++) {
-      for (int j = 0; j < n; j++) {
-        if (board[i][j] == 'B') {
-          board[i][j] = 'O';
-        } else if (board[i][j] == 'O') {
-          board[i][j] = 'X';
-        }
+    for (int i = 1; i < ratings.length; i++) {
+      if (ratings[i] > ratings[i - 1]) {
+        candyNum[i] = candyNum[i ]
       }
     }
   }
-
-  private void enqueue(char[][] board, int r, int c, Queue<Integer> myQ) {
-    if (r >= 0 && r < board.length && c >= 0 && c < board[0].length && board[r][c] == 'O') {
-      myQ.offer(r * board[0].length + c);
-    }
-  }
-
-
-
-
-
-
 
 
 
@@ -128,7 +88,7 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().solve(board);
+    new temp().canCompleteCircuit("aab");
 
 
     List<Integer> a1 = new ArrayList<>(B);

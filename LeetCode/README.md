@@ -146,7 +146,7 @@ LeetCode Solution
 |140|[Word Break II](140.Word Break II)|O(n^2)|O(n)|Hard|
 |141|[Linked List Cycle](141.Linked List Cycle)|O(n)|O(1)|Medium|
 |142|[Linked List Cycle II](142.Linked List Cycle II)|O(n)|O(1)|Medium|
-
+|143|[Reorder List](143.Reorder List)|O(n)|O(1)|Medium|
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
 

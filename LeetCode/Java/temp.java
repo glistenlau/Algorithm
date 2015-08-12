@@ -12,38 +12,41 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<String> wordBreak(String s, Set<String> wordDict) {
-    List<String> result = new ArrayList<String>();
-    if (s == null || s.length() == 0) {
-      return result;
-    }
-
-    dfsHelper(s, 0, wordDict, new StringBuilder(), result);
-    return result;
-  }
-
-  private void dfsHelper(String s, int pos, Set<String> dict, StringBuilder taken, List<String> result) {
-    if (pos >= s.length()) {
-      result.add(taken.toString());
+  public void reorderList(ListNode head) {
+    if (head == null || head.next == null) {
       return;
     }
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode fast = dummy;
+    ListNode slow = dummy;
 
-    for (int i = pos + 1; i <= s.length(); i++) {
-      String curt = s.substring(pos, i);
-      if (dict.contains(curt)) {
-        if (taken.length() != 0) {
-          taken.append(' ');
-        }
-
-        taken.append(curt);
-        dfsHelper(s, i, dict, taken, result);
-        taken.delete(taken.length() - i + pos, taken.length());
-
-        if (taken.length() != 0) {
-          taken.deleteCharAt(taken.length() - 1);
-        }
-      }
+    while (fast != null && fast.next != null) {
+      fast = fast.next.next;
+      slow = slow.next;
     }
+    fast = reverseList(slow.next);
+    slow = head;
+
+    while (slow != null && fast != null) {
+      ListNode temp = fast.next;
+      fast.next = slow.next;
+      slow.next = fast;
+      fast = temp;
+      slow = slow.next.next;
+    }
+
+  }
+
+  private ListNode reverseList(ListNode head) {
+    ListNode reversed = null;
+    while (head != null) {
+      ListNode temp = head.next;
+      head.next = reversed;
+      reversed = head;
+      head = temp;
+    }
+    return reversed;
   }
 
 

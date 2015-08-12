@@ -12,41 +12,34 @@ import java.util.*;
  * }
  */
 public class temp {
-  public void reorderList(ListNode head) {
-    if (head == null || head.next == null) {
-      return;
-    }
-    ListNode dummy = new ListNode(0);
-    dummy.next = head;
-    ListNode fast = dummy;
-    ListNode slow = dummy;
-
-    while (fast != null && fast.next != null) {
-      fast = fast.next.next;
-      slow = slow.next;
-    }
-    fast = reverseList(slow.next);
-    slow = head;
-
-    while (slow != null && fast != null) {
-      ListNode temp = fast.next;
-      fast.next = slow.next;
-      slow.next = fast;
-      fast = temp;
-      slow = slow.next.next;
+  public List<List<Integer>> connectedSet(ArrayList<UndirectedGraphNode> nodes) {
+    // Write your code here
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if (nodes == null) {
+      return result;
     }
 
-  }
+    HashSet<UndirectedGraphNode> visited = new HashSet<>();
+    Queue<UndirectedGraphNode> myQ = new LinkedList<>();
 
-  private ListNode reverseList(ListNode head) {
-    ListNode reversed = null;
-    while (head != null) {
-      ListNode temp = head.next;
-      head.next = reversed;
-      reversed = head;
-      head = temp;
+    for (UndirectedGraphNode node: nodes) {
+      if (visited.contains(node)) {
+        continue;
+      }
+      List<Integer> connected = new ArrayList<>();
+      myQ.offer(node);
+      while (!myQ.isEmpty()) {
+        UndirectedGraphNode curt = myQ.poll();
+        connected.add(curt.label);
+        visited.add(curt);
+        for (UndirectedGraphNode neighbor: curt.neighbors) {
+          myQ.offer(neighbor);
+        }
+      }
+      result.add(connected);
     }
-    return reversed;
+
+    return result;
   }
 
 

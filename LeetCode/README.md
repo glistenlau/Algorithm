@@ -143,7 +143,7 @@ LeetCode Solution
 |137|[Single Number II](137.Single Number)|O(n)|O(1)|Medium|
 |138|[Copy List with Random Pointer](138.Copy List with Random Pointer)|O(n)|O(1)|Hard|
 |139|[Word Break](139.Word Break)|O(n^2)|O(n)|Medium|
-|140|[Word Break II](140.Word Break II)|O(n^2)|O(n)|Hard|
+|140|[Word Break II](140.Word Break II)|O(n2^n)|O(n)|Hard|
 |141|[Linked List Cycle](141.Linked List Cycle)|O(n)|O(1)|Medium|
 |142|[Linked List Cycle II](142.Linked List Cycle II)|O(n)|O(1)|Medium|
 |143|[Reorder List](143.Reorder List)|O(n)|O(1)|Medium|

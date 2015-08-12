@@ -66,6 +66,8 @@ public class Solution {
         }
 
       }
+
+      Collections.sort(connected);
       result.add(connected);
     }
 

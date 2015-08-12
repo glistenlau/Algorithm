@@ -139,6 +139,14 @@ LeetCode Solution
 |133|[Clone Graph](133.Clone Graph)|O(n)|O(1)|Medium|
 |134|[Gas Station](134.Gas Station)|O(n)|O(1)|Medium|
 |135|[Candy](135.Candy)|O(n)|O(n)|Hard|
+|136|[Single Number](136.Single Number)|O(n)|O(1)|Medium|
+|137|[Single Number II](137.Single Number)|O(n)|O(1)|Medium|
+|138|[Copy List with Random Pointer](138.Copy List with Random Pointer)|O(n)|O(1)|Hard|
+|139|[Word Break](139.Word Break)|O(n^2)|O(n)|Medium|
+|140|[Word Break II](140.Word Break II)|O(n^2)|O(n)|Hard|
+|141|[Linked List Cycle](141.Linked List Cycle)|O(n)|O(1)|Medium|
+|142|[Linked List Cycle II](142.Linked List Cycle II)|O(n)|O(1)|Medium|
+
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
 

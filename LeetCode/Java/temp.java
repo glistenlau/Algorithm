@@ -12,16 +12,36 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int candy(int[] ratings) {
-    int[] candyNum = new int[ratings.length];
-
-    for (int i = 0; i < ratings.length; i++) {
-      candyNum[i] = 1;
+  public List<String> wordBreak(String s, Set<String> wordDict) {
+    List<String> result = new ArrayList<String>();
+    if (s == null || s.length() == 0) {
+      return result;
     }
 
-    for (int i = 1; i < ratings.length; i++) {
-      if (ratings[i] > ratings[i - 1]) {
-        candyNum[i] = candyNum[i ]
+    dfsHelper(s, 0, wordDict, new StringBuilder(), result);
+    return result;
+  }
+
+  private void dfsHelper(String s, int pos, Set<String> dict, StringBuilder taken, List<String> result) {
+    if (pos >= s.length()) {
+      result.add(taken.toString());
+      return;
+    }
+
+    for (int i = pos + 1; i <= s.length(); i++) {
+      String curt = s.substring(pos, i);
+      if (dict.contains(curt)) {
+        if (taken.length() != 0) {
+          taken.append(' ');
+        }
+
+        taken.append(curt);
+        dfsHelper(s, i, dict, taken, result);
+        taken.delete(taken.length() - i + pos, taken.length());
+
+        if (taken.length() != 0) {
+          taken.deleteCharAt(taken.length() - 1);
+        }
       }
     }
   }
@@ -29,8 +49,9 @@ public class temp {
 
 
 
+
   public static void main(String[] args) {
-    String[] temp = {"hot","dot","dog","lot","log"};
+    String[] temp = {"cat", "cats", "and", "sand", "dog"};
 
     Set<String> dict = new HashSet<String>();
 
@@ -49,7 +70,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {100, 4, 200, 1, 3, 2};
+    int[] A = {1, 2, 7, 8, 5};
     int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
 
     TreeNode root = new TreeNode(1);
@@ -88,7 +109,7 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().canCompleteCircuit("aab");
+    new temp().wordBreak("catsanddog", dict);
 
 
     List<Integer> a1 = new ArrayList<>(B);

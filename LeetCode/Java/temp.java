@@ -12,83 +12,67 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class UnionFind {
-    HashMap<Integer, Integer> parent;
-
-    UnionFind(HashSet<Integer> nodes) {
-      parent = new HashMap<>();
-      for (int num: nodes) {
-        parent.put(num, num);
+  public class LRUCache {
+    private class DoublyListNode {
+      int value;
+      DoublyListNode prev, next;
+      DoublyListNode(int value) {
+        this.value = value;
+        this.prev = this.next = null;
       }
     }
 
-    int compressedFind(int node) {
-      int father = parent.get(node);
-      while (father != parent.get(father)) {
-        father = parent.get(father);
-      }
-      int fa = parent.get(node);
-      while (fa != parent.get(fa)) {
-        int temp = parent.get(fa);
-        parent.put(fa, father);
-        fa = temp;
-      }
+    DoublyListNode start, end;
+    HashMap<Integer, DoublyListNode> map;
 
-      return father;
+    public LRUCache(int capacity) {
+      map = new HashMap<>();
+      start = end = new DoublyListNode(capacity);
+      start.next = end;
+      end.prev = start;
     }
 
-    void union(int a, int b) {
-      int aFather = parent.get(a);
-      int bFather = parent.get(b);
-      if (aFather != bFather) {
-        parent.put(b, aFather);
+    public int get(int key) {
+      if (!map.containsKey(key)) {
+        return -1;
       }
+      DoublyListNode curt = map.get(key);
+      curt.prev.next = curt.next;
+      curt.next.prev = curt.prev;
+      insertToEnd(curt);
+      return curt.value;
     }
 
-    List<List<Integer>> print() {
-      List<List<Integer>> result = new ArrayList<List<Integer>>();
-      HashMap<Integer, List<Integer>> connected = new HashMap<>();
-      for (int i: parent.keySet()) {
-        if (!connected.containsKey(parent.get(i))) {
-          connected.put(parent.get(i), new ArrayList<>());
-        }
-        connected.get(parent.get(i)).add(i);
+    public void set(int key, int value) {
+      if (map.containsKey(key)) {
+        this.get(key);
+        return;
       }
 
-      for (List<Integer> list: connected.values()) {
-        Collections.sort(list);
-        result.add(list);
+      if (start.value <= 0) {
+        DoublyListNode least = start.next;
+        start.next = least.next;
+        least.next.prev = start;
+        least.next = least.prev = null;
+      } else {
+        start.value--;
       }
+      DoublyListNode newNode = new DoublyListNode(value);
+      insertToEnd(newNode);
+      map.put(key, newNode);
+    }
 
-      return result;
+    private void insertToEnd(DoublyListNode node) {
+      if (node.next == end) {
+        return;
+      }
+      node.prev = end.prev;
+      node.next = end;
+      end.prev.next = node;
+      end.prev = node;
     }
   }
 
-
-  public List<List<Integer>> connectedSet(ArrayList<UndirectedGraphNode> nodes) {
-    if (nodes == null) {
-      return new ArrayList<>();
-    }
-
-    HashSet<Integer> nodeSet = new HashSet<>();
-    for (UndirectedGraphNode node: nodes) {
-      nodeSet.add(node.label);
-    }
-
-    UnionFind uf = new UnionFind(nodeSet);
-
-    for (UndirectedGraphNode node: nodes) {
-      for (UndirectedGraphNode neighbor: node.neighbors) {
-        int nodeFather = uf.compressedFind(node.label);
-        int neighborFather = uf.compressedFind(neighbor.label);
-        if (nodeFather != neighborFather) {
-          uf.union(node.label, neighbor.label);
-        }
-      }
-    }
-
-    return uf.print();
-  }
 
 
 

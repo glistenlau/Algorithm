@@ -149,5 +149,6 @@ LeetCode Solution
 |143|[Reorder List](143.Reorder List)|O(n)|O(1)|Medium|
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
+|146|[LRU Cache](146.LRU Cache)|O(1)|O(1)|Hard|
 
 

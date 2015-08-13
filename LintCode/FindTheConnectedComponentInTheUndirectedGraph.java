@@ -74,3 +74,86 @@ public class Solution {
     return result;
   }
 }
+
+// Solution 2: Union Find
+public class Solution {
+  private class UnionFind {
+    HashMap<Integer, Integer> parent;
+
+    UnionFind(HashSet<Integer> nodes) {
+      parent = new HashMap<>();
+      for (int num: nodes) {
+        parent.put(num, num);
+      }
+    }
+
+    int compressedFind(int node) {
+      int father = parent.get(node);
+      while (father != parent.get(father)) {
+        father = parent.get(father);
+      }
+      int fa = parent.get(node);
+      while (fa != parent.get(fa)) {
+        int temp = parent.get(fa);
+        parent.put(fa, father);
+        fa = temp;
+      }
+
+      return father;
+    }
+
+    void union(int a, int b) {
+      int aFather = this.compressedFind(a);
+      int bFather = this.compressedFind(b);
+      if (aFather != bFather) {
+        parent.put(bFather, aFather);
+      }
+    }
+
+    List<List<Integer>> print() {
+      List<List<Integer>> result = new ArrayList<List<Integer>>();
+      HashMap<Integer, ArrayList<Integer>> connected = new HashMap<>();
+      for (int i: parent.keySet()) {
+        int father = this.compressedFind(i);
+        if (!connected.containsKey(father)) {
+          connected.put(father, new ArrayList<Integer>());
+        }
+        connected.get(father).add(i);
+      }
+
+      for (List<Integer> list: connected.values()) {
+        Collections.sort(list);
+        result.add(list);
+      }
+
+      return result;
+    }
+  }
+
+
+  public List<List<Integer>> connectedSet(ArrayList<UndirectedGraphNode> nodes) {
+    if (nodes == null) {
+      return new ArrayList<>();
+    }
+
+    HashSet<Integer> nodeSet = new HashSet<>();
+    for (UndirectedGraphNode node: nodes) {
+      nodeSet.add(node.label);
+    }
+
+    UnionFind uf = new UnionFind(nodeSet);
+
+    for (UndirectedGraphNode node: nodes) {
+      for (UndirectedGraphNode neighbor: node.neighbors) {
+        int nodeFather = uf.compressedFind(node.label);
+        int neighborFather = uf.compressedFind(neighbor.label);
+        if (nodeFather != neighborFather) {
+          uf.union(node.label, neighbor.label);
+        }
+      }
+    }
+
+    return uf.print();
+  }
+}
+

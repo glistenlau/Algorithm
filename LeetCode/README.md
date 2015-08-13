@@ -150,5 +150,9 @@ LeetCode Solution
 |144|[Binary Tree Preorder Traversal](144.Binary Tree Preorder Traversal)|O(n)|O(1)|Medium|
 |145|[Binary Tree Postorder Traversal](145.Binary Tree Postorder Traversal)|O(n)|O(1)|Hard|
 |146|[LRU Cache](146.LRU Cache)|O(1)|O(1)|Hard|
+|147|[Insertion Sort List](147.Insertion Sort List)|O(n^2)|O(1)|Medium|
+|148|[Sort List](148.Sort List)|O(nlogn)|O(1)|Medium|
+|149|[Max Points on a Line](149.Max Points on a Line)|O(n^2)|O(n)|Hard|
+|150|[Evaluate Reverse Polish Notation](150.Evaluate Reverse Polish Notation)|O(n)|O(n)|Medium|
 
 

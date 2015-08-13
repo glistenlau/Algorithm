@@ -12,72 +12,45 @@ import java.util.*;
  * }
  */
 public class temp {
-  public class LRUCache {
-    private class DoublyListNode {
-      int value;
-      DoublyListNode prev, next;
-      DoublyListNode(int value) {
-        this.value = value;
-        this.prev = this.next = null;
-      }
+  public int evalRPN(String[] tokens) {
+    if (tokens == null || tokens.length == 0) {
+      return 0;
     }
 
-    DoublyListNode start, end;
-    HashMap<Integer, DoublyListNode> map;
+    Deque<String> nums = new ArrayDeque<>();
 
-    public LRUCache(int capacity) {
-      map = new HashMap<>();
-      start = end = new DoublyListNode(capacity);
-      start.next = end;
-      end.prev = start;
-    }
-
-    public int get(int key) {
-      if (!map.containsKey(key)) {
-        return -1;
-      }
-      DoublyListNode curt = map.get(key);
-      curt.prev.next = curt.next;
-      curt.next.prev = curt.prev;
-      insertToEnd(curt);
-      return curt.value;
-    }
-
-    public void set(int key, int value) {
-      if (map.containsKey(key)) {
-        this.get(key);
-        return;
-      }
-
-      if (start.value <= 0) {
-        DoublyListNode least = start.next;
-        start.next = least.next;
-        least.next.prev = start;
-        least.next = least.prev = null;
+    for (String token: tokens) {
+      if (token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")) {
+        nums.push(op(nums.pop(), nums.pop(), token));
       } else {
-        start.value--;
+        nums.push(token);
       }
-      DoublyListNode newNode = new DoublyListNode(value);
-      insertToEnd(newNode);
-      map.put(key, newNode);
     }
 
-    private void insertToEnd(DoublyListNode node) {
-      if (node.next == end) {
-        return;
-      }
-      node.prev = end.prev;
-      node.next = end;
-      end.prev.next = node;
-      end.prev = node;
+    return Integer.parseInt(nums.pop());
+  }
+
+  private String op(String a, String b, String operation) {
+    int n1 = Integer.parseInt(a);
+    int n2 = Integer.parseInt(b);
+    int result = 0;
+    if (operation.equals("+")) {
+      result = n2 + n1;
+    } else if (operation.equals("-")) {
+      result = n2 - n1;
+    } else if (operation.equals("*")) {
+      result = n2 * n1;
+    } else if (operation.equals("/")) {
+      result = n2 / n1;
     }
+
+    return String.valueOf(result);
   }
 
 
 
-
   public static void main(String[] args) {
-    String[] temp = {"cat", "cats", "and", "sand", "dog"};
+    String[] temp = {"2", "1", "+", "3", "*"};
 
     Set<String> dict = new HashSet<String>();
 
@@ -125,17 +98,17 @@ public class temp {
     for (int n: A) {
       B.add(n);
     }
-    ListNode head = new ListNode(1);
-    head.next = new ListNode(2);
-    head.next.next = new ListNode(3);
-    head.next.next.next = new ListNode(4);
-    head.next.next.next.next = new ListNode(5);
+    ListNode head = new ListNode(4);
+    head.next = new ListNode(3);
+    head.next.next = new ListNode(1);
+    head.next.next.next = new ListNode(5);
+    head.next.next.next.next = new ListNode(2);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().wordBreak("catsanddog", dict);
+    new temp().evalRPN(temp);
 
 
     List<Integer> a1 = new ArrayList<>(B);

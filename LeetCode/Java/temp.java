@@ -12,39 +12,80 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int evalRPN(String[] tokens) {
-    if (tokens == null || tokens.length == 0) {
-      return 0;
+  public List<List<Integer>> connectedSet2(ArrayList<DirectedGraphNode> nodes) {
+    // Write your code here
+    if (nodes == null || nodes.length == 0) {
+      return new ArrayList<>();
     }
 
-    Deque<String> nums = new ArrayDeque<>();
+    HashSet<Integer> labels = new HashSet<>();
+    for (DirectedGraphNode node: nodes) {
+      labels.add(node.label);
+    }
 
-    for (String token: tokens) {
-      if (token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")) {
-        nums.push(op(nums.pop(), nums.pop(), token));
-      } else {
-        nums.push(token);
+    UnionFind uf = new UnionFind(labels);
+
+    for (DirectedGraphNode ori: nodes) {
+      for (DirectedGraphNode neighbor: ori.neighbors) {
+        uf.union(ori.label, neighbor.label);
       }
     }
 
-    return Integer.parseInt(nums.pop());
+    return uf.print();
   }
 
-  private String op(String a, String b, String operation) {
-    int n1 = Integer.parseInt(a);
-    int n2 = Integer.parseInt(b);
-    int result = 0;
-    if (operation.equals("+")) {
-      result = n2 + n1;
-    } else if (operation.equals("-")) {
-      result = n2 - n1;
-    } else if (operation.equals("*")) {
-      result = n2 * n1;
-    } else if (operation.equals("/")) {
-      result = n2 / n1;
+  private class UnionFind {
+    HashMap<Integer, Integer> father;
+    UnionFind(HashSet<Integer> nums) {
+      father = new HashMap<>();
+      for (int n: nums) {
+        father.put(n, n);
+      }
     }
 
-    return String.valueOf(result);
+    int compressedFind(int node) {
+      int fa = father.get(node);
+      while (fa != father.get(fa)) {
+        fa = father.get(fa);
+      }
+
+      int fat = father.get(node);
+      while (fat != father.get(fat)) {
+        int temp = father.get(fat);
+        father.put(fat, fa);
+        fat = temp;
+      }
+
+      return fa;
+    }
+
+    void union (int a, int b) {
+      int aFa = compressedFind(a);
+      int bFa = compressedFind(b);
+      if (aFa != bFa) {
+        father.put(bFa, aFa);
+      }
+    }
+
+    List<List<Integer>> print() {
+      HashMap<Integer, List<Integer>> sameFa = new HashMap<>();
+      List<List<Integer>> result = new ArrayList<>();
+
+      for (int n: father.keySet()) {
+        int f = compressedFind(n);
+        if (!sameFa.containsKey(f)) {
+          sameFa.put(f, new ArrayList<>());
+        }
+        sameFa.get(f).add(n);
+      }
+
+      for (List<Integer> list: sameFa.values()) {
+        Collections.sort(list);
+        result.add(list);
+      }
+
+      return result;
+    }
   }
 
 

@@ -154,5 +154,9 @@ LeetCode Solution
 |148|[Sort List](148.Sort List)|O(nlogn)|O(1)|Medium|
 |149|[Max Points on a Line](149.Max Points on a Line)|O(n^2)|O(n)|Hard|
 |150|[Evaluate Reverse Polish Notation](150.Evaluate Reverse Polish Notation)|O(n)|O(n)|Medium|
-
+|151|[Reverse Words in a String](151.Reverse Words in a String)|O(n)|O(n)|Medium|
+|152|[Maximum Product Subarray](152.Maximum Product Subarray)|O(n)|O(1)|Medium|
+|153|[Find Minimum in Rotated Sorted Array](153.Find Minimum in Rotated Sorted Array)|O(logn)|O(1)|Medium|
+|154|[Find Minimum in Rotated Sorted Array II](154.Find Minimum in Rotated Sorted Array)|O(n)|O(1)|Hard|
+|155|[Min Stack](155.Min Stack)|O(1)|O(n)|Easy|
 

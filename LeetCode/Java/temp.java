@@ -12,71 +12,30 @@ import java.util.*;
  * }
  */
 public class temp {
-  public ArrayList<Long> intervalSum(int[] A,
-                                     ArrayList<Interval> queries) {
-    // write your code here
-    ArrayList<Long> result = new ArrayList<>();
-    SegmentTreeNode seg = buildSegmentTree(A, 0, A.length - 1);
-    for (Interval in: queries) {
-      result.add(query(seg, in.start, in.end));
+  public String reverseWords(String s) {
+    if (s == null || s.length() == 0) {
+      return "";
     }
+    StringBuilder sb = new StringBuilder();
+    char[] chars = s.toCharArray();
+    int left = 0;
 
-    return result;
-  }
-
-  private class SegmentTreeNode {
-    int start, end;
-    long sum;
-    SegmentTreeNode left, right;
-    SegmentTreeNode(int start, int end) {
-      this.start = start;
-      this.end = end;
-      sum = 0L;
-      left = right = null;
-    }
-  }
-
-  private SegmentTreeNode buildSegmentTree(int[] A, int start, int end) {
-    SegmentTreeNode root = new SegmentTreeNode(start, end);
-    if (start == end) {
-      root.sum = A[start];
-      return root;
-    }
-
-    int mid = start + (end - start) / 2;
-    root.left = buildSegmentTree(A, start, mid);
-    root.right = buildSegmentTree(A, mid + 1, end);
-    root.sum = root.left.sum + root.right.sum;
-
-    return root;
-  }
-
-  private long query(SegmentTreeNode root, int start, int end) {
-    if (root.start == start && root.end == end) {
-      return root.sum;
-    }
-
-    int mid = root.start + (root.end - root.start) / 2;
-    long left = 0L;
-    long right = 0L;
-
-    if (start <= mid) {
-      if (end > mid) {
-        left = query(root.left, start, mid);
-      } else {
-        left = query(root.left, start, end);
+    while (left < chars.length) {
+      while (left < chars.length && chars[left] == ' ') {
+        left++;
       }
-    }
 
-    if (end > mid) {
-      if (start <= mid) {
-        right = query(root.right, mid + 1, end);
-      } else {
-        right = query(root.right, start, end);
+      int right = left;
+      while (right < chars.length && chars[right] != ' ') {
+        right++;
       }
+      if (sb.length() != 0 && left != right) {
+        sb.insert(0, ' ');
+      }
+      sb.insert(0, chars, left, right - left);
+      left = right + 1;
     }
-
-    return left + right;
+    return sb.toString();
   }
 
 
@@ -144,7 +103,7 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    new temp().intervalSum(A, quries);
+    new temp().reverseWords("    ");
 
 
     List<Integer> a1 = new ArrayList<>(B);

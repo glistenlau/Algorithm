@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/IntervalSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/155.Min Stack/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/155.Min Stack/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithm/temp.class" afterPath="$PROJECT_DIR$/out/production/Algorithm/temp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java" afterPath="$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/README.md" afterPath="$PROJECT_DIR$/LeetCode/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java" afterPath="$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/Java/temp.java" afterPath="$PROJECT_DIR$/LeetCode/Java/temp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,35 +42,126 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="temp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntervalSum.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LintCode/IntervalSum.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.238434">
-              <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8305085">
+              <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/155.Min Stack/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SegmentTreeQueryII.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/155.Min Stack/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="90" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="87" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -90,17 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LeetCode/126.Word Ladder II/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/126.Word Ladder II/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/128.Longest Consecutive Sequence/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/128.Longest Consecutive Sequence/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/130.Surrounded Regions/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/130.Surrounded Regions/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/131.Palindrome Partitioning/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/131.Palindrome Partitioning/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/132.Palindrome Partitioning II/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/Java/UdirectedGraphNode.java" />
-        <option value="$PROJECT_DIR$/LeetCode/133.Clone Graph/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/133.Clone Graph/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/132.Palindrome Partitioning II/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/135.Candy/Solution.java" />
@@ -136,11 +226,22 @@
         <option value="$PROJECT_DIR$/LeetCode/149.Max Points on a Line/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/150.Evaluate Reverse Polish Notation/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/150.Evaluate Reverse Polish Notation/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/README.md" />
         <option value="$PROJECT_DIR$/LintCode/FindTheWeakConnectedComponentInTheDirectedGraph.java" />
+        <option value="$PROJECT_DIR$/LintCode/IntervalSum.java" />
+        <option value="$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java" />
         <option value="$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java" />
         <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
-        <option value="$PROJECT_DIR$/LintCode/IntervalSum.java" />
+        <option value="$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/155.Min Stack/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/155.Min Stack/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/README.md" />
       </list>
     </option>
   </component>
@@ -155,10 +256,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1174" />
-    <option name="y" value="70" />
-    <option name="width" value="1876" />
-    <option name="height" value="1057" />
+    <option name="x" value="-1322" />
+    <option name="y" value="74" />
+    <option name="width" value="1331" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -321,7 +422,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LintCode" />
+              <option name="myItemId" value="LeetCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="155.Min Stack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="154.Find Minimum in Rotated Sorted Array II" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -694,7 +831,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1174" y="70" width="1876" height="1057" extended-state="0" />
+    <frame x="-1322" y="74" width="1331" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -706,14 +843,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17147192" sideWeight="0.49675852" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34634146" sideWeight="0.59338313" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31842387" sideWeight="0.38267544" order="10" side_tool="false" content_ui="tabs" x="67" y="483" width="1034" height="107" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45371777" sideWeight="0.38267544" order="10" side_tool="false" content_ui="tabs" x="67" y="483" width="1034" height="107" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29344264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1021" y="268" width="505" height="537" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2933852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1021" y="268" width="505" height="537" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24644808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3684771" sideWeight="0.67763156" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36722305" sideWeight="0.67763156" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -794,7 +931,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>151</line>
+          <line>110</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -823,7 +960,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>149</line>
+          <line>108</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
@@ -841,18 +978,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>18</line>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="230" />
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="231" />
+      <option name="time" value="236" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -866,88 +997,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LeetCode/130.Surrounded Regions/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71428573">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/130.Surrounded Regions/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10309278">
-          <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/131.Palindrome Partitioning/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/132.Palindrome Partitioning II/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1815431">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/131.Palindrome Partitioning/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06359301">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/134.Gas Station/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/134.Gas Station/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23391813">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/135.Candy/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12903225">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/135.Candy/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6374269">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/Java/UndirectedGraphNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64327484">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/132.Palindrome Partitioning II/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12903225">
@@ -1222,17 +1271,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="95" selection-start-line="155" selection-start-column="95" selection-end-line="155" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/146.LRU Cache/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1245,14 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1275,10 +1305,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/IntervalSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/SegmentTreeQueryII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/CountOfSmallerNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1286,19 +1336,120 @@
     <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LintCode/IntervalSum.java">
+    <entry file="file://$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.238434">
-          <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/151.Reverse Words in a String/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/152.Maximum Product Subarray/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="87" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/153.Find Minimum in Rotated Sorted Array/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/154.Find Minimum in Rotated Sorted Array II/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="90" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/155.Min Stack/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/155.Min Stack/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8305085">
+          <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

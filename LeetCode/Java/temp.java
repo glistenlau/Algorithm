@@ -12,80 +12,71 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<List<Integer>> connectedSet2(ArrayList<DirectedGraphNode> nodes) {
-    // Write your code here
-    if (nodes == null || nodes.length == 0) {
-      return new ArrayList<>();
+  public ArrayList<Long> intervalSum(int[] A,
+                                     ArrayList<Interval> queries) {
+    // write your code here
+    ArrayList<Long> result = new ArrayList<>();
+    SegmentTreeNode seg = buildSegmentTree(A, 0, A.length - 1);
+    for (Interval in: queries) {
+      result.add(query(seg, in.start, in.end));
     }
 
-    HashSet<Integer> labels = new HashSet<>();
-    for (DirectedGraphNode node: nodes) {
-      labels.add(node.label);
-    }
-
-    UnionFind uf = new UnionFind(labels);
-
-    for (DirectedGraphNode ori: nodes) {
-      for (DirectedGraphNode neighbor: ori.neighbors) {
-        uf.union(ori.label, neighbor.label);
-      }
-    }
-
-    return uf.print();
+    return result;
   }
 
-  private class UnionFind {
-    HashMap<Integer, Integer> father;
-    UnionFind(HashSet<Integer> nums) {
-      father = new HashMap<>();
-      for (int n: nums) {
-        father.put(n, n);
+  private class SegmentTreeNode {
+    int start, end;
+    long sum;
+    SegmentTreeNode left, right;
+    SegmentTreeNode(int start, int end) {
+      this.start = start;
+      this.end = end;
+      sum = 0L;
+      left = right = null;
+    }
+  }
+
+  private SegmentTreeNode buildSegmentTree(int[] A, int start, int end) {
+    SegmentTreeNode root = new SegmentTreeNode(start, end);
+    if (start == end) {
+      root.sum = A[start];
+      return root;
+    }
+
+    int mid = start + (end - start) / 2;
+    root.left = buildSegmentTree(A, start, mid);
+    root.right = buildSegmentTree(A, mid + 1, end);
+    root.sum = root.left.sum + root.right.sum;
+
+    return root;
+  }
+
+  private long query(SegmentTreeNode root, int start, int end) {
+    if (root.start == start && root.end == end) {
+      return root.sum;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    long left = 0L;
+    long right = 0L;
+
+    if (start <= mid) {
+      if (end > mid) {
+        left = query(root.left, start, mid);
+      } else {
+        left = query(root.left, start, end);
       }
     }
 
-    int compressedFind(int node) {
-      int fa = father.get(node);
-      while (fa != father.get(fa)) {
-        fa = father.get(fa);
-      }
-
-      int fat = father.get(node);
-      while (fat != father.get(fat)) {
-        int temp = father.get(fat);
-        father.put(fat, fa);
-        fat = temp;
-      }
-
-      return fa;
-    }
-
-    void union (int a, int b) {
-      int aFa = compressedFind(a);
-      int bFa = compressedFind(b);
-      if (aFa != bFa) {
-        father.put(bFa, aFa);
+    if (end > mid) {
+      if (start <= mid) {
+        right = query(root.right, mid + 1, end);
+      } else {
+        right = query(root.right, start, end);
       }
     }
 
-    List<List<Integer>> print() {
-      HashMap<Integer, List<Integer>> sameFa = new HashMap<>();
-      List<List<Integer>> result = new ArrayList<>();
-
-      for (int n: father.keySet()) {
-        int f = compressedFind(n);
-        if (!sameFa.containsKey(f)) {
-          sameFa.put(f, new ArrayList<>());
-        }
-        sameFa.get(f).add(n);
-      }
-
-      for (List<Integer> list: sameFa.values()) {
-        Collections.sort(list);
-        result.add(list);
-      }
-
-      return result;
-    }
+    return left + right;
   }
 
 
@@ -149,7 +140,11 @@ public class temp {
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
     int[] in = {5, 2, 6, 1, 7, 3, 8};
     int[] post = {5, 6, 2, 7, 8, 3, 1};
-    new temp().evalRPN(temp);
+    ArrayList<Interval> quries = new ArrayList<>();
+    quries.add(new Interval(1, 2));
+    quries.add(new Interval(0, 4));
+    quries.add(new Interval(2, 4));
+    new temp().intervalSum(A, quries);
 
 
     List<Integer> a1 = new ArrayList<>(B);

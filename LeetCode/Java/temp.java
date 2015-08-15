@@ -12,32 +12,27 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String reverseWords(String s) {
-    if (s == null || s.length() == 0) {
-      return "";
+  public int compareVersion(String version1, String version2) {
+    String[] v1 = version1.split("\\.");
+    String[] v2 = version2.split("\\.");
+    int before1 = v1.length > 1? Integer.parseInt(v1[0]): Integer.parseInt(version1);
+    int after1 = v1.length > 1? Integer.parseInt(v1[1]): 0;
+    int before2 = v2.length > 1? Integer.parseInt(v2[0]): Integer.parseInt(version2);
+    int after2 = v2.length > 1? Integer.parseInt(v2[1]): 0;
+    if (before1 > before2) {
+      return 1;
+    } else if (before1 == before2) {
+      if (after1 > after2) {
+        return 1;
+      } else if (after1 < after2) {
+        return -1;
+      } else {
+        return 0;
+      }
+    } else {
+      return -1;
     }
-    StringBuilder sb = new StringBuilder();
-    char[] chars = s.toCharArray();
-    int left = 0;
-
-    while (left < chars.length) {
-      while (left < chars.length && chars[left] == ' ') {
-        left++;
-      }
-
-      int right = left;
-      while (right < chars.length && chars[right] != ' ') {
-        right++;
-      }
-      if (sb.length() != 0 && left != right) {
-        sb.insert(0, ' ');
-      }
-      sb.insert(0, chars, left, right - left);
-      left = right + 1;
-    }
-    return sb.toString();
   }
-
 
 
   public static void main(String[] args) {
@@ -103,7 +98,7 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    new temp().reverseWords("    ");
+    new temp().compareVersion("1.0", "1.1");
 
 
     List<Integer> a1 = new ArrayList<>(B);

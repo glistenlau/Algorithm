@@ -12,72 +12,27 @@ import java.util.*;
  * }
  */
 public class temp {
-  /**
-   * @param n an integer
-   * @param m an integer
-   * @param operators an array of point
-   * @return an integer array
-   */
-  public List<Integer> numIslands2(int n, int m, Point[] operators) {
-    // Write your code here
-    List<Integer> result = new ArrayList<Integer>();
-    UnionFind uf = new UnionFind(n, m);
-    int[][] matrix = new int[n][m];
-    int[] rowOffset = {-1, 1, 0, 0};
-    int[] colOffset = {0, 0, -1, 1};
-    int count = 0;
-
-    for (Point p: operators) {
-      matrix[p.x][p.y] = 1;
-      for (int i = 0; i < 4; i++) {
-        int row = p.x + rowOffset[i];
-        int col = p.y + colOffset[i];
-        if (row >= 0 && row < n && col >= 0 && col < m && matrix[row][col] == 1) {
-          if (uf.compressedFind(p.x * m + p.y) != uf.compressedFind(row * m + col)) {
-            uf.union(p.x * m + p.y, row * m + col);
-            count--;
-          }
-        }
-      }
-      result.add(++count);
+  public int minimumSize(int[] nums, int s) {
+    // write your code here
+    if (nums == null || nums.length == 0) {
+      return -1;
     }
 
-    return result;
-  }
+    int result = Integer.MAX_VALUE;
+    int start = 0;
+    int end = 0;
+    int sum = nums[0];
 
-  private class UnionFind {
-    int[] fathers;
-
-    UnionFind(int row, int col) {
-      fathers = new int[row * col];
-      for (int i = 0; i < fathers.length; i++) {
-        fathers[i] = i;
+    while (start < nums.length && end < nums.length) {
+      if (sum >= s) {
+        result = Math.min(result, end - start + 1);
+        sum -= nums[start++];
+      } else {
+        sum += ++end < nums.length? nums[end]: 0;
       }
     }
 
-    int compressedFind(int pos) {
-      int father = fathers[pos];
-      while (father != fathers[father]) {
-        father = fathers[father];
-      }
-
-      int fa = fathers[pos];
-      while (fa != fathers[fa]) {
-        int temp = fathers[fa];
-        fathers[fa] = father;
-        fa = temp;
-      }
-
-      return father;
-    }
-
-    void union(int a, int b) {
-      int aFa = compressedFind(a);
-      int bFa = compressedFind(b);
-      if (aFa != bFa) {
-        fathers[bFa] = aFa;
-      }
-    }
+    return result == Integer.MAX_VALUE? -1: result;
   }
 
   public static void main(String[] args) {
@@ -100,7 +55,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {1, 2, 7, 8, 5};
+    int[] A = {2, 3, 1, 2, 4, 3};
     int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
 
     TreeNode root = new TreeNode(1);
@@ -145,7 +100,7 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    new temp().numIslands2(3, 3, pts);
+    new temp().minimumSize(A, 7);
 
 
     List<Integer> a1 = new ArrayList<>(B);

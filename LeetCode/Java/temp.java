@@ -12,84 +12,72 @@ import java.util.*;
  * }
  */
 public class temp {
-  public ArrayList<Integer> countOfSmallerNumberII(int[] A) {
-    // write your code here
-    ArrayList<Integer> result = new ArrayList<>();
-    if (A == null || A.length == 0) {
-      return result;
-    }
+  /**
+   * @param n an integer
+   * @param m an integer
+   * @param operators an array of point
+   * @return an integer array
+   */
+  public List<Integer> numIslands2(int n, int m, Point[] operators) {
+    // Write your code here
+    List<Integer> result = new ArrayList<Integer>();
+    UnionFind uf = new UnionFind(n, m);
+    int[][] matrix = new int[n][m];
+    int[] rowOffset = {-1, 1, 0, 0};
+    int[] colOffset = {0, 0, -1, 1};
+    int count = 0;
 
-    SegmentTreeNode root = buildTree(0, 10000);
-    for (int num: A) {
-      result.add(query(root, 0, num - 1));
-      addToTree(root, num);
+    for (Point p: operators) {
+      matrix[p.x][p.y] = 1;
+      for (int i = 0; i < 4; i++) {
+        int row = p.x + rowOffset[i];
+        int col = p.y + colOffset[i];
+        if (row >= 0 && row < n && col >= 0 && col < m && matrix[row][col] == 1) {
+          if (uf.compressedFind(p.x * m + p.y) != uf.compressedFind(row * m + col)) {
+            uf.union(p.x * m + p.y, row * m + col);
+            count--;
+          }
+        }
+      }
+      result.add(++count);
     }
 
     return result;
   }
 
-  private class SegmentTreeNode {
-    int start, end, count;
-    SegmentTreeNode left, right;
-    SegmentTreeNode(int start, int end) {
-      count = 0;
-      this.start = start;
-      this.end = end;
-      left = right = null;
-    }
-  }
+  private class UnionFind {
+    int[] fathers;
 
-  private SegmentTreeNode buildTree(int start, int end) {
-    SegmentTreeNode root = new SegmentTreeNode(start, end);
-    if (start == end) {
-      return root;
-    }
-
-    int mid = start + (end - start) / 2;
-    root.left = buildTree(start, mid);
-    root.right = buildTree(mid + 1, end);
-    return root;
-  }
-
-  private int query(SegmentTreeNode root, int start, int end) {
-    if (start <= root.start && end >= root.end) {
-      return root.count;
-    }
-
-    int mid = root.start + (root.end - root.start) / 2;
-    int left = 0;
-    int right = 0;
-    if (start <= mid) {
-      if (end > mid) {
-        left = query(root.left, start, mid);
-      } else {
-        left = query(root.left, start, end);
-      }
-    }
-    if (end > mid) {
-      if (start <= mid) {
-        right = query(root.right, mid + 1, end);
-      } else {
-        right = query(root.right, start, end);
+    UnionFind(int row, int col) {
+      fathers = new int[row * col];
+      for (int i = 0; i < fathers.length; i++) {
+        fathers[i] = i;
       }
     }
 
-    return left + right;
-  }
+    int compressedFind(int pos) {
+      int father = fathers[pos];
+      while (father != fathers[father]) {
+        father = fathers[father];
+      }
 
-  private void addToTree(SegmentTreeNode root, int num) {
-    if (root.start == root.end && root.start == num) {
-      root.count = 1;
-      return;
+      int fa = fathers[pos];
+      while (fa != fathers[fa]) {
+        int temp = fathers[fa];
+        fathers[fa] = father;
+        fa = temp;
+      }
+
+      return father;
     }
 
-    int mid = root.start + (root.end - root.start) / 2;
-    if (num <= mid) {
-      addToTree(root.left, num);
-    } else {
-      addToTree(root.right, num);
+    void union(int a, int b) {
+      int aFa = compressedFind(a);
+      int bFa = compressedFind(b);
+      if (aFa != bFa) {
+        fathers[bFa] = aFa;
+      }
     }
-    root.count += 1;
   }
 
   public static void main(String[] args) {
@@ -141,6 +129,8 @@ public class temp {
     for (int n: A) {
       B.add(n);
     }
+    Point[] pts= {new Point(0, 0), new Point(0, 1), new Point(2, 2), new Point(2, 1)};
+
     ListNode head = new ListNode(4);
     head.next = new ListNode(3);
     head.next.next = new ListNode(1);
@@ -155,7 +145,7 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    new temp().compareVersion("1.0", "1.1");
+    new temp().numIslands2(3, 3, pts);
 
 
     List<Integer> a1 = new ArrayList<>(B);

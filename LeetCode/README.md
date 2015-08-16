@@ -159,7 +159,7 @@ LeetCode Solution
 |153|[Find Minimum in Rotated Sorted Array](153.Find Minimum in Rotated Sorted Array)|O(logn)|O(1)|Medium|
 |154|[Find Minimum in Rotated Sorted Array II](154.Find Minimum in Rotated Sorted Array)|O(n)|O(1)|Hard|
 |155|[Min Stack](155.Min Stack)|O(1)|O(n)|Easy|
-|160|[Intersection of Two Linked List](160.Intersection of Two Linked List)|O(n)|O(1)|Easy|
+|160|[Intersection of Two Linked Lists](160.Intersection of Two Linked Lists)|O(n)|O(1)|Easy|
 |162|[Find Peak Element](162.Find Peak Element)|O(logn)|O(1)|Medium|
 |164|[Maximum Gap](164.Maximum Gap)|O(n)|O(n)|Hard|
 |165|[Compare Version Numbers](165.Compare Version Numbers)|O(n)|O(n)|Easy|

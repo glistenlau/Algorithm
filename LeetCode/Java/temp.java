@@ -12,27 +12,6 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int compareVersion(String version1, String version2) {
-    String[] v1 = version1.split("\\.");
-    String[] v2 = version2.split("\\.");
-    int before1 = v1.length > 1? Integer.parseInt(v1[0]): Integer.parseInt(version1);
-    int after1 = v1.length > 1? Integer.parseInt(v1[1]): 0;
-    int before2 = v2.length > 1? Integer.parseInt(v2[0]): Integer.parseInt(version2);
-    int after2 = v2.length > 1? Integer.parseInt(v2[1]): 0;
-    if (before1 > before2) {
-      return 1;
-    } else if (before1 == before2) {
-      if (after1 > after2) {
-        return 1;
-      } else if (after1 < after2) {
-        return -1;
-      } else {
-        return 0;
-      }
-    } else {
-      return -1;
-    }
-  }
 
 
   public static void main(String[] args) {

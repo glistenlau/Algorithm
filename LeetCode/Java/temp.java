@@ -12,7 +12,85 @@ import java.util.*;
  * }
  */
 public class temp {
+  public ArrayList<Integer> countOfSmallerNumberII(int[] A) {
+    // write your code here
+    ArrayList<Integer> result = new ArrayList<>();
+    if (A == null || A.length == 0) {
+      return result;
+    }
 
+    SegmentTreeNode root = buildTree(0, 10000);
+    for (int num: A) {
+      result.add(query(root, 0, num - 1));
+      addToTree(root, num);
+    }
+
+    return result;
+  }
+
+  private class SegmentTreeNode {
+    int start, end, count;
+    SegmentTreeNode left, right;
+    SegmentTreeNode(int start, int end) {
+      count = 0;
+      this.start = start;
+      this.end = end;
+      left = right = null;
+    }
+  }
+
+  private SegmentTreeNode buildTree(int start, int end) {
+    SegmentTreeNode root = new SegmentTreeNode(start, end);
+    if (start == end) {
+      return root;
+    }
+
+    int mid = start + (end - start) / 2;
+    root.left = buildTree(start, mid);
+    root.right = buildTree(mid + 1, end);
+    return root;
+  }
+
+  private int query(SegmentTreeNode root, int start, int end) {
+    if (start <= root.start && end >= root.end) {
+      return root.count;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    int left = 0;
+    int right = 0;
+    if (start <= mid) {
+      if (end > mid) {
+        left = query(root.left, start, mid);
+      } else {
+        left = query(root.left, start, end);
+      }
+    }
+    if (end > mid) {
+      if (start <= mid) {
+        right = query(root.right, mid + 1, end);
+      } else {
+        right = query(root.right, start, end);
+      }
+    }
+
+    return left + right;
+  }
+
+  private void addToTree(SegmentTreeNode root, int num) {
+    if (root.start == root.end && root.start == num) {
+      root.count = 1;
+      return;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    if (num <= mid) {
+      addToTree(root.left, num);
+    } else {
+      addToTree(root.right, num);
+    }
+    root.count += 1;
+  }
 
   public static void main(String[] args) {
     String[] temp = {"2", "1", "+", "3", "*"};

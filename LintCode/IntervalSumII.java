@@ -1,3 +1,20 @@
+/**
+ * Interval Sum II
+ * www.lintcode.com/en/problem/interval-sum-ii/
+ *
+ * Given an integer array in the construct mothod, implement two methods query(start, end) and modify(index, value):
+ *   For query(start, end), return the sum form index start to index end in the given array.
+ *   For modify(index, value), modify the number in the given index to value.
+ *
+ * Example
+ * Given array A = [1, 2, 7, 8, 5].
+ *   query(0, 2), return 10.
+ *   modify(0, 4), change A[0] from 1 to 4.
+ *   query(0, 1), return 6.
+ *   modiry(2, 1), change A[2] from 7 to 1.
+ *   query(2, 4), return 14.
+ */
+
 public class Solution {
   /* you may need to use some attributes here */
   private SegmentTreeNode seg;

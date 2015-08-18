@@ -12,31 +12,22 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int minimumSize(int[] nums, int s) {
-    // write your code here
-    if (nums == null || nums.length == 0) {
-      return -1;
+  public String convertToTitle(int n) {
+    StringBuilder result = new StringBuilder();
+    int index = n;
+    int r = 0;
+    while (index > 0) {
+      r = (index - 1) % 26;
+      result.insert(0, (char) ('A' + r));
+      index = (index - 1) / 26;
     }
 
-    int result = Integer.MAX_VALUE;
-    int start = 0;
-    int end = 0;
-    int sum = nums[0];
-
-    while (start < nums.length && end < nums.length) {
-      if (sum >= s) {
-        result = Math.min(result, end - start + 1);
-        sum -= nums[start++];
-      } else {
-        sum += ++end < nums.length? nums[end]: 0;
-      }
-    }
-
-    return result == Integer.MAX_VALUE? -1: result;
+    return result.toString();
   }
 
+
   public static void main(String[] args) {
-    String[] temp = {"2", "1", "+", "3", "*"};
+    String[] temp = {"3", "-", "4", "+", "5"};
 
     Set<String> dict = new HashSet<String>();
 
@@ -55,21 +46,21 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {2, 3, 1, 2, 4, 3};
+    int[] A = {};
     int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
 
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(5);
-    root.left.left = new TreeNode(3);
-    root.left.right = new TreeNode(4);
-    root.right.right = new TreeNode(6);
-    TreeLinkNode tln = new TreeLinkNode(1);
-    tln.left = new TreeLinkNode(2);
-    tln.right = new TreeLinkNode(3);
-    tln.left.left = new TreeLinkNode(4);
-    tln.left.right = new TreeLinkNode(5);
-    tln.right.right = new TreeLinkNode(7);
+//    TreeNode root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(5);
+//    root.left.left = new TreeNode(3);
+//    root.left.right = new TreeNode(4);
+//    root.right.right = new TreeNode(6);
+//    TreeLinkNode tln = new TreeLinkNode(1);
+//    tln.left = new TreeLinkNode(2);
+//    tln.right = new TreeLinkNode(3);
+//    tln.left.left = new TreeLinkNode(4);
+//    tln.left.right = new TreeLinkNode(5);
+//    tln.right.right = new TreeLinkNode(7);
 
 
     List<Interval> test = new ArrayList<>();
@@ -100,7 +91,10 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    new temp().minimumSize(A, 7);
+    int[] col = new int[1000];
+    for (i = 0; i < 1000; i++) {
+      System.out.println(new temp().convertToTitle(i + 1));
+    }
 
 
     List<Integer> a1 = new ArrayList<>(B);

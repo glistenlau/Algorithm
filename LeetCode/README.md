@@ -163,3 +163,5 @@ LeetCode Solution
 |162|[Find Peak Element](162.Find Peak Element)|O(logn)|O(1)|Medium|
 |164|[Maximum Gap](164.Maximum Gap)|O(n)|O(n)|Hard|
 |165|[Compare Version Numbers](165.Compare Version Numbers)|O(n)|O(n)|Easy|
+|166|[Fraction to Recurring Decimal](166.Fraction to Recurring Decimal)|O(n)|O(n)|Medium|
+|168|[Excel Sheet Column Title](168.Excel Sheet Column Title)|O(n)|O(n)|Easy|

@@ -12,38 +12,45 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int calculateMinimumHP(int[][] dungeon) {
-    int left = 1;
-    int right = Integer.MAX_VALUE - 1;
-    while (left + 1 < right) {
-      int mid = left + (right - left) / 2;
-      if (canSurvival(mid, dungeon)) {
-        right = mid;
+  public ArrayList<String> convertToRPN(String[] expression) {
+    // write your code here
+    ArrayList<String> result = new ArrayList<>();
+    int[] poriority = new int[expression.length];
+    int base = 0;
+    for (int i = 0; i < expression.length; i++) {
+      String e = expression[i];
+      if (e.equals("+") || e.equals("-")) {
+        poriority[i] = base + 1;
+      } else if (e.equals("*") || e.equals("/")) {
+        poriority[i] = base + 10;
+      } else if (e.equals("(")) {
+        base += 10;
+      } else if (e.equals(")")) {
+        base -= 10;
+      }
+    }
+
+    Stack<Integer> stack = new Stack<>();
+    for (int i = 0; i < expression.length; i++) {
+      String e = expression[i];
+      if (e.equals(")") || e.equals("(")) {
+        continue;
+      }
+      if (poriority[i] == 0) {
+        result.add(expression[i]);
       } else {
-        left = mid;
-      }
-    }
-
-    if (canSurvival(left, dungeon)) {
-      return left;
-    }
-    return right;
-  }
-
-  private boolean canSurvival(int health, int[][] dungeon) {
-    int[][] healthLeft = new int[dungeon.length][dungeon[0].length];
-    healthLeft[0][0] = health + dungeon[0][0];
-
-    for (int i = 0; i < dungeon.length; i++) {
-      for (int j = 0; j < dungeon[0].length; j++) {
-        if (i == 0 && j == 0) {
-          continue;
+        while (!stack.isEmpty() && poriority[i] <= poriority[stack.peek()]) {
+          result.add(expression[stack.pop()]);
         }
-        healthLeft[i][j] = Math.max(i > 0? healthLeft[i - 1][j]: Integer.MIN_VALUE, j > 0? healthLeft[i][j - 1]: Integer.MIN_VALUE);
+        stack.push(i);
       }
     }
 
-    return healthLeft[dungeon.length - 1][dungeon[0].length - 1] > 0;
+    while (!stack.isEmpty()) {
+      result.add(expression[stack.pop()]);
+    }
+
+    return result;
   }
 
 

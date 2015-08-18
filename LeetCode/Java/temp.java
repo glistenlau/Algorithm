@@ -12,45 +12,65 @@ import java.util.*;
  * }
  */
 public class temp {
-  public ArrayList<String> convertToRPN(String[] expression) {
-    // write your code here
-    ArrayList<String> result = new ArrayList<>();
+  public int evaluateExpression(String[] expression) {
     int[] poriority = new int[expression.length];
+    Stack<Integer> operator = new Stack<>();
+    Stack<Integer> operand = new Stack<>();
     int base = 0;
     for (int i = 0; i < expression.length; i++) {
       String e = expression[i];
-      if (e.equals("+") || e.equals("-")) {
-        poriority[i] = base + 1;
-      } else if (e.equals("*") || e.equals("/")) {
-        poriority[i] = base + 10;
-      } else if (e.equals("(")) {
+      if (e.equals("(")) {
         base += 10;
-      } else if (e.equals(")")) {
-        base -= 10;
-      }
-    }
-
-    Stack<Integer> stack = new Stack<>();
-    for (int i = 0; i < expression.length; i++) {
-      String e = expression[i];
-      if (e.equals(")") || e.equals("(")) {
         continue;
       }
+      if (e.equals(")")) {
+        base -= 10;
+        continue;
+      }
+      poriority[i] = getPoriority(e, base);
       if (poriority[i] == 0) {
-        result.add(expression[i]);
+        operand.push(Integer.parseInt(e));
       } else {
-        while (!stack.isEmpty() && poriority[i] <= poriority[stack.peek()]) {
-          result.add(expression[stack.pop()]);
+        while (!operator.isEmpty() && poriority[i] <= poriority[operator.peek()]) {
+          operand.push(op(operand, expression[operator.pop()]));
         }
-        stack.push(i);
+        operator.push(i);
       }
     }
-
-    while (!stack.isEmpty()) {
-      result.add(expression[stack.pop()]);
+    while (!operator.isEmpty()) {
+      operand.push(op(operand, expression[operator.pop()]));
     }
 
-    return result;
+    return operand.pop();
+  }
+
+  private int getPoriority(String s, int base) {
+    if (s.equals("*") || s.equals("/")) {
+      return base + 10;
+    }
+    if (s.equals("+") || s.equals("-")) {
+      return base + 1;
+    }
+    return 0;
+  }
+
+  private int op(Stack<Integer> operand, String e) {
+    int a = operand.pop();
+    int b = operand.pop();
+    if (e.equals("+")) {
+      return b + a;
+    }
+    if (e.equals("-")) {
+      return b - a;
+    }
+    if (e.equals("*")) {
+      return b * a;
+    }
+    if (e.equals("/")) {
+      return b / a;
+    }
+
+    return -1;
   }
 
 
@@ -120,7 +140,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().calculateMinimumHP(matrix1));
+    System.out.println(new temp().evaluateExpression(temp));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

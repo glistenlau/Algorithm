@@ -165,3 +165,6 @@ LeetCode Solution
 |165|[Compare Version Numbers](165.Compare Version Numbers)|O(n)|O(n)|Easy|
 |166|[Fraction to Recurring Decimal](166.Fraction to Recurring Decimal)|O(n)|O(n)|Medium|
 |168|[Excel Sheet Column Title](168.Excel Sheet Column Title)|O(n)|O(n)|Easy|
+|169|[Majority Element](169.Majority Element)|O(n)|O(1)|Easy|
+|171|[Excel Sheet Column Title](171.Excel Sheet Column Number)|O(n)|O(1)|Easy|
+|172|[Factorial Trailing Zeros](172.Factorial Trailing Zeros)|O(logn)|O(1)|Easy|

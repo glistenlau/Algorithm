@@ -12,17 +12,38 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String convertToTitle(int n) {
-    StringBuilder result = new StringBuilder();
-    int index = n;
-    int r = 0;
-    while (index > 0) {
-      r = (index - 1) % 26;
-      result.insert(0, (char) ('A' + r));
-      index = (index - 1) / 26;
+  public int calculateMinimumHP(int[][] dungeon) {
+    int left = 1;
+    int right = Integer.MAX_VALUE - 1;
+    while (left + 1 < right) {
+      int mid = left + (right - left) / 2;
+      if (canSurvival(mid, dungeon)) {
+        right = mid;
+      } else {
+        left = mid;
+      }
     }
 
-    return result.toString();
+    if (canSurvival(left, dungeon)) {
+      return left;
+    }
+    return right;
+  }
+
+  private boolean canSurvival(int health, int[][] dungeon) {
+    int[][] healthLeft = new int[dungeon.length][dungeon[0].length];
+    healthLeft[0][0] = health + dungeon[0][0];
+
+    for (int i = 0; i < dungeon.length; i++) {
+      for (int j = 0; j < dungeon[0].length; j++) {
+        if (i == 0 && j == 0) {
+          continue;
+        }
+        healthLeft[i][j] = Math.max(i > 0? healthLeft[i - 1][j]: Integer.MIN_VALUE, j > 0? healthLeft[i][j - 1]: Integer.MIN_VALUE);
+      }
+    }
+
+    return healthLeft[dungeon.length - 1][dungeon[0].length - 1] > 0;
   }
 
 
@@ -47,7 +68,7 @@ public class temp {
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
     int[] A = {};
-    int[][] matrix1 = {{1, 2, 3, 6, 5}, {16, 41, 23, 22, 6}, {15, 17, 24, 21, 7}, {14, 18, 19, 20, 10}, {13, 14, 11, 10, 9}};
+    int[][] matrix1 = {{2, 1}};
 
 //    TreeNode root = new TreeNode(1);
 //    root.left = new TreeNode(2);
@@ -92,10 +113,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    for (i = 0; i < 1000; i++) {
-      System.out.println(new temp().convertToTitle(i + 1));
-    }
-
+    System.out.println(new temp().calculateMinimumHP(matrix1));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

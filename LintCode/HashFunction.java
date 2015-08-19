@@ -31,10 +31,11 @@ class Solution {
   public int hashCode(char[] key,int HASH_SIZE) {
     // write your code here
     long code = 0;
-    for (int i = 0; i < key.length - 1; i++) {
-      code = ((code + key[i]) * 33) % HASH_SIZE;
+    for (int i = 0; i < key.length; i++) {
+      code *= 33;
+      code = (code + key[i]) % HASH_SIZE;
     }
-    code = (code + key[key.length - 1]) % HASH_SIZE;
     return (int)code;
   }
 };
+

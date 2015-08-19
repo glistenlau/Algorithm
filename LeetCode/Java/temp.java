@@ -12,11 +12,23 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int evaluateExpression(String[] expression) {
-    int[] poriority = new int[expression.length];
-    Stack<Integer> operator = new Stack<>();
-    Stack<Integer> operand = new Stack<>();
+  private class PriorityNode {
+    int priority;
+    ExpressionTreeNode root;
+    PriorityNode(int priority, String symbol) {
+      this.priority = priority;
+      this.root = new ExpressionTreeNode(symbol);
+    }
+  }
+
+  public ExpressionTreeNode build(String[] expression) {
+    // write your code here
+    if (expression == null || expression.length == 0) {
+      return null;
+    }
+
     int base = 0;
+    Stack<PriorityNode> stack = new Stack<>();
     for (int i = 0; i < expression.length; i++) {
       String e = expression[i];
       if (e.equals("(")) {
@@ -27,55 +39,46 @@ public class temp {
         base -= 10;
         continue;
       }
-      poriority[i] = getPoriority(e, base);
-      if (poriority[i] == 0) {
-        operand.push(Integer.parseInt(e));
-      } else {
-        while (!operator.isEmpty() && poriority[i] <= poriority[operator.peek()]) {
-          operand.push(op(operand, expression[operator.pop()]));
+
+      int pri = getPriority(e, base);
+      PriorityNode newNode = new PriorityNode(pri, e);
+      while (!stack.isEmpty() && newNode.priority <= stack.peek().priority) {
+        PriorityNode cur = stack.pop();
+        if (stack.isEmpty()) {
+          newNode.root.left = cur.root;
+        } else {
+          PriorityNode left = stack.peek();
+          if (newNode.priority > left.priority) {
+            newNode.root.left = cur.root;
+          } else {
+            left.root.right = cur.root;
+          }
         }
-        operator.push(i);
       }
+
+      stack.push(newNode);
     }
-    while (!operator.isEmpty()) {
-      operand.push(op(operand, expression[operator.pop()]));
+    while (stack.size() > 1) {
+      stack.peek().root.left = stack.pop().root;
     }
 
-    return operand.pop();
+    return stack.isEmpty()? null: stack.pop().root;
   }
 
-  private int getPoriority(String s, int base) {
-    if (s.equals("*") || s.equals("/")) {
-      return base + 10;
-    }
+  private int getPriority(String s, int base) {
     if (s.equals("+") || s.equals("-")) {
       return base + 1;
     }
-    return 0;
-  }
-
-  private int op(Stack<Integer> operand, String e) {
-    int a = operand.pop();
-    int b = operand.pop();
-    if (e.equals("+")) {
-      return b + a;
-    }
-    if (e.equals("-")) {
-      return b - a;
-    }
-    if (e.equals("*")) {
-      return b * a;
-    }
-    if (e.equals("/")) {
-      return b / a;
+    if (s.equals("*") || s.equals("/")) {
+      return base + 10;
     }
 
-    return -1;
+    return Integer.MAX_VALUE;
   }
 
 
   public static void main(String[] args) {
-    String[] temp = {"3", "-", "4", "+", "5"};
+    String[] temp = {"2","*","6","-","(","23","+","7",")","/","(","1","+","2",")"};
 
     Set<String> dict = new HashSet<String>();
 
@@ -140,7 +143,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().evaluateExpression(temp));
+    System.out.println(new temp().build(temp));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

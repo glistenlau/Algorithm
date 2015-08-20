@@ -170,3 +170,6 @@ LeetCode Solution
 |172|[Factorial Trailing Zeros](172.Factorial Trailing Zeros)|O(logn)|O(1)|Easy|
 |173|[Binary Search Tree Iterator](173.Binary Seach Tree Iterator)|O(1)|O(h)|Medium|
 |174|[Dungeon Game](174.Dungeon Game)|O(kmn)|O(mn)|Hard|
+|179|[Largest Number](179.Largest Number)|O(nlogn)|O(n)|Medium|
+|187|[Repeated DNA Sequences](187.Repeated DNA Sequences)|O(n)|O(n)|Medium|
+

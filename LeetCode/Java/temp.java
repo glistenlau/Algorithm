@@ -12,68 +12,21 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class PriorityNode {
-    int priority;
-    ExpressionTreeNode root;
-    PriorityNode(int priority, String symbol) {
-      this.priority = priority;
-      this.root = new ExpressionTreeNode(symbol);
-    }
-  }
-
-  public ExpressionTreeNode build(String[] expression) {
+  public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
     // write your code here
-    if (expression == null || expression.length == 0) {
-      return null;
-    }
-
-    int base = 0;
-    Stack<PriorityNode> stack = new Stack<>();
-    for (int i = 0; i < expression.length; i++) {
-      String e = expression[i];
-      if (e.equals("(")) {
-        base += 10;
-        continue;
+    Deque<Integer> myQ = new ArrayDeque<>();
+    ArrayList<Integer> result = new ArrayList<>();
+    for (int i = 0; i < nums.length; i++) {
+      while (!myQ.isEmpty() && nums[i] > nums[myQ.peekLast()]) {
+        myQ.pop();
       }
-      if (e.equals(")")) {
-        base -= 10;
-        continue;
+      myQ.push(i);
+      if (i >= k - 1) {
+        int f = myQ.peekFirst();
+        result.add(f == i - k + 1? nums[myQ.poll()]: nums[myQ.peekFirst()]);
       }
-
-      int pri = getPriority(e, base);
-      PriorityNode newNode = new PriorityNode(pri, e);
-      while (!stack.isEmpty() && newNode.priority <= stack.peek().priority) {
-        PriorityNode cur = stack.pop();
-        if (stack.isEmpty()) {
-          newNode.root.left = cur.root;
-        } else {
-          PriorityNode left = stack.peek();
-          if (newNode.priority > left.priority) {
-            newNode.root.left = cur.root;
-          } else {
-            left.root.right = cur.root;
-          }
-        }
-      }
-
-      stack.push(newNode);
     }
-    while (stack.size() > 1) {
-      stack.peek().root.left = stack.pop().root;
-    }
-
-    return stack.isEmpty()? null: stack.pop().root;
-  }
-
-  private int getPriority(String s, int base) {
-    if (s.equals("+") || s.equals("-")) {
-      return base + 1;
-    }
-    if (s.equals("*") || s.equals("/")) {
-      return base + 10;
-    }
-
-    return Integer.MAX_VALUE;
+    return result;
   }
 
 
@@ -97,7 +50,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {};
+    int[] A = {142,38,100,53,22,84,168,50,194,136,111,13,47,45,151,164,126,47,106,124,183,8,87,38,91,121,102,46,82,195,53,18,11,165,61};
     int[][] matrix1 = {{2, 1}};
 
 //    TreeNode root = new TreeNode(1);
@@ -143,7 +96,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().build(temp));
+    System.out.println(new temp().maxSlidingWindow(A, 35));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

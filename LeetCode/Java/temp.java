@@ -12,73 +12,73 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class Node {
-    int index, val;
-    Node(int index, int val) {
-      this.index = index;
+  private class ExpressionTreeNode {
+    int val;
+    String str;
+    ExpressionTreeNode left, right;
+
+    ExpressionTreeNode(int val, String str) {
       this.val = val;
+      this.str = str;
+      left = right = null;
     }
   }
-  public ArrayList<Integer> medianSlidingWindow(int[] nums, int k) {
+
+  public ArrayList<String> convertToPN(String[] expression) {
     // write your code here
-    ArrayList<Integer> result = new ArrayList<>();
-    Queue<Node> maxHeap = new PriorityQueue<>(nums.length, maxComp);
-    Queue<Node> minHeap = new PriorityQueue<>(nums.length, minComp);
-    Node[] nodes = new Node[nums.length];
-    Node median = null;
-
-    for (int i = 0; i < nums.length; i++) {
-      nodes[i] = new Node(i, nums[i]);
-      if (median == null) {
-        median = nodes[i];
-      } else if (nums[i] < median.val) {
-        maxHeap.offer(nodes[i]);
-      } else {
-        minHeap.offer(nodes[i]);
+    ArrayList<String> ans = new ArrayList<>();
+    Stack<ExpressionTreeNode> stack = new Stack<>();
+    int base = 0;
+    for (String str: expression) {
+      int priority = Integer.MAX_VALUE;
+      if (str.equals("+") || str.equals("-")) {
+        priority = base + 1;
+      } else if (str.equals("*") || str.equals("/")) {
+        priority = base + 10;
+      } else if (str.equals("(")) {
+        base += 10;
+        continue;
+      } else if (str.equals(")")) {
+        base -= 10;
+        continue;
       }
-
-      while (maxHeap.size() > minHeap.size()) {
-        minHeap.offer(median);
-        median = maxHeap.poll();
-      }
-      while (minHeap.size() > maxHeap.size() + 1) {
-        maxHeap.offer(median);
-        median = minHeap.poll();
-      }
-
-      if (i >= k - 1) {
-        result.add(median.val);
-        if (median.index == i - k + 1) {
-          if (maxHeap.isEmpty() && minHeap.isEmpty()) {
-            median = null;
-          } else {
-            median = maxHeap.size() > minHeap.size()? maxHeap.poll(): minHeap.poll();
-          }
-        } else if (nums[i - k + 1] < median.val) {
-          maxHeap.remove(nodes[i - k + 1]);
+      ExpressionTreeNode cur = new ExpressionTreeNode(priority, str);
+      while (!stack.isEmpty() && cur.val <= stack.peek().val) {
+        ExpressionTreeNode mid = stack.pop();
+        if (stack.isEmpty()) {
+          cur.left = mid;
         } else {
-          minHeap.remove(nodes[i - k + 1]);
+          ExpressionTreeNode left = stack.peek();
+          if (left.val >= cur.val) {
+            left.right = cur;
+          } else {
+            cur.left = cur;
+          }
         }
       }
+      stack.push(cur);
 
     }
 
-    return result;
+    while (stack.size() > 1) {
+      ExpressionTreeNode right = stack.pop();
+      stack.peek().left = right;
+    }
+
+    ExpressionTreeNode root = stack.isEmpty()? null: stack.pop();
+    preOrder(root, ans);
+    return ans;
   }
 
-  private Comparator<Node> maxComp = new Comparator<Node>() {
-    @Override
-    public int compare(Node a, Node b) {
-      return b.val - a.val;
+  private void preOrder(ExpressionTreeNode root, ArrayList<String> ans) {
+    if (root == null) {
+      return;
     }
-  };
 
-  private Comparator<Node> minComp = new Comparator<Node>() {
-    @Override
-    public int compare(Node a, Node b) {
-      return a.val - b.val;
-    }
-  };
+    ans.add(root.str);
+    preOrder(root.left, ans);
+    preOrder(root.right, ans);
+  }
 
 
   public static void main(String[] args) {

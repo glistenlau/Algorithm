@@ -12,71 +12,53 @@ import java.util.*;
  * }
  */
 public class temp {
-  public class Solution {
-    /**
-     * @param buildings: A list of lists of integers
-     * @return: Find the outline of those buildings
-     */
-    private class Building {
-      int start, end, h;
-
-      Building(int start, int end, int h) {
-        this.start = start;
-        this.end = end;
-        this.h = h;
-      }
+  public String minWindow(String source, String target) {
+    if (source == null || target == null || source.length() < target.length()) {
+      return "";
     }
 
-    private Comparator<Building> buildComp = new Comparator<Building>() {
-      @Override
-      public int compare(Building b1, Building b2) {
-        return b1.start - b2.start;
-      }
-    };
+    HashMap<Character, Integer> tar = new HashMap<>();
+    getStringMap(target, tar);
+    int n = target.length();
+    int left = 0;
+    String ans = null;
 
-    public ArrayList<ArrayList<Integer>> buildingOutline(int[][] buildings) {
-      // write your code here
-      ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-      if (buildings == null || buildings.length == 0 || buildings[0].length == 0) {
-        return ans;
-      }
-      Queue<Building> b = new PriorityQueue(buildings.length, buildComp);
-      for (int[] building: buildings) {
-        b.offer(new Building(building[0], building[1], building[2]));
+    for (int right = 0; right < source.length(); right++) {
+      char cur = source.charAt(right);
+      if (tar.containsKey(cur)) {
+        if (tar.get(cur) > 0) {
+          n--;
+        }
+        tar.put(cur, tar.get(cur) - 1);
       }
 
-      while (!b.isEmpty()) {
-        Building cur = b.poll();
+      while (n <= 0) {
+        if (ans == null || ans.length() > right - left + 1) {
+          ans = source.substring(left, right + 1);
+        }
 
-        while (!b.isEmpty() && b.peek().start < cur.end) {
-          Building next = b.poll();
-          if (cur.h == next.h) {
-            cur.end = Math.max(cur.end, next.end);
-          } else if (cur.h < next.h) {
-            if (cur.end > next.end) {
-              b.offer(new Building(next.end, cur.end, cur.h));
-            }
-            cur.end = next.start;
-            b.offer(next);
-          } else {
-            if (cur.end < next.end) {
-              next.start = cur.end;
-              b.offer(next);
-            }
+        char r = source.charAt(left);
+        if (tar.containsKey(r)) {
+          if (tar.get(r) >= 0) {
+            n++;
           }
-        }
-
-        if (cur.start != cur.end) {
-          ArrayList<Integer> temp = new ArrayList<>();
-          temp.add(cur.start);
-          temp.add(cur.end);
-          temp.add(cur.h);
-          ans.add(temp);
+          tar.put(r, tar.get(r) + 1);
         }
       }
-
-      return ans;
     }
+    return ans;
+  }
+
+  private void getStringMap(String s, HashMap<Character, Integer> map) {
+    for (int i = 0; i < s.length(); i++) {
+      char cur = s.charAt(i);
+      if (!map.containsKey(cur)) {
+        map.put(cur, 0);
+      }
+
+      map.put(cur, map.get(cur) + 1);
+    }
+
   }
 
   public static void main(String[] args) {

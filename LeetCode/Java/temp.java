@@ -12,53 +12,30 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String minWindow(String source, String target) {
-    if (source == null || target == null || source.length() < target.length()) {
-      return "";
+  public boolean isPalindrome(String s) {
+    // Write your code here
+    if (s == null || s.length() == 0) {
+      return true;
     }
-
-    HashMap<Character, Integer> tar = new HashMap<>();
-    getStringMap(target, tar);
-    int n = target.length();
+    char c = 'a';
     int left = 0;
-    String ans = null;
-
-    for (int right = 0; right < source.length(); right++) {
-      char cur = source.charAt(right);
-      if (tar.containsKey(cur)) {
-        if (tar.get(cur) > 0) {
-          n--;
-        }
-        tar.put(cur, tar.get(cur) - 1);
+    int right = s.length() - 1;
+    while (left < right) {
+      while (left < right && (s.charAt(left) < 'a' || s.charAt(left) > 'z')) {
+        left++;
+      }
+      while (left < right && (s.charAt(right) < 'a' || s.charAt(right) > 'z')) {
+        right--;
       }
 
-      while (n <= 0) {
-        if (ans == null || ans.length() > right - left + 1) {
-          ans = source.substring(left, right + 1);
-        }
-
-        char r = source.charAt(left);
-        if (tar.containsKey(r)) {
-          if (tar.get(r) >= 0) {
-            n++;
-          }
-          tar.put(r, tar.get(r) + 1);
-        }
+      if (s.charAt(left) != s.charAt(right)) {
+        return false;
       }
+
+      left++;
+      right--;
     }
-    return ans;
-  }
-
-  private void getStringMap(String s, HashMap<Character, Integer> map) {
-    for (int i = 0; i < s.length(); i++) {
-      char cur = s.charAt(i);
-      if (!map.containsKey(cur)) {
-        map.put(cur, 0);
-      }
-
-      map.put(cur, map.get(cur) + 1);
-    }
-
+    return true;
   }
 
   public static void main(String[] args) {
@@ -127,7 +104,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-//    System.out.println(new temp().medianSlidingWindow(A, 2));
+    System.out.println(new temp().isPalindrome("Bab"));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

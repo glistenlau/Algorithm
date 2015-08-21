@@ -33,6 +33,7 @@ public class Solution {
         }
         tar.put(cur, tar.get(cur) - 1);
       }
+      source.low
 
       while (n <= 0) {
         if (ans == null || ans.length() > right - left + 1) {

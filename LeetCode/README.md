@@ -172,4 +172,6 @@ LeetCode Solution
 |174|[Dungeon Game](174.Dungeon Game)|O(kmn)|O(mn)|Hard|
 |179|[Largest Number](179.Largest Number)|O(nlogn)|O(n)|Medium|
 |187|[Repeated DNA Sequences](187.Repeated DNA Sequences)|O(n)|O(n)|Medium|
-
+|189|[Rotate Array](189.Rotate Array)|O(n)|O(1)|Easy|
+|190|[Reverse Bits](190.Reverse Bits)|O(1)|O(1)|Easy|
+|191|[Number of 1 Bits](191.Number of 1 Bits)|O(1)|O(1)|Easy|

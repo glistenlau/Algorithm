@@ -12,30 +12,46 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isPalindrome(String s) {
-    // Write your code here
-    if (s == null || s.length() == 0) {
-      return true;
+  public int longestIncreasingContinuousSubsequenceII(int[][] A) {
+    if (A == null || A.length == 0|| A[0].length == 0) {
+      return 0;
     }
-    char c = 'a';
-    int left = 0;
-    int right = s.length() - 1;
-    while (left < right) {
-      while (left < right && (s.charAt(left) < 'a' || s.charAt(left) > 'z')) {
-        left++;
+    int max = 0;
+    int[][] f = new int[A.length][A[0].length];
+    boolean[][] found = new boolean[A.length][A[0].length];
+    for (int i = 0; i < A.length; i++) {
+      for (int j = 0; j < A.length; j++) {
+        if (!found[i][j]) {
+          bfs(A, i, j, f, found);
+        }
+        max = Math.max(max, f[i][j]);
       }
-      while (left < right && (s.charAt(right) < 'a' || s.charAt(right) > 'z')) {
-        right--;
-      }
-
-      if (s.charAt(left) != s.charAt(right)) {
-        return false;
-      }
-
-      left++;
-      right--;
     }
-    return true;
+
+    return max;
+  }
+
+  private int bfs(int[][] A, int r, int c, int[][] f, boolean[][] found) {
+    int[] dx = {1, -1, 0, 0};
+    int[] dy = {0, 0, -1, 1};
+
+    found[r][c] = true;
+
+    for (int i = 0; i < 4; i++) {
+      int row = r + dx[i];
+      int col = c + dy[i];
+      if (row >= 0 && row < A.length && col >= 0 && col < A[0].length) {
+        if (A[row][col] == A[r][c] - 1) {
+          if (!found[row][col]) {
+            bfs(A, row, col, f, found);
+          }
+          f[r][c] = f[row][col] + 1;
+          return f[r][c];
+        }
+      }
+    }
+
+    return 1;
   }
 
   public static void main(String[] args) {
@@ -59,7 +75,7 @@ public class temp {
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
     int[] A = {1, 2, 7, 7, 2, 10, 3, 4, 5};
-    int[][] matrix1 = {{12,13,0,12},{13,4,13,12},{13,8,10,12},{12,13,12,12},{13,13,13,13}};
+    int[][] matrix1 = {{1, 2, 3, 4, 5}, {16, 17, `}};
 
 //    TreeNode root = new TreeNode(1);
 //    root.left = new TreeNode(2);

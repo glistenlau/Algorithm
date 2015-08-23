@@ -172,6 +172,8 @@ LeetCode Solution
 |174|[Dungeon Game](174.Dungeon Game)|O(kmn)|O(mn)|Hard|
 |179|[Largest Number](179.Largest Number)|O(nlogn)|O(n)|Medium|
 |187|[Repeated DNA Sequences](187.Repeated DNA Sequences)|O(n)|O(n)|Medium|
+|188|[Best Time to Buy and Sell Stock IV](188.Best Time To Buy and Sell Stock IV)|O(kn)|O(kn)|Hard|
 |189|[Rotate Array](189.Rotate Array)|O(n)|O(1)|Easy|
 |190|[Reverse Bits](190.Reverse Bits)|O(1)|O(1)|Easy|
 |191|[Number of 1 Bits](191.Number of 1 Bits)|O(1)|O(1)|Easy|
+|198|[House Robber](198.House Robber)|O(n)|O(1)|Easy|

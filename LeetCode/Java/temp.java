@@ -12,46 +12,61 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int longestIncreasingContinuousSubsequenceII(int[][] A) {
-    if (A == null || A.length == 0|| A[0].length == 0) {
-      return 0;
-    }
-    int max = 0;
-    int[][] f = new int[A.length][A[0].length];
-    boolean[][] found = new boolean[A.length][A[0].length];
-    for (int i = 0; i < A.length; i++) {
-      for (int j = 0; j < A.length; j++) {
-        if (!found[i][j]) {
-          bfs(A, i, j, f, found);
-        }
-        max = Math.max(max, f[i][j]);
-      }
-    }
+  class TrieNode {
+    // Initialize your data structure here.
+    boolean hasEnd;
+    TrieNode[] next;
+    TrieNode() {
 
-    return max;
+      hasEnd = false;
+      next = new TrieNode[26];
+    }
   }
 
-  private int bfs(int[][] A, int r, int c, int[][] f, boolean[][] found) {
-    int[] dx = {1, -1, 0, 0};
-    int[] dy = {0, 0, -1, 1};
+  public class Trie {
+    private TrieNode root;
 
-    found[r][c] = true;
-
-    for (int i = 0; i < 4; i++) {
-      int row = r + dx[i];
-      int col = c + dy[i];
-      if (row >= 0 && row < A.length && col >= 0 && col < A[0].length) {
-        if (A[row][col] == A[r][c] - 1) {
-          if (!found[row][col]) {
-            bfs(A, row, col, f, found);
-          }
-          f[r][c] = f[row][col] + 1;
-          return f[r][c];
-        }
-      }
+    public Trie() {
+      root = new TrieNode();
     }
 
-    return 1;
+    // Inserts a word into the trie.
+    public void insert(String word) {
+      TrieNode cur = root;
+      for (int i = 0; i < word.length(); i++) {
+        if (cur.next[word.charAt(i)] == null) {
+          cur.next[word.charAt(i)] = new TrieNode();
+        }
+        cur = cur.next[word.charAt(i)];
+      }
+      cur.hasEnd = true;
+    }
+
+    // Returns if the word is in the trie.
+    public boolean search(String word) {
+      TrieNode cur = root;
+      for (int i = 0; i < word.length(); i++) {
+        if (cur.next[word.charAt(i)] == null) {
+          return false;
+        }
+        cur = cur.next[word.charAt(i)];
+      }
+      return cur.hasEnd;
+    }
+
+    // Returns if there is any word in the trie
+    // that starts with the given prefix.
+    public boolean startsWith(String prefix) {
+      TrieNode cur = root;
+      for (int i = 0; i < prefix.length(); i++) {
+        if (cur.next[prefix.charAt(i)] == null) {
+          return false;
+        }
+        cur = cur.next[prefix.charAt(i)];
+      }
+
+      return true;
+    }
   }
 
   public static void main(String[] args) {
@@ -74,21 +89,21 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {1, 2, 7, 7, 2, 10, 3, 4, 5};
-    int[][] matrix1 = {{1, 2, 3, 4, 5}, {16, 17, `}};
+    int[] A = {1,2,4,2,5,7,2,4,9,0};
+    int[][] matrix1 = {{0, 1}};
 
-//    TreeNode root = new TreeNode(1);
-//    root.left = new TreeNode(2);
-//    root.right = new TreeNode(5);
-//    root.left.left = new TreeNode(3);
-//    root.left.right = new TreeNode(4);
-//    root.right.right = new TreeNode(6);
-//    TreeLinkNode tln = new TreeLinkNode(1);
-//    tln.left = new TreeLinkNode(2);
-//    tln.right = new TreeLinkNode(3);
-//    tln.left.left = new TreeLinkNode(4);
-//    tln.left.right = new TreeLinkNode(5);
-//    tln.right.right = new TreeLinkNode(7);
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(5);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(4);
+    root.right.right = new TreeNode(6);
+    TreeLinkNode tln = new TreeLinkNode(1);
+    tln.left = new TreeLinkNode(2);
+    tln.right = new TreeLinkNode(3);
+    tln.left.left = new TreeLinkNode(4);
+    tln.left.right = new TreeLinkNode(5);
+    tln.right.right = new TreeLinkNode(7);
 
 
     List<Interval> test = new ArrayList<>();
@@ -104,12 +119,12 @@ public class temp {
       B.add(n);
     }
 //    Point[] pts= {new Point(0, 0), new Point(0, 1), new Point(2, 2), new Point(2, 1)};
-
-    ListNode head = new ListNode(4);
-    head.next = new ListNode(3);
-    head.next.next = new ListNode(1);
-    head.next.next.next = new ListNode(5);
-    head.next.next.next.next = new ListNode(2);
+//
+//    ListNode head = new ListNode(4);
+//    head.next = new ListNode(3);
+//    head.next.next = new ListNode(1);
+//    head.next.next.next = new ListNode(5);
+//    head.next.next.next.next = new ListNode(2);
     boolean check = dict.contains("hot");
     String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
     int[] pre = {1, 2, 5, 6, 3, 7, 8};
@@ -120,7 +135,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().isPalindrome("Bab"));
+    System.out.println(new temp().canFinish(2, matrix1));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

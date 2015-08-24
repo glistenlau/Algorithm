@@ -177,7 +177,7 @@ LeetCode Solution
 |190|[Reverse Bits](190.Reverse Bits)|O(1)|O(1)|Easy|
 |191|[Number of 1 Bits](191.Number of 1 Bits)|O(1)|O(1)|Easy|
 |198|[House Robber](198.House Robber)|O(n)|O(1)|Easy|
-|199|[Binary Tree Right Side View](199.Binary Tree Right Side View|O(n)|O(n)|Medium|
+|199|[Binary Tree Right Side View](199.Binary Tree Right Side View)|O(n)|O(n)|Medium|
 |200|[Number of Islands](200.Number of Islands)|O(mn)|O(1)|Medium|
 |201|[Bitwise AND of Numbers Range](201.Bitwise AND of Numbers Range)|O(1)|O(1)|Medium|
 |202|[Happy Number](202.Happy Number)|O(n)|O(n)|Easy|

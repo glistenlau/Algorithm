@@ -12,61 +12,44 @@ import java.util.*;
  * }
  */
 public class temp {
-  class TrieNode {
-    // Initialize your data structure here.
-    boolean hasEnd;
-    TrieNode[] next;
-    TrieNode() {
-
-      hasEnd = false;
-      next = new TrieNode[26];
-    }
-  }
-
-  public class Trie {
-    private TrieNode root;
-
-    public Trie() {
-      root = new TrieNode();
-    }
-
-    // Inserts a word into the trie.
-    public void insert(String word) {
-      TrieNode cur = root;
-      for (int i = 0; i < word.length(); i++) {
-        if (cur.next[word.charAt(i)] == null) {
-          cur.next[word.charAt(i)] = new TrieNode();
-        }
-        cur = cur.next[word.charAt(i)];
-      }
-      cur.hasEnd = true;
-    }
-
-    // Returns if the word is in the trie.
-    public boolean search(String word) {
-      TrieNode cur = root;
-      for (int i = 0; i < word.length(); i++) {
-        if (cur.next[word.charAt(i)] == null) {
-          return false;
-        }
-        cur = cur.next[word.charAt(i)];
-      }
-      return cur.hasEnd;
-    }
-
-    // Returns if there is any word in the trie
-    // that starts with the given prefix.
-    public boolean startsWith(String prefix) {
-      TrieNode cur = root;
-      for (int i = 0; i < prefix.length(); i++) {
-        if (cur.next[prefix.charAt(i)] == null) {
-          return false;
-        }
-        cur = cur.next[prefix.charAt(i)];
-      }
-
+  public boolean firstWillWin(int[] values) {
+    if (values == null || values.length == 0) {
       return true;
     }
+
+    int[] f = new int[values.length + 1];
+    boolean[] visited = new boolean[values.length + 1];
+
+    int sum = 0;
+    for (int val: values) {
+      sum += val;
+    }
+
+    return sum < 2 * search(values.length, values, f, visited);
+  }
+
+  private int search(int n, int[] values, int[] f, boolean[] visited) {
+    if (visited[n]) {
+      return f[n];
+    }
+    visited[n] = true;
+
+    if (n == 0) {
+      f[n] = 0;
+    } else if (n == 1) {
+      f[n] = values[values.length - 1];
+    } else if (n == 2) {
+      f[n] = values[values.length - 1] + values[values.length - 2];
+    } else if (n == 3) {
+      f[n] = values[values.length - 2] + values[values.length - 3];
+    } else {
+      f[n] = Math.max(
+          Math.min(search(n - 2, values, f, visited), search(n - 3, values, f, visited)) + values[values.length - n],
+          Math.min(search(n - 3, values, f, visited), search(n - 4, values, f, visited)) + values[values.length - n] + values[values.length - n + 1]
+      );
+    }
+
+    return f[n];
   }
 
   public static void main(String[] args) {
@@ -89,7 +72,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {1,2,4,2,5,7,2,4,9,0};
+    int[] A = {2, 2, 2, 2, 2, 2};
     int[][] matrix1 = {{0, 1}};
 
     TreeNode root = new TreeNode(1);
@@ -135,7 +118,7 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().canFinish(2, matrix1));
+    System.out.println(new temp().firstWillWin(A));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

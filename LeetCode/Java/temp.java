@@ -12,48 +12,41 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean firstWillWin(int[] values) {
-    if (values == null || values.length == 0) {
-      return true;
+  public List<List<Integer>> combinationSum3(int k, int n) {
+    List<List<Integer>> ans = new ArrayList<>();
+    if (k == 0) {
+      return ans;
     }
 
-    int[] f = new int[values.length + 1];
-    boolean[] visited = new boolean[values.length + 1];
-
-    int sum = 0;
-    for (int val: values) {
-      sum += val;
-    }
-
-    return sum < 2 * search(values.length, values, f, visited);
+    dfsHelper(k, n, 1, 0, new ArrayList<>(), ans);
+    return ans;
   }
 
-  private int search(int n, int[] values, int[] f, boolean[] visited) {
-    if (visited[n]) {
-      return f[n];
-    }
-    visited[n] = true;
-
-    if (n == 0) {
-      f[n] = 0;
-    } else if (n == 1) {
-      f[n] = values[values.length - 1];
-    } else if (n == 2) {
-      f[n] = values[values.length - 1] + values[values.length - 2];
-    } else if (n == 3) {
-      f[n] = values[values.length - 2] + values[values.length - 3];
-    } else {
-      f[n] = Math.max(
-          Math.min(search(n - 2, values, f, visited), search(n - 3, values, f, visited)) + values[values.length - n],
-          Math.min(search(n - 3, values, f, visited), search(n - 4, values, f, visited)) + values[values.length - n] + values[values.length - n + 1]
-      );
+  private void dfsHelper(int k, int n, int pos, int sum, List<Integer> taken, List<List<Integer>> ans) {
+    if (taken.size() == k || sum > n) {
+      if (sum == n) {
+        ans.add(new ArrayList<>(taken));
+      }
+      return ;
     }
 
-    return f[n];
+    for (int i = pos; i <= 9; i++) {
+      sum += i;
+      taken.add(i);
+      dfsHelper(k, n, pos + 1, sum, taken, ans);
+      taken.remove(taken.size() - 1);
+      sum -= i;
+    }
   }
 
   public static void main(String[] args) {
-    String[] temp = {"2","*","6","-","(","23","+","7",")","/","(","1","+","2",")"};
+    String[] temp = {"oath", "pea", "eat", "rain"};
+    char[][] board = {
+        {'o', 'a', 'a', 'n'},
+        {'e', 't', 'a', 'e'},
+        {'i', 'h', 'k', 'r'},
+        {'o', 'f', 'l', 'v'}
+    };
 
     Set<String> dict = new HashSet<String>();
 
@@ -62,17 +55,14 @@ public class temp {
     }
 
     String[] strA = {"O"};
-    char[][] board = new char[strA.length][strA[0].length()];
     int i = 0;
-    for (String str: strA) {
-      board[i++] = str.toCharArray();
-    }
+
 
     char[][] sodoku = {{'X', 'X', 'X', 'X'},
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {2, 2, 2, 2, 2, 2};
+    int[] A = {2, 1};
     int[][] matrix1 = {{0, 1}};
 
     TreeNode root = new TreeNode(1);
@@ -117,8 +107,8 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    int[] col = new int[1000];
-    System.out.println(new temp().firstWillWin(A));
+    int[] col = new int[1000];""
+    System.out.println(new temp().combinationSum3(2, 18));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

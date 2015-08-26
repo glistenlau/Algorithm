@@ -189,3 +189,8 @@ LeetCode Solution
 |208|[Implement Trie (Prefix Tree)](208.Implement Trie (Prefix Tree))|O(n)|O(n)|Medium|
 |209|[Minimum Size Subarray Sum](209.Minimum Size Subarray Sum)|O(n)|O(1)|Medium|
 |210|[Course Schedule II](210.Course Schedule II)|O(m+n)|O(m+n)|Medium|
+|211|[Add and Search Word - Data structure design](211.Add ans Search Word - Data structure design)|O(n)|O(n)|Medium|
+|212|[Word Search II](212.Word Search II)|O((mn)^2)|O(k)|Hard|
+|213|[House Robber II](213.House Robber II)|O(n)|O(n)|Medium|
+|214|[Shortest Palindrome](214.Shortest Palindrome)|O(n)|O(n)|Hard|
+|215|[Kth Largest Element in an Array](215.Kth Largest Element in an Array)|O(n)|O(1)|Medium|

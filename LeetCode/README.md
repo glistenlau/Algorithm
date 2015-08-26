@@ -194,3 +194,8 @@ LeetCode Solution
 |213|[House Robber II](213.House Robber II)|O(n)|O(n)|Medium|
 |214|[Shortest Palindrome](214.Shortest Palindrome)|O(n)|O(n)|Hard|
 |215|[Kth Largest Element in an Array](215.Kth Largest Element in an Array)|O(n)|O(1)|Medium|
+|216|[Combination Sum III](216.Combination Sum III)|O(2^n)|O(k)|Medium|
+|217|[Contains Duplicate](217.Contains Duplicate)|O(n)|O(n)|Easy|
+|218|[The Skyline Problem](218.The Skyline Problem)|O(nlogn)|O(n)|Hard|
+|219|[Contains Duplicate II](219.Contains Duplicate II)|O(n)|O(1)|Easy|
+|220|[Contains Duplicate III](220.Contains Duplicate III)|O(n^2)|O(n)|Medium|

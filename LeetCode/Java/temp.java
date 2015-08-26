@@ -12,30 +12,63 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<List<Integer>> combinationSum3(int k, int n) {
-    List<List<Integer>> ans = new ArrayList<>();
-    if (k == 0) {
-      return ans;
+  private class TreeNode {
+    int val, index;
+    TreeNode left, right;
+
+    TreeNode (int val, int index) {
+      this.val = val;
+      this.index = index;
+      this.left = this.right = null;
+    }
+  }
+  public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+    if (nums == null || nums.length < 2 || k == 0) {
+      return false;
+    }
+    TreeNode root = null;
+
+    for (int i = 0; i < nums.length; i++) {
+      if (searchBST(root, nums, i, k, t)) {
+        return true;
+      }
+      root = insertBST(root, nums, i);
     }
 
-    dfsHelper(k, n, 1, 0, new ArrayList<>(), ans);
-    return ans;
+    return false;
   }
 
-  private void dfsHelper(int k, int n, int pos, int sum, List<Integer> taken, List<List<Integer>> ans) {
-    if (taken.size() == k || sum > n) {
-      if (sum == n) {
-        ans.add(new ArrayList<>(taken));
-      }
-      return ;
+  private TreeNode insertBST(TreeNode root, int[] nums, int i) {
+    if (root == null) {
+      return new TreeNode(nums[i], i);
     }
 
-    for (int i = pos; i <= 9; i++) {
-      sum += i;
-      taken.add(i);
-      dfsHelper(k, n, pos + 1, sum, taken, ans);
-      taken.remove(taken.size() - 1);
-      sum -= i;
+    if (nums[i] > root.val) {
+      root.right = insertBST(root.right, nums, i);
+    } else {
+      root.left = insertBST(root.left, nums, i);
+    }
+    return root;
+  }
+
+  private boolean searchBST(TreeNode root, int[] nums, int i, int k, int t) {
+    if (root == null) {
+      return false;
+    }
+    if (Math.abs(nums[i] - root.val) > t) {
+      if (nums[i] > root.val) {
+        return searchBST(root.right, nums, i, k, t);
+      } else {
+        return searchBST(root.left, nums, i, k, t);
+      }
+    } else {
+      if (Math.abs(i - root.index) <= k) {
+        return true;
+      }
+      if (searchBST(root.left, nums, i, k, t) || searchBST(root.right, nums, i, k, t)) {
+        return true;
+      }
+      return false;
     }
   }
 
@@ -62,15 +95,19 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {2, 1};
-    int[][] matrix1 = {{0, 1}};
+    int[] A = {-1, -1};
+    int[][] matrix1 = {
 
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(5);
-    root.left.left = new TreeNode(3);
-    root.left.right = new TreeNode(4);
-    root.right.right = new TreeNode(6);
+        {0, 2, 3},
+        {2, 5, 3}
+    };
+
+//    TreeNode root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(5);
+//    root.left.left = new TreeNode(3);
+//    root.left.right = new TreeNode(4);
+//    root.right.right = new TreeNode(6);
     TreeLinkNode tln = new TreeLinkNode(1);
     tln.left = new TreeLinkNode(2);
     tln.right = new TreeLinkNode(3);
@@ -107,8 +144,8 @@ public class temp {
     quries.add(new Interval(1, 2));
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
-    int[] col = new int[1000];""
-    System.out.println(new temp().combinationSum3(2, 18));
+    int[] col = new int[1000];
+    System.out.println(new temp().containsNearbyAlmostDuplicate(A, 1, 0));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

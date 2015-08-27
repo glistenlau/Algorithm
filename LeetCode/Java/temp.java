@@ -12,44 +12,40 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean firstWillWin(int[] values) {
-    // write your code here
-    int[][] dp = new int[values.length][values.length];
-    boolean[][] visited = new boolean[values.length][values.length];
-    int sum = 0;
-    for (int value: values) {
-      sum += value;
+  private int[][] getSums(int[] pages) {
+    int[][] sums = new int[pages.length + 1][pages.length + 1];
+    for (int i = 1; i <= pages.length; i++) {
+      for (int j = i; j <= pages.length; j++) {
+        sums[i][j] = sums[i][j - 1] + pages[j - 1];
+      }
     }
 
-    return sum < 2 * search(values, 0, values.length - 1, dp, visited);
+    return sums;
   }
-
-  private int search(int[] values, int left, int right, int[][] dp, boolean[][] visited) {
-    if (left > right) {
+  public int copyBooks(int[] pages, int k) {
+    // write your code here
+    if (pages == null || pages.length == 0) {
       return 0;
     }
-    if (visited[left][right]) {
-      return dp[left][right];
+
+    int[][] dp = new int[pages.length + 1][k + 1];
+    int[][] sums = getSums(pages);
+
+    for (int i = 1; i <= pages.length; i++) {
+      dp[i][0] = Integer.MAX_VALUE;
     }
 
-    if (left == 0 && right == 1) {
-      dp[left][right] = Math.max(values[left], values[right]);
-    } else if (left == values.length - 2 && right == values.length - 1) {
-      dp[left][right] = Math.max(values[left], values[right]);
-    } else if (left == right) {
-      dp[left][right] = values[left];
-
-    } else {
-      dp[left][right] = Math.max(
-          Math.min(search(values, left + 2, right, dp, visited), search(values, left + 1, right - 1, dp, visited)) + values[left],
-          Math.min(search(values, left + 1, right - 1, dp, visited), search(values, left, right - 2, dp, visited)) + values[right]
-      );
+    for (int i = 1; i <= pages.length; i++) {
+      for (int j = 1; j <= k; j++) {
+        dp[i][j] = Integer.MAX_VALUE;
+        for (int n = 0; n < i; n++) {
+          dp[i][j] = Math.min(dp[i][j], Math.max(dp[n][j - 1], sums[n + 1][i]));
+        }
+      }
     }
 
-    visited[left][right] = true;
-    return dp[left][right];
+    return dp[pages.length][k];
   }
-
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};
     char[][] board = {
@@ -73,7 +69,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {-1, -1};
+    int[] A = {3, 2, 4};
     int[][] matrix1 = {
 
         {3, 2, 2},
@@ -125,7 +121,7 @@ public class temp {
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
     for (int[] ma: matrix1) {
-      System.out.println(new temp().firstWillWin(ma));
+      System.out.println(new temp().copyBooks(A, 2));
     }
 
     List<Integer> a1 = new ArrayList<>(B);

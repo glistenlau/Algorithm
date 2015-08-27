@@ -12,44 +12,32 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int postOffice(int[] A, int k) {
-    if (A == null || A.length == 0) {
-      return 0;
+  public List<String> summaryRanges(int[] nums) {
+    List<String> ans = new ArrayList<String>();
+    if (nums == null || nums.length == 0) {
+      return ans;
     }
 
-    int[][] diff = getDiff(A);
-    int[][] dp = new int[A.length + 1][k + 1];
-    for (int i = 1; i <= A.length; i++) {
-      dp[i][1] = diff[0][i - 1];
-    }
-
-
-    for (int i = 1; i <= A.length; i++) {
-      for (int n = 2; n <= k; n++) {
-        dp[i][n] = Integer.MAX_VALUE;
-        for (int j = 0; j < i; j++) {
-          dp[i][n] = Math.min(dp[i][n], dp[j][n - 1] + diff[j][i - 1]);
-        }
+    int left = 0;
+    for (int i = 1; i < nums.length; i++) {
+      if (nums[i] != nums[i - 1] + 1) {
+        ans.add(getPattern(nums, left, i - 1));
+        left = i;
       }
     }
+    ans.add(getPattern(nums, left, nums.length - 1));
 
-    return dp[A.length][k];
+    return ans;
   }
 
-  private int[][] getDiff(int[] A) {
-    int[][] diff = new int[A.length][A.length];
-
-    for (int i = 0; i < A.length; i++) {
-      for (int j = i + 1; j < A.length; j++) {
-        int mid = i + (j - i) / 2;
-        for (int k = i; k <=j; k++) {
-          diff[i][j] += Math.abs(A[k] - A[mid]);
-        }
-      }
+  private String getPattern(int[] nums, int start, int end) {
+    if (start == end) {
+      return "" + nums[start];
+    } else {
+      return "" + nums[start] + "->" + nums[end];
     }
-
-    return diff;
   }
+
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};
     char[][] board = {
@@ -65,7 +53,7 @@ public class temp {
       dict.add(temp[i]);
     }
 
-    String[] strA = {"O"};
+    String[] strA = {"1 + 1", " 2-1 + 2", "(1 + (4+5+2)-3) + (6+8)"};
     int i = 0;
 
 
@@ -124,8 +112,8 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    for (int[] ma: matrix1) {
-      System.out.println(new temp().postOffice(A, 2));
+    for (String str: strA) {
+      System.out.println(new temp().summaryRanges(new int[]{0, 1, 2, 4, 5, 7}));
     }
 
     List<Integer> a1 = new ArrayList<>(B);

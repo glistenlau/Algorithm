@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/PostOfficeProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/221.Maximal Square/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/223.Rectangle Area/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/224.Basic Calculator/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/227.Basic Calculator II/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/228.Summary Ranges/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/229.Majority Element II/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/221.Maximal Square/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/223.Rectangle Area/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/224.Basic Calculator/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/227.Basic Calculator II/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/228.Summary Ranges/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/229.Majority Element II/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/Solution.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithm/temp.class" afterPath="$PROJECT_DIR$/out/production/Algorithm/temp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/README.md" afterPath="$PROJECT_DIR$/LeetCode/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/Java/temp.java" afterPath="$PROJECT_DIR$/LeetCode/Java/temp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,49 +57,51 @@
         <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
-                <element signature="e#1408#1416#0" expanded="true" />
-                <element signature="e#2588#2597#0" expanded="true" />
+                <element signature="e#324#332#0" expanded="true" />
+                <element signature="e#1133#1141#0" expanded="true" />
+                <element signature="e#2356#2365#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostOfficeProblem.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LintCode/PostOfficeProblem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50104386">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CopyBooks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LintCode/CopyBooks.java">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/228.Summary Ranges/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CoinsInALineIII.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LintCode/CoinsInALineIII.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/214.Shortest Palindrome/README.md">
+        <entry file="file://$PROJECT_DIR$/LeetCode/228.Summary Ranges/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/229.Majority Element II/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/229.Majority Element II/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.25">
               <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
@@ -91,20 +114,20 @@
         </entry>
       </file>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/219.Contains Duplicate II/Solution.java">
+        <entry file="file://$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/219.Contains Duplicate II/README.md">
+        <entry file="file://$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.25">
-              <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -113,11 +136,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/227.Basic Calculator II/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/217.Contains Duplicate/README.md">
+        <entry file="file://$PROJECT_DIR$/LeetCode/227.Basic Calculator II/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.25">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+              <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -126,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/213.House Robber II/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.7826087">
+              <caret line="210" column="89" selection-start-line="210" selection-start-column="89" selection-end-line="210" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -165,26 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LeetCode/199.Binary Tree Right Side View/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/200.Number of Islands/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/200.Number of Islands/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/201.Bitwise AND of Numbers Range/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/201.Bitwise AND of Numbers Range/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/202.Happy Number/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/202.Happy Number/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/203.Remove Linked List Element/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/203.Remove Linked List Element/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/204.Count Primes/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/204.Count Primes/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/205.Isomorphic Strings/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/205.Isomorphic Strings/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/206.Reverse Linked List/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/206.Reverse Linked List/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/207.Course Schedule/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/207.Course Schedule/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/208.Implement Trie (Prefix Tree)/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/208.Implement Trie (Prefix Tree)/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/209.Minimum Size Subarray Sum/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/209.Minimum Size Subarray Sum/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/210.Course Schedule II/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/210.Course Schedule II/README.md" />
@@ -211,11 +224,31 @@
         <option value="$PROJECT_DIR$/LeetCode/220.contains Duplicate III/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/220.contains Duplicate III/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/214.Shortest Palindrome/README.md" />
-        <option value="$PROJECT_DIR$/LeetCode/README.md" />
         <option value="$PROJECT_DIR$/LintCode/CoinsInALineIII.java" />
         <option value="$PROJECT_DIR$/LintCode/CopyBooks.java" />
-        <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
         <option value="$PROJECT_DIR$/LintCode/PostOfficeProblem.java" />
+        <option value="$PROJECT_DIR$/LeetCode/221.Maximal Square/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/221.Maximal Square/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/223.Rectangle Area/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/223.Rectangle Area/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/224.Basic Calculator/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/224.Basic Calculator/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
+        <option value="$PROJECT_DIR$/LeetCode/227.Summary Ranges/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/227.Summary Ranges/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/229.Majority Element II/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/229.Majority Element II/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/227.Basic Calculator II/Solution.java" />
+        <option value="$PROJECT_DIR$/LeetCode/227.Basic Calculator II/README.md" />
+        <option value="$PROJECT_DIR$/LeetCode/README.md" />
       </list>
     </option>
   </component>
@@ -230,10 +263,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1375" />
-    <option name="y" value="23" />
-    <option name="width" value="1636" />
-    <option name="height" value="1027" />
+    <option name="x" value="-1347" />
+    <option name="y" value="513" />
+    <option name="width" value="1920" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -398,7 +431,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LintCode" />
+              <option name="myItemId" value="LeetCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -769,7 +802,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1375" y="23" width="1636" height="1027" extended-state="0" />
+    <frame x="-1347" y="513" width="1920" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -780,15 +813,15 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17051706" sideWeight="0.49675852" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4389439" sideWeight="0.4848485" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.62518966" sideWeight="0.4848485" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2970297" sideWeight="0.38267544" order="10" side_tool="false" content_ui="tabs" x="67" y="483" width="1034" height="107" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28742138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1021" y="268" width="505" height="537" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28708646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1021" y="268" width="505" height="537" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18490566" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43014303" sideWeight="0.67763156" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41640043" sideWeight="0.67763156" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +902,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>132</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -898,7 +931,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>130</line>
+          <line>118</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
@@ -914,20 +947,8 @@
           <properties />
           <option name="timeStamp" value="150" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="304" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LeetCode/Java/temp.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="305" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="306" />
+      <option name="time" value="308" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -941,176 +962,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LeetCode/199.Binary Tree Right Side View/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/199.Binary Tree Right Side View/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/200.Number of Islands/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/200.Number of Islands/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/201.Bitwise AND of Numbers Range/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/201.Bitwise AND of Numbers Range/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/202.Happy Number/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/202.Happy Number/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/203.Remove Linked List Element/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06711409">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/203.Remove Linked List Element/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6687898">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/204.Count Primes/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/204.Count Primes/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/205.Isomorphic Strings/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/205.Isomorphic Strings/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/206.Reverse Linked List/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/206.Reverse Linked List/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/207.Course Schedule/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/207.Course Schedule/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/208.Implement Trie (Prefix Tree)/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/208.Implement Trie (Prefix Tree)/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="77" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/209.Minimum Size Subarray Sum/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -1333,17 +1184,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38650307">
-          <caret line="191" column="62" selection-start-line="191" selection-start-column="62" selection-end-line="191" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/220.Contains Duplicate III/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12269939">
@@ -1379,24 +1219,231 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
+    <entry file="file://$PROJECT_DIR$/LintCode/PostOfficeProblem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/221.Maximal Square/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/221.Maximal Square/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
-            <element signature="e#1408#1416#0" expanded="true" />
-            <element signature="e#2588#2597#0" expanded="true" />
+            <marker date="1440691523000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1440691523000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1440691523000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LintCode/PostOfficeProblem.java">
+    <entry file="file://$PROJECT_DIR$/LeetCode/222.Count Complete TreeNodes/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50104386">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="76" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/223.Rectangle Area/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/223.Rectangle Area/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/224.Basic Calculator/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#914#915#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/225.Implement Stack using Queues/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/226.Invert Binary Tree/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/224.Basic Calculator/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#324#332#0" expanded="true" />
+            <element signature="e#1133#1141#0" expanded="true" />
+            <element signature="e#2356#2365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/228.Summary Ranges/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/228.Summary Ranges/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/229.Majority Element II/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/229.Majority Element II/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/230.Kth Smallest Element in a BST/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/227.Basic Calculator II/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/227.Basic Calculator II/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7826087">
+          <caret line="210" column="89" selection-start-line="210" selection-start-column="89" selection-end-line="210" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -199,3 +199,13 @@ LeetCode Solution
 |218|[The Skyline Problem](218.The Skyline Problem)|O(nlogn)|O(n)|Hard|
 |219|[Contains Duplicate II](219.Contains Duplicate II)|O(n)|O(1)|Easy|
 |220|[Contains Duplicate III](220.Contains Duplicate III)|O(n^2)|O(n)|Medium|
+|221|[Maximal Square](221.Maximal Square)|O(mn)|O(mn)|Medium|
+|222|[Count Complete Tree Nodes](222.Count Complete Tree Nodes)|O(logn)|O(logn)|Medium|
+|223|[Rectangle Area](223.Rectangle Area)|O(1)|O(1)|Easy|
+|224|[Basic Calculator](224.Basic Calculator II)|O(n)|O(n)|Medium|
+|225|[Implement Stack using Queues](225.Implement Stack using Queues)|O(n)|O(n)|Easy|
+|226|[Invert Binary Tree](226.Invert Binary Tree)|O(n)|O(1)|Easy|
+|227|[Basic Calculator II](227.Basic Calculator II)|O(n)|O(n)|Medium|
+|228|[Summary Ranges](228.Summary Ranges)|O(n)|O(1)|Easy|
+|229|[Majority Element II](229.Majority Element II)|O(n)|O(1)|Medium|
+|230|[Kth Smallest Element in a BST](230.Kth Smallest Element in a BST)|O(k)|O(1)|Medium|

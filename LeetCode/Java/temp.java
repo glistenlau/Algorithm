@@ -12,64 +12,42 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class TreeNode {
-    int val, index;
-    TreeNode left, right;
-
-    TreeNode (int val, int index) {
-      this.val = val;
-      this.index = index;
-      this.left = this.right = null;
-    }
-  }
-  public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-    if (nums == null || nums.length < 2 || k == 0) {
-      return false;
-    }
-    TreeNode root = null;
-
-    for (int i = 0; i < nums.length; i++) {
-      if (searchBST(root, nums, i, k, t)) {
-        return true;
-      }
-      root = insertBST(root, nums, i);
+  public boolean firstWillWin(int[] values) {
+    // write your code here
+    int[][] dp = new int[values.length][values.length];
+    boolean[][] visited = new boolean[values.length][values.length];
+    int sum = 0;
+    for (int value: values) {
+      sum += value;
     }
 
-    return false;
+    return sum < 2 * search(values, 0, values.length - 1, dp, visited);
   }
 
-  private TreeNode insertBST(TreeNode root, int[] nums, int i) {
-    if (root == null) {
-      return new TreeNode(nums[i], i);
+  private int search(int[] values, int left, int right, int[][] dp, boolean[][] visited) {
+    if (left > right) {
+      return 0;
+    }
+    if (visited[left][right]) {
+      return dp[left][right];
     }
 
-    if (nums[i] > root.val) {
-      root.right = insertBST(root.right, nums, i);
+    if (left == 0 && right == 1) {
+      dp[left][right] = Math.max(values[left], values[right]);
+    } else if (left == values.length - 2 && right == values.length - 1) {
+      dp[left][right] = Math.max(values[left], values[right]);
+    } else if (left == right) {
+      dp[left][right] = values[left];
+
     } else {
-      root.left = insertBST(root.left, nums, i);
+      dp[left][right] = Math.max(
+          Math.min(search(values, left + 2, right, dp, visited), search(values, left + 1, right - 1, dp, visited)) + values[left],
+          Math.min(search(values, left + 1, right - 1, dp, visited), search(values, left, right - 2, dp, visited)) + values[right]
+      );
     }
-    return root;
-  }
 
-  private boolean searchBST(TreeNode root, int[] nums, int i, int k, int t) {
-    if (root == null) {
-      return false;
-    }
-    if (Math.abs(nums[i] - root.val) > t) {
-      if (nums[i] > root.val) {
-        return searchBST(root.right, nums, i, k, t);
-      } else {
-        return searchBST(root.left, nums, i, k, t);
-      }
-    } else {
-      if (Math.abs(i - root.index) <= k) {
-        return true;
-      }
-      if (searchBST(root.left, nums, i, k, t) || searchBST(root.right, nums, i, k, t)) {
-        return true;
-      }
-      return false;
-    }
+    visited[left][right] = true;
+    return dp[left][right];
   }
 
   public static void main(String[] args) {
@@ -98,8 +76,9 @@ public class temp {
     int[] A = {-1, -1};
     int[][] matrix1 = {
 
-        {0, 2, 3},
-        {2, 5, 3}
+        {3, 2, 2},
+        {1, 2, 4},
+        {1, 20, 4}
     };
 
 //    TreeNode root = new TreeNode(1);
@@ -145,7 +124,9 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    System.out.println(new temp().containsNearbyAlmostDuplicate(A, 1, 0));
+    for (int[] ma: matrix1) {
+      System.out.println(new temp().firstWillWin(ma));
+    }
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);

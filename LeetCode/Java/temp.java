@@ -12,39 +12,43 @@ import java.util.*;
  * }
  */
 public class temp {
-  private int[][] getSums(int[] pages) {
-    int[][] sums = new int[pages.length + 1][pages.length + 1];
-    for (int i = 1; i <= pages.length; i++) {
-      for (int j = i; j <= pages.length; j++) {
-        sums[i][j] = sums[i][j - 1] + pages[j - 1];
-      }
-    }
-
-    return sums;
-  }
-  public int copyBooks(int[] pages, int k) {
-    // write your code here
-    if (pages == null || pages.length == 0) {
+  public int postOffice(int[] A, int k) {
+    if (A == null || A.length == 0) {
       return 0;
     }
 
-    int[][] dp = new int[pages.length + 1][k + 1];
-    int[][] sums = getSums(pages);
-
-    for (int i = 1; i <= pages.length; i++) {
-      dp[i][0] = Integer.MAX_VALUE;
+    int[][] diff = getDiff(A);
+    int[][] dp = new int[A.length + 1][k + 1];
+    for (int i = 1; i <= A.length; i++) {
+      dp[i][1] = diff[0][i - 1];
     }
 
-    for (int i = 1; i <= pages.length; i++) {
-      for (int j = 1; j <= k; j++) {
-        dp[i][j] = Integer.MAX_VALUE;
-        for (int n = 0; n < i; n++) {
-          dp[i][j] = Math.min(dp[i][j], Math.max(dp[n][j - 1], sums[n + 1][i]));
+
+    for (int i = 1; i <= A.length; i++) {
+      for (int n = 2; n <= k; n++) {
+        dp[i][n] = Integer.MAX_VALUE;
+        for (int j = 0; j < i; j++) {
+          dp[i][n] = Math.min(dp[i][n], dp[j][n - 1] + diff[j][i - 1]);
         }
       }
     }
 
-    return dp[pages.length][k];
+    return dp[A.length][k];
+  }
+
+  private int[][] getDiff(int[] A) {
+    int[][] diff = new int[A.length][A.length];
+
+    for (int i = 0; i < A.length; i++) {
+      for (int j = i + 1; j < A.length; j++) {
+        int mid = i + (j - i) / 2;
+        for (int k = i; k <=j; k++) {
+          diff[i][j] += Math.abs(A[k] - A[mid]);
+        }
+      }
+    }
+
+    return diff;
   }
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};
@@ -69,7 +73,7 @@ public class temp {
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
         {'X', 'O', 'X', 'X'}};
-    int[] A = {3, 2, 4};
+    int[] A = {1, 2, 3, 4, 5};
     int[][] matrix1 = {
 
         {3, 2, 2},
@@ -121,7 +125,7 @@ public class temp {
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
     for (int[] ma: matrix1) {
-      System.out.println(new temp().copyBooks(A, 2));
+      System.out.println(new temp().postOffice(A, 2));
     }
 
     List<Integer> a1 = new ArrayList<>(B);

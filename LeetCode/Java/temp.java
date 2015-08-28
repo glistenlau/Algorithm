@@ -12,28 +12,50 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int[] maxSlidingWindow(int[] nums, int k) {
-    int[] ans = new int[nums.length - k + 1];
-    int left = 0;
+  public int kthSmallest(int[][] matrix, int k) {
+    // write your code here
+    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+      return -1;
+    }
 
-    Deque<Integer> myQ = new ArrayDeque<>();
+    PriorityQueue<Integer> myQ = new PriorityQueue<>();
+    int m = matrix.length;
+    int n = matrix[0].length;
+    int[] dx = {1, 0};
+    int[] dy = {0, 1};
+    int count = 0;
 
-    for (int i = 0; i < nums.length; i++) {
-      while (!myQ.isEmpty() && nums[i] > nums[myQ.peekLast()]) {
-        myQ.removeLast();
+    myQ.offer(0);
+
+    while (!myQ.isEmpty()) {
+      int cur = myQ.poll();
+      int row = cur / n;
+      int col = cur % n;
+      count++;
+      if (count == k) {
+        return matrix[row][col];
       }
-      myQ.addLast(i);
-      if (i - left == k - 1) {
-        ans[left] = nums[myQ.peekFirst()];
-        if (left == myQ.peekFirst()) {
-          myQ.removeFirst();
+
+      for (int i = 0; i < 2; i++) {
+        int r = row + dx[i];
+        int c = row + dy[i];
+        if (r >= 0 && r < m && c >= 0 && c < n) {
+          myQ.offer(r * n + c);
         }
-        left++;
       }
     }
 
-    return ans;
+    return -1;
   }
+
+  private Comparator<Integer> matrixCmp = new Comparator<Integer>(int[][] m) {
+    @Override
+    public int compare(Integer a, Integer b) {
+
+      return
+    }
+  }
+
 
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};
@@ -110,7 +132,7 @@ public class temp {
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
     for (String str: strA) {
-      System.out.println(new temp().countDigitOne(13));
+      System.out.println(new temp().diffWaysToCompute("10+5"));
     }
 
     List<Integer> a1 = new ArrayList<>(B);

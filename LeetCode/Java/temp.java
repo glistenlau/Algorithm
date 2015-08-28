@@ -12,30 +12,27 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<String> summaryRanges(int[] nums) {
-    List<String> ans = new ArrayList<String>();
-    if (nums == null || nums.length == 0) {
-      return ans;
-    }
-
+  public int[] maxSlidingWindow(int[] nums, int k) {
+    int[] ans = new int[nums.length - k + 1];
     int left = 0;
-    for (int i = 1; i < nums.length; i++) {
-      if (nums[i] != nums[i - 1] + 1) {
-        ans.add(getPattern(nums, left, i - 1));
-        left = i;
+
+    Deque<Integer> myQ = new ArrayDeque<>();
+
+    for (int i = 0; i < nums.length; i++) {
+      while (!myQ.isEmpty() && nums[i] > nums[myQ.peekLast()]) {
+        myQ.removeLast();
+      }
+      myQ.addLast(i);
+      if (i - left == k - 1) {
+        ans[left] = nums[myQ.peekFirst()];
+        if (left == myQ.peekFirst()) {
+          myQ.removeFirst();
+        }
+        left++;
       }
     }
-    ans.add(getPattern(nums, left, nums.length - 1));
 
     return ans;
-  }
-
-  private String getPattern(int[] nums, int start, int end) {
-    if (start == end) {
-      return "" + nums[start];
-    } else {
-      return "" + nums[start] + "->" + nums[end];
-    }
   }
 
   public static void main(String[] args) {
@@ -113,7 +110,7 @@ public class temp {
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
     for (String str: strA) {
-      System.out.println(new temp().summaryRanges(new int[]{0, 1, 2, 4, 5, 7}));
+      System.out.println(new temp().countDigitOne(13));
     }
 
     List<Integer> a1 = new ArrayList<>(B);

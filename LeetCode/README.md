@@ -202,10 +202,19 @@ LeetCode Solution
 |221|[Maximal Square](221.Maximal Square)|O(mn)|O(mn)|Medium|
 |222|[Count Complete Tree Nodes](222.Count Complete Tree Nodes)|O(logn)|O(logn)|Medium|
 |223|[Rectangle Area](223.Rectangle Area)|O(1)|O(1)|Easy|
-|224|[Basic Calculator](224.Basic Calculator II)|O(n)|O(n)|Medium|
+|224|[Basic Calculator](224.Basic Calculator)|O(n)|O(n)|Medium|
 |225|[Implement Stack using Queues](225.Implement Stack using Queues)|O(n)|O(n)|Easy|
 |226|[Invert Binary Tree](226.Invert Binary Tree)|O(n)|O(1)|Easy|
 |227|[Basic Calculator II](227.Basic Calculator II)|O(n)|O(n)|Medium|
 |228|[Summary Ranges](228.Summary Ranges)|O(n)|O(1)|Easy|
 |229|[Majority Element II](229.Majority Element II)|O(n)|O(1)|Medium|
 |230|[Kth Smallest Element in a BST](230.Kth Smallest Element in a BST)|O(k)|O(1)|Medium|
+|231|[Power of Two](231.Power of Two)|O(1)|O(1)|Easy|
+|232|[Implement Queue using Stacks](232.Implement Queue using Stacks)|O(1)|O(1)|Easy|
+|234|[Palindrome Linked List](234.Palindrome Linked List)|O(n)|O(1)|Easy|
+|235|[Lowest Common Ancestor of a Binary Search Tree](235.Lowest Common Ancestor of a Binary Search Tree)|O(n)|O(logn)|Easy|
+|236|[Lowest Common Ancestor of a Binary Tree](236.Lowest Common Ancestor of a Binary Tree)|O(n)|O(logn)|Medium|
+|237|[Delete Node in a Linked List](237.Delete Node in a Linked List)|O(n)|O(1)|Easy|
+|238|[Product of Array Except Self](238.Product of Array Except Self)|O(n)|O(1)|Medium|
+|239|[Sliding Window Maximum](239.Sliding Window Maximum)|O(n)|O(n)|Hard|
+|240|[Search a 2D Matrix II](240.Search a 2D Matrix II)|O(m + n)|O(1)|Medium|

@@ -12,48 +12,58 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int kthSmallest(int[][] matrix, int k) {
-    // write your code here
-    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-      return -1;
+  private class Airplane {
+    int time;
+    boolean isLand;
+
+    Airplane (int time, boolean isLand) {
+      this.time = time;
+      this.isLand = isLand;
     }
+  }
 
-    PriorityQueue<Integer> myQ = new PriorityQueue<>();
-    int m = matrix.length;
-    int n = matrix[0].length;
-    int[] dx = {1, 0};
-    int[] dy = {0, 1};
-    int count = 0;
-
-    myQ.offer(0);
-
-    while (!myQ.isEmpty()) {
-      int cur = myQ.poll();
-      int row = cur / n;
-      int col = cur % n;
-      count++;
-      if (count == k) {
-        return matrix[row][col];
-      }
-
-      for (int i = 0; i < 2; i++) {
-        int r = row + dx[i];
-        int c = row + dy[i];
-        if (r >= 0 && r < m && c >= 0 && c < n) {
-          myQ.offer(r * n + c);
+  private Comparator<Airplane> airCmp = new Comparator<Airplane>() {
+    @Override
+    public int compare(Airplane a, Airplane b) {
+      if (a.time != b.time) {
+        return a.time - b.time;
+      } else {
+        if (a.isLand) {
+          return -1;
+        } else if (b.isLand) {
+          return 1;
+        } else {
+          return 0;
         }
       }
     }
+  };
 
-    return -1;
-  }
-
-  private Comparator<Integer> matrixCmp = new Comparator<Integer>(int[][] m) {
-    @Override
-    public int compare(Integer a, Integer b) {
-
-      return
+  public int countOfAirplanes(List<Interval> airplanes) {
+    // write your code here
+    if (airplanes == null || airplanes.size() == 0) {
+      return 0;
     }
+    PriorityQueue<Airplane> myQ = new PriorityQueue<Airplane>(2 * airplanes.size(), airCmp);
+
+    for (Interval in: airplanes) {
+      myQ.offer(new Airplane(int.start, false));
+      myQ.offer(new Airplane(int.end, true));
+    }
+
+    int max = 0;
+    int count = 0;
+    while (!myQ.isEmpty()) {
+      Airplane cur = myQ.poll();
+      if (cur.isLand) {
+        count--;
+      } else {
+        count++;
+        max = Math.max(max, count);
+      }
+    }
+
+    return max;
   }
 
 

@@ -211,6 +211,7 @@ LeetCode Solution
 |230|[Kth Smallest Element in a BST](230.Kth Smallest Element in a BST)|O(k)|O(1)|Medium|
 |231|[Power of Two](231.Power of Two)|O(1)|O(1)|Easy|
 |232|[Implement Queue using Stacks](232.Implement Queue using Stacks)|O(1)|O(1)|Easy|
+|233|[Number of Digit One](233.Number of Digit One)|O(n)|O(1)|Medium|
 |234|[Palindrome Linked List](234.Palindrome Linked List)|O(n)|O(1)|Easy|
 |235|[Lowest Common Ancestor of a Binary Search Tree](235.Lowest Common Ancestor of a Binary Search Tree)|O(n)|O(logn)|Easy|
 |236|[Lowest Common Ancestor of a Binary Tree](236.Lowest Common Ancestor of a Binary Tree)|O(n)|O(logn)|Medium|

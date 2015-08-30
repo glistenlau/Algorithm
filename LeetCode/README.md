@@ -219,3 +219,11 @@ LeetCode Solution
 |238|[Product of Array Except Self](238.Product of Array Except Self)|O(n)|O(1)|Medium|
 |239|[Sliding Window Maximum](239.Sliding Window Maximum)|O(n)|O(n)|Hard|
 |240|[Search a 2D Matrix II](240.Search a 2D Matrix II)|O(m + n)|O(1)|Medium|
+|241|[Different Ways to Add Parentheses](241.Different Ways to Add Parentheses)|O(2^n)|On)|Medium|
+|242|[Valid Anagram](242.Valid Anagram)|O(n)|O(1)|Easy|
+|257|[Binary Tree Paths](257.Binary Tree Paths)|O(n)|O(n)|Easy|
+|258|[Add Digits](258.Add Digits)|O(1)|O(1)|Easy|
+|260|[Single Number III](260.Single Number III)|O(n)|O(1)|Medium|
+|263|[Ugly Number](263.Ugly Number)|O(n)|O(1)|Easy|
+|264|[Ugly Number II](264.Ugly Number II)|O(n)|O(n)|Medium|
+|268|[Missing Number](268.Missing Number)|O(n)|O(1)|Medium|

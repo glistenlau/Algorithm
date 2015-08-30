@@ -12,46 +12,32 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int kthLargestElement(int k, ArrayList<Integer> numbers) {
-    // write your code here
-    if (numbers == null || numbers.size() == 0) {
-      return -1;
+  public int[] singleNumber(int[] nums) {
+    int[] ans = new int[2];
+    if (nums == null || nums.length < 3) {
+      return nums;
     }
 
-    return quickSelect(k, numbers, 0, numbers.size() - 1);
-  }
-
-  private int quickSelect(int k, ArrayList<Integer> nums, int left, int right) {
-    if (left > right) {
-      return -1;
+    int combine = 0;
+    for (int num: nums) {
+      combine ^= num;
     }
 
-    int mid = left + (right - left) / 2;
-
-    int l = left;
-    int r = right;
-    while (l <= r) {
-      while (l <= r && nums.get(l) > nums.get(mid)) {
-        l++;
+    int i = 0;
+    while (i < 31) {
+      if (((combine >> i) & 1) == 1) {
+        break;
       }
-      while (l <= r && nums.get(r) < nums.get(mid)) {
-        r++;
-      }
-
-      if (l <= r) {
-        int temp = nums.get(l);
-        nums.set(l, nums.get(r));
-        nums.set(r, temp);
+    }
+    for (int num: nums) {
+      if (((num >> i) & 1) == 1) {
+        ans[0] ^= num;
+      } else {
+        ans[1] ^= num;
       }
     }
 
-    if (l == k) {
-      return nums.get(l - 1);
-    } else if (l > k) {
-      return quickSelect(k, nums, left, r);
-    } else {
-      return quickSelect(k, nums, l, right);
-    }
+    return ans;
   }
 
   public static void main(String[] args) {
@@ -85,12 +71,12 @@ public class temp {
         {1, 20, 4}
     };
 
-//    TreeNode root = new TreeNode(1);
-//    root.left = new TreeNode(2);
-//    root.right = new TreeNode(5);
-//    root.left.left = new TreeNode(3);
-//    root.left.right = new TreeNode(4);
-//    root.right.right = new TreeNode(6);
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(5);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(4);
+    root.right.right = new TreeNode(6);
     TreeLinkNode tln = new TreeLinkNode(1);
     tln.left = new TreeLinkNode(2);
     tln.right = new TreeLinkNode(3);
@@ -128,12 +114,10 @@ public class temp {
     quries.add(new Interval(0, 4));
     quries.add(new Interval(2, 4));
     int[] col = new int[1000];
-    for (String str: strA)
-      System.out.println(new temp().kthLargestElement(3, Arrays.asList(new int[]{9, 3, 2, 4, 8}));
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println();
+    System.out.println(new temp().binaryTreePaths(root));
   }
 }
 

@@ -117,7 +117,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().binaryTreePaths(root));
+//    System.out.println(new temp().binaryTreePaths(root));
   }
 }
 

@@ -41,12 +41,12 @@ public class HashHeap {
 
     int poll() {
       int ans = this.peek();
-      this.delete(ans);
+      this.remove(ans);
       size--;
       return ans;
     }
 
-    void delete(int num) {
+    void remove(int num) {
       Node node = map.get(num);
       int index = node.index;
       if (node.num == 1) {

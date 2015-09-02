@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -119,13 +124,16 @@ public class Heap {
     return -1;
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new FileReader("./LeetCode/java/log.txt"));
+    br.readLine();
     Scanner in = new Scanner(System.in);
     Heap test = new Heap("MAX");
     int size = in.nextInt();
     for (int i = 0; i < size; i++) {
       test.offer(in.nextInt());
     }
+    new ArrayList<>(Arrays.asList(new int[]{1, 2}));
     System.out.println(test.peek());
     System.out.println(test.poll());
     test.delete(in.nextInt());

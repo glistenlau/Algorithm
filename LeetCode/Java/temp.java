@@ -12,247 +12,56 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class HashHeap {
-    class Node{
-      int num, index;
-      Node(int num, int index) {
-        this.num = num;
-        this.index = index;
+  public long permutationIndexII(int[] A) {
+    // Write your code here
+    if (A == null || A.length < 2) {
+      return 1;
+    }
+
+    HashMap<Integer, Integer> map = new HashMap<>();
+    for (int num: A) {
+      if (!map.containsKey(num)) {
+        map.put(num, 0);
       }
+      map.put(num, map.get(num) + 1);
     }
+    long ans = 0;
 
-    int size;
-    String mode;
-    List<Integer> heap;
-    HashMap<Integer, Node> map;
-
-    HashHeap(String mode) {
-      this.size = 0;
-      this.mode = mode;
-      this.heap = new ArrayList<>();
-      this.map = new HashMap<>();
-    }
-
-    void offer(int num) {
-      if (map.containsKey(num)) {
-        map.get(num).num++;
-      } else {
-        heap.add(num);
-        map.put(num, new Node(1, heap.size() - 1));
-        siftUp(heap.size() - 1);
+    for (int i = 0; i < A.length; i++) {
+      HashSet<Integer> visited = new HashSet<>();
+      for (int j = i + 1; j < A.length; j++) {
+        if (!visited.contains(A[j]) && A[j] > A[i]) {
+          map.put(A[j], map.get(A[j]) - 1);
+          ans += getNum(map);
+          map.put(A[j], map.get(A[j]) + 1);
+        }
       }
-      size++;
+      map.put(A[i], map.get(A[i]) - 1);
     }
 
-    int peek() {
-      return heap.get(0);
-    }
-
-    int poll() {
-      int ans = this.peek();
-      this.delete(ans);
-      size--;
-      return ans;
-    }
-
-    void delete(int num) {
-      Node node = map.get(num);
-      if (node.num == 1) {
-        swap(node.index, heap.size() - 1);
-        map.remove(num);
-        heap.remove(heap.size() - 1);
-        siftUp(node.index);
-        siftDown(node.index);
-      } else {
-        node.num--;
-      }
-      size--;
-    }
-
-    boolean isEmpty() {
-      return size == 0;
-    }
-
-    void swap(int a, int b) {
-      if (a == b) {
-        return;
-      }
-
-      Node nodeA = map.get(heap.get(a));
-      Node nodeB = map.get(heap.get(b));
-
-      int temp = nodeA.index;
-      nodeA.index = nodeB.index;
-      nodeB.index = temp;
-
-      temp = heap.get(a);
-      heap.set(a, heap.get(b));
-      heap.set(b, temp);
-    }
-
-    void siftUp(int index) {
-      if (index == 0 || index >= heap.size()) {
-        return;
-      }
-
-      int parent = getParent(index);
-      if (parent != -1 && !isGood(parent, index)) {
-        swap(parent, index);
-        siftUp(parent);
-      }
-    }
-
-    void siftDown(int index) {
-      if (index == 0 || index >= heap.size()) {
-        return;
-      }
-
-      int lChild = getLeftChild(index);
-      int rChild = getRightChild(index);
-      int child = -1;
-
-      if (lChild != -1 && rChild != -1) {
-        child = isGood(lChild, rChild)? lChild: rChild;
-      } else if (lChild != -1) {
-        child = lChild;
-      } else if (rChild != -1) {
-        child = rChild;
-      }
-
-      if (child != -1 && !isGood(index, child)) {
-        swap(index, child);
-        siftDown(child);
-      }
-    }
-
-    int getParent(int index) {
-      if (index == 0) {
-        return -1;
-      }
-
-      return (index - 1) / 2;
-    }
-
-    int getLeftChild(int index) {
-      int left = 2 * index + 1;
-      if (left >= heap.size()) {
-        return -1;
-      }
-
-      return left;
-    }
-
-    int getRightChild(int index) {
-      int right = 2 * index + 2;
-      if (right >= heap.size()) {
-        return -1;
-      }
-
-      return right;
-    }
-
-    boolean isGood(int parent, int child) {
-      if (mode == "MAX") {
-        return heap.get(parent) >= heap.get(child);
-      } else {
-        return heap.get(parent) <= heap.get(child);
-      }
-    }
-
+    return ans;
   }
 
-  private class Edge{
-    int pos, h;
-    boolean isEnd;
-
-    Edge(int pos, int h, boolean isEnd) {
-      this.pos = pos;
-      this.h = h;
-      this.isEnd = isEnd;
+  private long getNum(HashMap<Integer, Integer> map) {
+    long sum = 0;
+    long denominator = 1;
+    for (int val: map.values()) {
+      if (val == 0) {
+        continue;
+      }
+      sum += 1;
+      denominator *= getFac(val);
     }
+
+    return getFac(sum) / denominator;
   }
 
-  public ArrayList<ArrayList<Integer>> buildingOutline(int[][] buildings) {
-    // write your code here
-    if (buildings == null || buildings.length == 0 || buildings[0].length == 0) {
-      return new ArrayList<>();
+  private long getFac(long val) {
+    long p = 1;
+    for (long i = val; i > 0; i--) {
+      p *= i;
     }
-
-    HashHeap heap = new HashHeap("MAX");
-    Edge[] edges = new Edge[2 * buildings.length];
-    ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-
-    int i = 0;
-    for (int[] building: buildings) {
-      edges[i++] = new Edge(building[0], building[2], false);
-      edges[i++] = new Edge(building[1], building[2], true);
-    }
-
-    Arrays.sort(edges, edgeCmp);
-
-    for (Edge e: edges) {
-      if (e.isEnd) {
-        heap.delete(e.h);
-        if (heap.isEmpty() || e.h > heap.peek()) {
-          ArrayList<Integer> temp = new ArrayList<>();
-          temp.add(e.pos);
-          temp.add(heap.isEmpty()? 0: heap.peek());
-          ans.add(temp);
-        }
-      } else {
-        if (heap.isEmpty() || e.h > heap.peek()) {
-          ArrayList<Integer> temp = new ArrayList<>();
-          temp.add(e.pos);
-          temp.add(e.h);
-          ans.add(temp);
-        }
-        heap.offer(e.h);
-      }
-    }
-
-    return getResult(ans);
-  }
-
-  private Comparator<Edge> edgeCmp = new Comparator<Edge>() {
-    @Override
-    public int compare(Edge e1, Edge e2) {
-      if (e1.pos != e2.pos) {
-        return e1.pos - e2.pos;
-      } else if (e1.h != e2.h) {
-        if (e1.isEnd && e2.isEnd) {
-          return e1.h - e2.h;
-        } else if (!e1.isEnd && !e2.isEnd) {
-          return e2.h - e1.h;
-        } else {
-          return 0;
-        }
-      } else {
-        return 0;
-      }
-    }
-  };
-
-  private ArrayList<ArrayList<Integer>> getResult(ArrayList<ArrayList<Integer>> ans) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
-    int prePos = ans.get(0).get(0);;
-    int preH = ans.get(0).get(1);
-
-    for (int i = 1; i < ans.size(); i++) {
-      int curPos = ans.get(i).get(0);
-      int curH = ans.get(i).get(1);
-      if (preH != 0) {
-        ArrayList<Integer> temp = new ArrayList<>();
-        temp.add(prePos);
-        temp.add(curPos);
-        temp.add(preH);
-        result.add(temp);
-      }
-      prePos = curPos;
-      preH = curH;
-
-    }
-
-    return result;
+    return p;
   }
 
   public static void main(String[] args) {
@@ -327,7 +136,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().buildingOutline(matrix1));
+//    System.out.println(new temp().continuousSubarraySumII(new int[]{3, 1, -100, -3, 4}));
   }
 }
 

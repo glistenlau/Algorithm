@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/DeleteDigits.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/NextPermutation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/CombinationSumII.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -52,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteDigits.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeleteDigits.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/DeleteDigits.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02621232">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CombinationSumII.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/CombinationSumII.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36697248">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -98,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LeetCode/235.Lowest Common Ancestor of a Binary Search Tree/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/236.Lowest Common Ancestor of a Binary Tree/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/236.Lowest Common Ancestor of a Binary Tree/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/237.Delete Node in a Linked List/Solution.java" />
@@ -149,6 +157,7 @@
         <option value="$PROJECT_DIR$/LintCode/LargestNumber.java" />
         <option value="$PROJECT_DIR$/LintCode/NextPermutation.java" />
         <option value="$PROJECT_DIR$/LintCode/DeleteDigits.java" />
+        <option value="$PROJECT_DIR$/LintCode/CombinationSumII.java" />
       </list>
     </option>
   </component>
@@ -919,16 +928,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LeetCode/237.Delete Node in a Linked List/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14814815">
-          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/235.Lowest Common Ancestor of a Binary Search Tree/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5298013">
@@ -1346,8 +1345,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LintCode/DeleteDigits.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02621232">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/CombinationSumII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36697248">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding />
         </state>
       </provider>

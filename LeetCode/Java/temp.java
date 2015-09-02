@@ -12,57 +12,36 @@ import java.util.*;
  * }
  */
 public class temp {
-  public long permutationIndexII(int[] A) {
-    // Write your code here
-    if (A == null || A.length < 2) {
-      return 1;
+  public String largestNumber(int[] nums) {
+    // write your code here
+    if (nums == null || nums.length == 0) {
+      return "";
     }
-
-    HashMap<Integer, Integer> map = new HashMap<>();
-    for (int num: A) {
-      if (!map.containsKey(num)) {
-        map.put(num, 0);
-      }
-      map.put(num, map.get(num) + 1);
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(numCmp);
+    StringBuilder sb = new StringBuilder();
+    for (int num: nums) {
+      maxHeap.offer(num);
     }
-    long ans = 0;
+    while (!maxHeap.isEmpty()) {
+      sb.append((maxHeap.poll()));
+    }
+    return sb.toString();
+  }
 
-    for (int i = 0; i < A.length; i++) {
-      HashSet<Integer> visited = new HashSet<>();
-      for (int j = i + 1; j < A.length; j++) {
-        if (!visited.contains(A[j]) && A[j] > A[i]) {
-          map.put(A[j], map.get(A[j]) - 1);
-          ans += getNum(map);
-          map.put(A[j], map.get(A[j]) + 1);
+  private Comparator<Integer> numCmp = new Comparator<Integer>() {
+    @Override
+    public int compare(Integer n1, Integer n2) {
+      String str1 = String.valueOf(n1) + String.valueOf(n2);
+      String str2 = String.valueOf(n2) + String.valueOf(n1);
+      for (int i = 0; i < str1.length(); i++) {
+        if (str1.charAt(i) != str2.charAt(i)) {
+          return str2.charAt(i) - str1.charAt(i);
         }
       }
-      map.put(A[i], map.get(A[i]) - 1);
+
+      return 0;
     }
-
-    return ans;
-  }
-
-  private long getNum(HashMap<Integer, Integer> map) {
-    long sum = 0;
-    long denominator = 1;
-    for (int val: map.values()) {
-      if (val == 0) {
-        continue;
-      }
-      sum += 1;
-      denominator *= getFac(val);
-    }
-
-    return getFac(sum) / denominator;
-  }
-
-  private long getFac(long val) {
-    long p = 1;
-    for (long i = val; i > 0; i--) {
-      p *= i;
-    }
-    return p;
-  }
+  };
 
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};

@@ -12,95 +12,43 @@ import java.util.*;
  * }
  */
 public class temp {
-  private class TrieNode {
-    TrieNode[] next;
-    boolean hasEnd;
-
-    TrieNode () {
-      this.next = new TrieNode[26];
-      this.hasEnd = false;
+  public int findK(String a, String b) {
+    int[] count_a = new int[256];
+    int[] count_b = new int[256];
+    for (int i = 0; i < a.length(); i++) {
+      count_a[a.charAt(i)]++;
     }
+    for (int i = 0; i < b.length(); i++) {
+      if (count_a[b.charAt(i)] == 0)
+        count_b[b.charAt(i)] --;
+      else
+        count_b[b.charAt(i)] ++;
+    }
+    StringBuffer sb_b = new StringBuffer();
+    for (int i = 0; i < b.length(); i++) {
+      if (count_b[b.charAt(i)] > 0)
+      sb_b.append(b.charAt(i));
+    }
+    String t_b = encode(sb_b.toString());
+    int min = Integer.MAX_VALUE;
+    for (int i = 0; i <t_b.length(); i++) {
+      if (t_b.charAt(i) <= '9' && t_b.charAt(i) >= '0')
+        min = Math.min(min, t_b.charAt(i) - '0');
+    }
+    return min;
   }
-
-  private class Trie {
-    TrieNode root;
-
-    Trie() {
-      root = new TrieNode();
-    }
-
-    void insert(String word) {
-      TrieNode cur = root;
-      for (int i = 0; i < word.length(); i++) {
-        char c = word.charAt(i);
-        if (cur.next[c - 'a'] == null) {
-          cur.next[c - 'a'] = new TrieNode();
-        }
-        cur = cur.next[c - 'a'];
+  public String encode(String s) {
+    StringBuffer sb = new StringBuffer();
+    for (int i = 0; i < s.length(); i++) {
+      int counter = 1;
+      while (i+1 < s.length() && s.charAt(i) == s.charAt(i+1)) {
+        counter++;
+        i++;
       }
-      cur.hasEnd = true;
+      sb.append(counter);
+      sb.append(s.charAt(i));
     }
-
-    boolean search(String word) {
-      TrieNode cur = root;
-      for (int i = 0; i < word.length(); i++) {
-        char c = word.charAt(i);
-        if (cur.next[c - 'a'] == null) {
-          return false;
-        }
-        cur = cur.next[c - 'a'];
-      }
-      return cur.hasEnd;
-    }
-  }
-
-
-  public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
-    // write your code here
-    ArrayList<String> ans = new ArrayList<String>();
-    if (board == null || board.length == 0 || board[0].length == 0) {
-      return ans;
-    }
-
-    Trie dict = new Trie();
-    for (String word: words) {
-      dict.insert(word);
-    }
-
-    for (int r = 0; r < board.length; r++) {
-      for (int c = 0; c < board[0].length; c++) {
-        search(board, r, c, new StringBuilder(), ans, new boolean[board.length][board[0].length], dict);
-      }
-    }
-
-    return ans;
-  }
-
-  private void search(char[][] board, int row, int col, StringBuilder sb, ArrayList<String> ans, boolean[][] visited, Trie dict) {
-    if (visited[row][col]) {
-      return;
-    }
-
-    visited[row][col] = true;
-    sb.append(board[row][col]);
-    if (dict.search(sb.toString())) {
-      ans.add(sb.toString());
-    }
-
-    int[] dx = {0, 0, -1, 1};
-    int[] dy = {1, -1, 0, 0};
-
-    for (int i = 0; i < 4; i++) {
-      int r = row + dx[i];
-      int c = col + dy[i];
-
-      if (r >= 0 && r < board.length && c >= 0 && c < board[0].length) {
-        search(board, r, c, sb, ans, visited, dict);
-      }
-    }
-
-    sb.deleteCharAt(sb.length() - 1);
-    visited[row][col] = false;
+    return sb.toString();
   }
 
   public static void main(String[] args) {
@@ -175,7 +123,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-//    System.out.println(new temp().continuousSubarraySumII(new int[]{3, 1, -100, -3, 4}));
+    System.out.println(new temp().findK("XXYYX", "XXXadhflakjhelXzzqqkkpoYYYadadfhgakheZafhajkefhlZadhflkejhZfagjhfebhhXXX"));
   }
 }
 

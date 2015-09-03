@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f220c9b-3c30-4385-9ddc-c56830194055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/SpaceReplacement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LintCode/Count1InBinary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -58,12 +58,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpaceReplacement.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpaceReplacement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LintCode/SpaceReplacement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Count1InBinary.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LintCode/Count1InBinary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40520447">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,8 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LeetCode/237.Delete Node in a Linked List/Solution.java" />
-        <option value="$PROJECT_DIR$/LeetCode/237.Delete Node in a Linked List/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/238.Product of Array Except Self/README.md" />
         <option value="$PROJECT_DIR$/LeetCode/238.Product of Array Except Self/Solution.java" />
         <option value="$PROJECT_DIR$/LeetCode/239.Sliding Window Maximum/Solution.java" />
@@ -145,6 +156,8 @@
         <option value="$PROJECT_DIR$/LintCode/UglyNumber.java" />
         <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
         <option value="$PROJECT_DIR$/LintCode/WrodSearchII.java" />
+        <option value="$PROJECT_DIR$/LintCode/SpaceReplacement.java" />
+        <option value="$PROJECT_DIR$/LintCode/Count1InBinary.java" />
       </list>
     </option>
   </component>
@@ -915,16 +928,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LeetCode/235.Lowest Common Ancestor of a Binary Search Tree/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/239.Sliding Window Maximum/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1348,8 +1351,19 @@
     <entry file="file://$PROJECT_DIR$/LintCode/SpaceReplacement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LintCode/Count1InBinary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40520447">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,36 +12,96 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String largestNumber(int[] nums) {
-    // write your code here
-    if (nums == null || nums.length == 0) {
-      return "";
+  private class TrieNode {
+    TrieNode[] next;
+    boolean hasEnd;
+
+    TrieNode () {
+      this.next = new TrieNode[26];
+      this.hasEnd = false;
     }
-    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(numCmp);
-    StringBuilder sb = new StringBuilder();
-    for (int num: nums) {
-      maxHeap.offer(num);
-    }
-    while (!maxHeap.isEmpty()) {
-      sb.append((maxHeap.poll()));
-    }
-    return sb.toString();
   }
 
-  private Comparator<Integer> numCmp = new Comparator<Integer>() {
-    @Override
-    public int compare(Integer n1, Integer n2) {
-      String str1 = String.valueOf(n1) + String.valueOf(n2);
-      String str2 = String.valueOf(n2) + String.valueOf(n1);
-      for (int i = 0; i < str1.length(); i++) {
-        if (str1.charAt(i) != str2.charAt(i)) {
-          return str2.charAt(i) - str1.charAt(i);
-        }
-      }
+  private class Trie {
+    TrieNode root;
 
-      return 0;
+    Trie() {
+      root = new TrieNode();
     }
-  };
+
+    void insert(String word) {
+      TrieNode cur = root;
+      for (int i = 0; i < word.length(); i++) {
+        char c = word.charAt(i);
+        if (cur.next[c - 'a'] == null) {
+          cur.next[c - 'a'] = new TrieNode();
+        }
+        cur = cur.next[c - 'a'];
+      }
+      cur.hasEnd = true;
+    }
+
+    boolean search(String word) {
+      TrieNode cur = root;
+      for (int i = 0; i < word.length(); i++) {
+        char c = word.charAt(i);
+        if (cur.next[c - 'a'] == null) {
+          return false;
+        }
+        cur = cur.next[c - 'a'];
+      }
+      return cur.hasEnd;
+    }
+  }
+
+
+  public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
+    // write your code here
+    ArrayList<String> ans = new ArrayList<String>();
+    if (board == null || board.length == 0 || board[0].length == 0) {
+      return ans;
+    }
+
+    Trie dict = new Trie();
+    for (String word: words) {
+      dict.insert(word);
+    }
+
+    for (int r = 0; r < board.length; r++) {
+      for (int c = 0; c < board[0].length; c++) {
+        search(board, r, c, new StringBuilder(), ans, new boolean[board.length][board[0].length], dict);
+      }
+    }
+
+    return ans;
+  }
+
+  private void search(char[][] board, int row, int col, StringBuilder sb, ArrayList<String> ans, boolean[][] visited, Trie dict) {
+    if (visited[row][col]) {
+      return;
+    }
+
+    visited[row][col] = true;
+    sb.append(board[row][col]);
+    if (dict.search(sb.toString())) {
+      ans.add(sb.toString());
+    }
+
+    int[] dx = {0, 0, -1, 1};
+    int[] dy = {1, -1, 0, 0};
+
+    for (int i = 0; i < 4; i++) {
+      int r = row + dx[i];
+      int c = col + dy[i];
+
+      if (r >= 0 && r < board.length && c >= 0 && c < board[0].length) {
+        search(board, r, c, sb, ans, visited, dict);
+      }
+    }
+
+    sb.deleteCharAt(sb.length() - 1);
+    visited[row][col] = false;
+  }
 
   public static void main(String[] args) {
     String[] temp = {"oath", "pea", "eat", "rain"};

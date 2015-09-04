@@ -20,47 +20,21 @@ public class Solution {
    * @param points an array of point
    * @return an integer
    */
-  public int maxPoints(Point[] points) {
-    if (points == null || points.length == 0) {
-      return 0;
+  ArrayList<String> longestWords(String[] dictionary) {
+    if (dictionary == null || dictionary.length == 0) {
+      return new ArrayList<>();
     }
 
-    int max = 1;
-    for (int i = 0; i < points.length; i++) {
-      HashMap<Double, Integer> map = new HashMap<>();
-      int same = 1;
-      for (int j = i + 1; j < points.length; j++) {
-        if (points[i].x == points[j].x && points[i].y == points[j].y) {
-          same++;
-        } else {
-          double slope = getSlope(points[i], points[j]);
-          if (!map.containsKey(slope)) {
-            map.put(slope, 0);
-          }
-          map.put(slope, map.get(slope) + 1);
-        }
+    ArrayList<String> ans = new ArrayList<>();
+    int max = 0;
+    for (int i = 0; i < dictionary.length(); i++) {
+      if (dictionary[i].length() > max) {
+        ans = new ArrayList<>();
       }
-      if (map.isEmpty()) {
-        max = Math.max(same, max);
-      } else {
-        for (int count: map.values()) {
-          max = Math.max(max, count + same);
-        }
+      if (dictionary[i].length() == max) {
+        ans.add(dictionary[i]);
       }
     }
 
-    return max;
+    return ans;
   }
-
-  private double getSlope(Point a, Point b) {
-    int dx = a.x - b.x;
-    int dy = a.y - b.y;
-    if (dx == 0) {
-      return (double)Integer.MAX_VALUE;
-    }
-    if (dy == 0) {
-      return 0.0;
-    }
-    return (double)dy/dx;
-  }
-}

@@ -12,43 +12,44 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int findK(String a, String b) {
-    int[] count_a = new int[256];
-    int[] count_b = new int[256];
-    for (int i = 0; i < a.length(); i++) {
-      count_a[a.charAt(i)]++;
+  public int maxPoints(Point[] points) {
+    if (points == null || points.length == 0) {
+      return 0;
     }
-    for (int i = 0; i < b.length(); i++) {
-      if (count_a[b.charAt(i)] == 0)
-        count_b[b.charAt(i)] --;
-      else
-        count_b[b.charAt(i)] ++;
-    }
-    StringBuffer sb_b = new StringBuffer();
-    for (int i = 0; i < b.length(); i++) {
-      if (count_b[b.charAt(i)] > 0)
-      sb_b.append(b.charAt(i));
-    }
-    String t_b = encode(sb_b.toString());
-    int min = Integer.MAX_VALUE;
-    for (int i = 0; i <t_b.length(); i++) {
-      if (t_b.charAt(i) <= '9' && t_b.charAt(i) >= '0')
-        min = Math.min(min, t_b.charAt(i) - '0');
-    }
-    return min;
-  }
-  public String encode(String s) {
-    StringBuffer sb = new StringBuffer();
-    for (int i = 0; i < s.length(); i++) {
-      int counter = 1;
-      while (i+1 < s.length() && s.charAt(i) == s.charAt(i+1)) {
-        counter++;
-        i++;
+
+    int max = 0;
+    for (int i = 0; i < points.length; i++) {
+      HashMap<Double, Integer> map = new HashMap<>();
+      int same = 1;
+      for (int j = i + 1; j < points.length; j++) {
+        if (points[i].x == points[j].x && points[i].y == points[j].y) {
+          same++;
+        } else {
+          double slope = getSlope(points[i], points[j]);
+          if (!map.containsKey(slope)) {
+            map.put(slope, 0);
+          }
+          map.put(slope, map.get(slope) + 1);
+        }
       }
-      sb.append(counter);
-      sb.append(s.charAt(i));
+      for (int count: map.values()) {
+        max = Math.max(max, count + same);
+      }
     }
-    return sb.toString();
+
+    return max;
+  }
+
+  private double getSlope(Point a, Point b) {
+    int dx = a.x - b.x;
+    int dy = a.y - b.y;
+    if (dx == 0) {
+      return (double)Integer.MAX_VALUE;
+    }
+    if (dy == 0) {
+      return 0.0;
+    }
+    return (double)dy/dx;
   }
 
   public static void main(String[] args) {
@@ -123,7 +124,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().findK("XXYYX", "XXXadhflakjhelXzzqqkkpoYYYadadfhgakheZafhajkefhlZadhflkejhZfagjhfebhhXXX"));
+    System.out.println(new temp().numberToWords(1234567));
   }
 }
 

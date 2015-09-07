@@ -12,29 +12,56 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int romanToInt(String s) {
+  public boolean isNumber(String s) {
+    // Write your code here
     if (s == null || s.length() == 0) {
-      return 0;
+      return false;
+    }
+    String[] nums = s.split("e");
+    if (nums.length > 2) {
+      return false;
     }
 
-    int[] nums = {1, 5, 10, 50, 100, 500, 1000};
-    char[] romans = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+    if (nums.length == 1) {
+      return isNumber(nums[0], false);
+    } else {
+      return isNumber(nums[0], false) && isNumber(nums[1], true);
+    }
+  }
 
-    int[] map = new int[26];
-    for (int i = 0; i < nums.length; i++) {
-      map[romans[i] - 'A'] = nums[i];
+  private boolean isNumber(String s, boolean hasE) {
+    if (s.length() == 0) {
+      return false;
+    }
+    boolean dot = false;
+
+    int left = 0;
+    while (left < s.length() && s.charAt(left) == ' ');
+    int right = s.length() - 1;
+    while (right >= 0 && s.charAt(right--) == ' ');
+
+    if (left > right) {
+      return false;
+    }
+    if (s.charAt(left) == '+' || s.charAt(left) == '-') {
+      left++;
     }
 
-    int ans = 0;
-    for (int i = 0; i < s.length(); i++) {
-      if (i < s.length() - 1 && map[s.charAt(i) - 'A'] < map[s.charAt(i + 1) - 'A']) {
-        ans += map[s.charAt(i + 1) - 'A'] - map[s.charAt(i) - 'A'];
-      } else {
-        ans += map[s.charAt(i) - 'A'];
+    while (left <= right) {
+      if (!Character.isDigit(s.charAt(left))) {
+        if (s.charAt(left) == '.') {
+          if (dot || hasE) {
+            return false;
+          }
+          dot = true;
+        } else {
+          return false;
+        }
       }
+      left++;
     }
 
-    return ans;
+    return true;
   }
 
 
@@ -112,7 +139,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println("a" * 3);
+    System.out.println(new temp().isNumber("3"));
   }
 }
 

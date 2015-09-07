@@ -112,8 +112,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    new temp().submatrixSum(matrix1);
-    System.out.println(A);
+    System.out.println("a" * 3);
   }
 }
 

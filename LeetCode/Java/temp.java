@@ -12,56 +12,28 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isNumber(String s) {
+  public int reverseInteger(int n) {
     // Write your code here
-    if (s == null || s.length() == 0) {
-      return false;
-    }
-    String[] nums = s.split("e");
-    if (nums.length > 2) {
-      return false;
-    }
+    int max = Integer.MAX_VALUE / 10;
+    int min = Integer.MIN_VALUE / 10;
+    int ans = 0;
 
-    if (nums.length == 1) {
-      return isNumber(nums[0], false);
-    } else {
-      return isNumber(nums[0], false) && isNumber(nums[1], true);
-    }
-  }
-
-  private boolean isNumber(String s, boolean hasE) {
-    if (s.length() == 0) {
-      return false;
-    }
-    boolean dot = false;
-
-    int left = 0;
-    while (left < s.length() && s.charAt(left) == ' ');
-    int right = s.length() - 1;
-    while (right >= 0 && s.charAt(right--) == ' ');
-
-    if (left > right) {
-      return false;
-    }
-    if (s.charAt(left) == '+' || s.charAt(left) == '-') {
-      left++;
-    }
-
-    while (left <= right) {
-      if (!Character.isDigit(s.charAt(left))) {
-        if (s.charAt(left) == '.') {
-          if (dot || hasE) {
-            return false;
-          }
-          dot = true;
-        } else {
-          return false;
-        }
+    while (n > 0) {
+      int num = n % 10;
+      if (ans > max && ans < min) {
+        return 0;
       }
-      left++;
+      if (ans == max && num > 7) {
+        return 0;
+      }
+      if (ans == min && num < -8) {
+        return 0;
+      }
+      ans = ans * 10 + num;
+      n /= 10;
     }
 
-    return true;
+    return ans;
   }
 
 
@@ -139,7 +111,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().isNumber("3"));
+    System.out.println(new temp().reverseInteger(-123));
   }
 }
 

@@ -12,44 +12,29 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isValidSudoku(char[][] board) {
-    for (int i = 0; i < board.length; i++) {
-      for (int j = 0; j < board[0].length; j++) {
-        if (!check(board, i, j)) {
-          return false;
-        }
+  public int romanToInt(String s) {
+    if (s == null || s.length() == 0) {
+      return 0;
+    }
+
+    int[] nums = {1, 5, 10, 50, 100, 500, 1000};
+    char[] romans = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+
+    int[] map = new int[26];
+    for (int i = 0; i < nums.length; i++) {
+      map[romans[i] - 'A'] = nums[i];
+    }
+
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if (i < s.length() - 1 && map[s.charAt(i) - 'A'] < map[s.charAt(i + 1) - 'A']) {
+        ans += map[s.charAt(i + 1) - 'A'] - map[s.charAt(i) - 'A'];
+      } else {
+        ans += map[s.charAt(i) - 'A'];
       }
     }
 
-    return true;
-  }
-
-  private boolean check(char[][] board, int row, int col) {
-    char tar = board[row][col];
-    for (int i = 0; i < board.length; i++) {
-      if (i != row && board[i][col] == tar) {
-        return false;
-      }
-    }
-
-    for (int j = 0; j < board[0].length; j++) {
-      if (j != col && board[row][j] == tar) {
-        return false;
-      }
-    }
-
-    int r = 3 * (row / 3);
-    int c = 3 * (col / 3);
-
-    for (int i = r; i < r + 3; i++) {
-      for (int j = c; j < c + 3; j++) {
-        if ((i != row || j != col) && board[i][j] == tar) {
-          return false;
-        }
-      }
-    }
-
-    return true;
+    return ans;
   }
 
 

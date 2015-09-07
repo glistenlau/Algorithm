@@ -12,34 +12,35 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int[][] submatrixSum(int[][] matrix) {
-    if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-      return new int[0][0];
-    }
+  public boolean isValidParentheses(String s) {
+  if (s == null || s.length() == 0) {
+    return true;
+  }
 
-    int[][] sums = new int[matrix.length + 1][matrix[0].length + 1];
-    for (int i = 1; i <= matrix.length; i++) {
-      for (int j = 1; j <= matrix[0].length; j++) {
-        sums[i][j] = sums[i - 1][j] + sums[i][j - 1] - sums[i - 1][j - 1] + matrix[i - 1][j - 1];
+  Stack<Character> stack = new Stack<>();
+  for (int i = 0; i < s.length(); i++) {
+    char c = s.charAt(i);
+    if (c == ')' || c == '{' || c==']') {
+      if (stack.isEmpty() || isValid(stack.pop(), c)) {
+        return false;
       }
+    } else {
+      stack.push(c);
     }
+  }
 
-    for (int i = 1; i <= matrix.length; i++) {
-      for (int j = i; j <= matrix.length; j++) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0, 0);
-        for (int k = 1; k <= matrix[0].length; k++) {
-          int sum = sums[j][k] - sums[i - 1][k];
-          if (map.containsKey(sum)) {
-            int pre = map.get(sum);
-            return new int[][] {{i - 1, k - pre - 1}, {j - 1, k - 1}};
-          }
-          map.put(sum, k);
-        }
-      }
+  return stack.isEmpty();
+}
+
+  private boolean isValid(char first, char last) {
+    if (first == '(') {
+      return last == ')';
+    } else if (first == '{') {
+      return last == '}';
+    } else if (first == '[') {
+      return last == ']';
     }
-
-    return new int[0][0];
+    return false;
   }
 
 

@@ -12,36 +12,33 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean isValidParentheses(String s) {
-  if (s == null || s.length() == 0) {
-    return true;
+  public String simplifyPath(String path) {
+  if (path == null || path.length() == 0) {
+    return "/";
   }
 
-  Stack<Character> stack = new Stack<>();
-  for (int i = 0; i < s.length(); i++) {
-    char c = s.charAt(i);
-    if (c == ')' || c == '{' || c==']') {
-      if (stack.isEmpty() || isValid(stack.pop(), c)) {
-        return false;
-      }
-    } else {
-      stack.push(c);
+  Stack<String> folder = new Stack<>();
+  String[] folders = path.split("/");
+  for (String f: folders) {
+    if (f.equals(".")) {
+      folder = new Stack<>();
+    } else if (f.equals("..")) {
+      folder.pop();
+    } else if (f.length() > 0) {
+      folder.push(f);
     }
   }
 
-  return stack.isEmpty();
+  StringBuilder ans = new StringBuilder();
+  while (!folder.isEmpty()) {
+    ans.insert(0, '/');
+    ans.insert(0, folder.pop());
+  }
+  if (ans.length() == 0) {
+    return "/";
+  }
+  return ans.toString();
 }
-
-  private boolean isValid(char first, char last) {
-    if (first == '(') {
-      return last == ')';
-    } else if (first == '{') {
-      return last == '}';
-    } else if (first == '[') {
-      return last == ']';
-    }
-    return false;
-  }
 
 
 

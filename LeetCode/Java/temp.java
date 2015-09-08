@@ -12,33 +12,39 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String getPermutation(int n, int k) {
-    int f = getFactor(n);
-    StringBuilder ans = new StringBuilder();
-    List<Integer> nums = new ArrayList<>();
-    for (int i = 1; i <= n; i++) {
-      nums.add(i);
+  public boolean hasRoute(ArrayList<DirectedGraphNode> graph, DirectedGraphNode s, DirectedGraphNode t) {
+    if (graph == null || graph.size() == 0) {
+      return false;
     }
 
-    while (!nums.isEmpty()) {
-      f /= nums.size();
-      int order = k / f;
-      k -= f * (order - 1);
-      ans.append(nums.get(order - 1));
-      nums.remove(order - 1);
+    if (s == t) {
+      return true;
     }
 
+    Queue<DirectedGraphNode> route = new LinkedList<>();
+    HashSet<DirectedGraphNode> visited = new HashSet<>();
 
-    return ans.toString();
-  }
-
-  private int getFactor(int n) {
-    int ans = 1;
-    for (int i = n; i > 1; i--) {
-      ans *= i;
+    for (DirectedGraphNode node: graph) {
+      if (node == s) {
+        route.offer(node);
+        visited.add(node);
+      }
     }
 
-    return ans;
+    while (!route.isEmpty()) {
+      DirectedGraphNode cur = route.poll();
+      for (DirectedGraphNode neighbor: cur.neighbors) {
+        if (!visited.contains(neighbor)) {
+          if (neighbor == t) {
+            return true;
+          }
+          route.offer(neighbor);
+          visited.add(neighbor);
+        }
+      }
+    }
+
+    return false;
   }
 
 

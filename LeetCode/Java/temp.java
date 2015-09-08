@@ -12,39 +12,51 @@ import java.util.*;
  * }
  */
 public class temp {
-  public boolean hasRoute(ArrayList<DirectedGraphNode> graph, DirectedGraphNode s, DirectedGraphNode t) {
-    if (graph == null || graph.size() == 0) {
-      return false;
+  public List<TreeNode> generateTrees(int n) {
+    // write your code here
+    if (n == 0) {
+      return new ArrayList<>(Arrays.asList(null));
     }
 
-    if (s == t) {
-      return true;
+    return generateTrees(1, n);
+  }
+
+  private List<TreeNode> generateTrees(int start, int end) {
+    if (start > end) {
+      return new ArrayList<>();
     }
 
-    Queue<DirectedGraphNode> route = new LinkedList<>();
-    HashSet<DirectedGraphNode> visited = new HashSet<>();
-
-    for (DirectedGraphNode node: graph) {
-      if (node == s) {
-        route.offer(node);
-        visited.add(node);
-      }
-    }
-
-    while (!route.isEmpty()) {
-      DirectedGraphNode cur = route.poll();
-      for (DirectedGraphNode neighbor: cur.neighbors) {
-        if (!visited.contains(neighbor)) {
-          if (neighbor == t) {
-            return true;
+    List<TreeNode> ans = new ArrayList<>();
+    for (int i = start; i <= end ; i++) {
+      List<TreeNode> left = generateTrees(start, i - 1);
+      List<TreeNode> right = generateTrees(i + 1, end);
+      if (left.size() != 0 && right.size() != 0) {
+        for (TreeNode l: left) {
+          for (TreeNode r: right) {
+            TreeNode root = new TreeNode(i);
+            root.left = l;
+            root.right = r;
+            ans.add(root);
           }
-          route.offer(neighbor);
-          visited.add(neighbor);
         }
+      } else if (left.size() == 0 && right.size() != 0) {
+        for (TreeNode r: right) {
+          TreeNode root = new TreeNode(i);
+          root.right = r;
+          ans.add(root);
+        }
+      } else if (left.size() != 0 && right.size() == 0) {
+        for (TreeNode l: left) {
+          TreeNode root = new TreeNode(i);
+          root.left = l;
+          ans.add(root);
+        }
+      } else {
+        ans.add(new TreeNode(i));
       }
     }
 
-    return false;
+    return ans;
   }
 
 

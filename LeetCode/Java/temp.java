@@ -12,37 +12,35 @@ import java.util.*;
  * }
  */
 public class temp {
-  public String addBinary(String a, String b) {
-    // Write your code here
-    int indexA = a.length() - 1;
-    int indexB = b.length() - 1;
+  public String getPermutation(int n, int k) {
+    int f = getFactor(n);
     StringBuilder ans = new StringBuilder();
-    int carry = 0;
-    while (indexA >= 0 && indexB >= 0) {
-      int numA = a.charAt(indexA--) == 0? 0: 1;
-      int numB = b.charAt(indexB--) == 0? 0: 1;
-
-      int sum = numA + numB + carry;
-      ans.insert(0, sum % 2);
-      carry = sum / 2;
+    List<Integer> nums = new ArrayList<>();
+    for (int i = 1; i <= n; i++) {
+      nums.add(i);
     }
 
-    while (indexA >= 0) {
-      int numA = a.charAt(indexA--) == 0? 0: 1;
-      int sum = numA + carry;
-      ans.insert(0, sum % 2);
-      carry = sum / 2;
+    while (!nums.isEmpty()) {
+      f /= nums.size();
+      int order = k / f;
+      k -= f * (order - 1);
+      ans.append(nums.get(order - 1));
+      nums.remove(order - 1);
     }
 
-    while (indexB >= 0) {
-      int numB = a.charAt(indexB--) == 0? 0: 1;
-      int sum = numB + carry;
-      ans.insert(0, sum % 2);
-      carry = sum / 2;
-    }
 
     return ans.toString();
   }
+
+  private int getFactor(int n) {
+    int ans = 1;
+    for (int i = n; i > 1; i--) {
+      ans *= i;
+    }
+
+    return ans;
+  }
+
 
 
 
@@ -119,7 +117,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().addBinary("0", "1"));
+    System.out.println(new temp().getPermutation(2, 1));
   }
 }
 

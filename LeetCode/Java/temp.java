@@ -136,7 +136,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().getPermutation(2, 1));
+//    System.out.println(new temp().getPermutation(2, 1));
   }
 }
 

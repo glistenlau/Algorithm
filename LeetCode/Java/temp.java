@@ -12,51 +12,52 @@ import java.util.*;
  * }
  */
 public class temp {
-  public List<TreeNode> generateTrees(int n) {
-    // write your code here
-    if (n == 0) {
-      return new ArrayList<>(Arrays.asList(null));
+  public boolean exist(char[][] board, String word) {
+    if (word == null || word.length() == 0) {
+      return true;
     }
-
-    return generateTrees(1, n);
-  }
-
-  private List<TreeNode> generateTrees(int start, int end) {
-    if (start > end) {
-      return new ArrayList<>();
+    if (board == null || board.length == 0 || board[0].length == 0) {
+      return false;
     }
-
-    List<TreeNode> ans = new ArrayList<>();
-    for (int i = start; i <= end ; i++) {
-      List<TreeNode> left = generateTrees(start, i - 1);
-      List<TreeNode> right = generateTrees(i + 1, end);
-      if (left.size() != 0 && right.size() != 0) {
-        for (TreeNode l: left) {
-          for (TreeNode r: right) {
-            TreeNode root = new TreeNode(i);
-            root.left = l;
-            root.right = r;
-            ans.add(root);
+    boolean[][] visited = new boolean[board.length][board[0].length];
+    for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board[0].length; j++) {
+        if (board[i][j] == word.charAt(0)) {
+          if (search(board, i, j, 1, word, visited)) {
+            return true;
           }
         }
-      } else if (left.size() == 0 && right.size() != 0) {
-        for (TreeNode r: right) {
-          TreeNode root = new TreeNode(i);
-          root.right = r;
-          ans.add(root);
-        }
-      } else if (left.size() != 0 && right.size() == 0) {
-        for (TreeNode l: left) {
-          TreeNode root = new TreeNode(i);
-          root.left = l;
-          ans.add(root);
-        }
-      } else {
-        ans.add(new TreeNode(i));
       }
     }
 
-    return ans;
+    return false;
+  }
+
+  private boolean search(char[][] board, int row, int col, int index, String word, boolean[][] visited) {
+    if (visited[row][col]) {
+      return false;
+    }
+    if (index == word.length()) {
+      return true;
+    }
+
+    int[] dx = {0, 0, -1, 1};
+    int[] dy = {1, -1, 0, 0};
+
+    visited[row][col] = true;
+
+    for (int i = 0; i < 4; i++) {
+      int r = row + dx[i];
+      int c = col + dy[i];
+      if (r >= 0 && r < board.length && c >= 0 && c < board[0].length) {
+        if (search(board, r, c, index + 1, word, visited)) {
+          return true;
+        }
+      }
+    }
+
+    visited[row][col] = false;
+    return false;
   }
 
 

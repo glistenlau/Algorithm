@@ -12,28 +12,40 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int reverseInteger(int n) {
+  public int divide(int dividend, int divisor) {
     // Write your code here
-    int max = Integer.MAX_VALUE / 10;
-    int min = Integer.MIN_VALUE / 10;
-    int ans = 0;
-
-    while (n > 0) {
-      int num = n % 10;
-      if (ans > max && ans < min) {
-        return 0;
-      }
-      if (ans == max && num > 7) {
-        return 0;
-      }
-      if (ans == min && num < -8) {
-        return 0;
-      }
-      ans = ans * 10 + num;
-      n /= 10;
+    long divd = Math.abs((long) dividend);
+    long divr = Math.abs((long) divisor);
+    if (dividend == Integer.MIN_VALUE && divisor == -1) {
+      return 2147483647;
+    }
+    if (Math.abs(divd) < Math.abs(divr)) {
+      return 0;
     }
 
-    return ans;
+    if (divisor == 0) {
+      return 2147483647;
+    }
+
+    boolean neg = false;
+    if ((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) {
+      neg = true;
+    }
+
+    long q = 1L;
+    while ((divr << 1) <= divd) {
+      q = q << 1;
+      divr = divr << 1;
+    }
+
+    long r = divd - divr;
+
+    if (neg) {
+      q = -q;
+      r = -r;
+    }
+
+    return (int)q + divide((int) r, divisor);
   }
 
 
@@ -111,7 +123,7 @@ public class temp {
 
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
-    System.out.println(new temp().reverseInteger(-123));
+    System.out.println(new temp().divide(Integer.MIN_VALUE, -3));
   }
 }
 

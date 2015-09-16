@@ -1,0 +1,39 @@
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=141633&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
+1. 印度女生，虽然是印度的，但女生还是比较友善的。题目大致是BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string，这题要用到heap
+
+2. 用尽量短的string生成4位数密码的所有组合
+
+3. 生成palindrome number， 然后寻找最相近的palindrome number，最简单的了，不过要注意奇数个digits和偶数个digits, 本以为就这么水过，结果最后遇到阿三
+
+4. 黑白2D array表示的image。边长是2^n。设计一个class来存它，用尽量少的space。提示是可以不断把图形分割成四块，分完继续分。如果其中一块里面所有格都是黑，那一块就是黑。
+   然后连个相同大小的的image相交生产第三个image，遵循黑黑得黑，其他都白的规则。
+
+
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=140903&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
+借男票账号来回报地里，今天刚结束的新鲜面经~~第一次onsite一定是GG了~~1. 美国大叔。 warm up 问题：求 int(log X).  第二题， 给一堆strings
+和一个input string, 在input里找出minimum unused char.
+2. 国人小哥。特别nice！给一个数字的array，两个数字间只用+或者* 算出最大的值。
+3.烙印大叔。 给一个array 和一个 target求出 array里有几组tuple相加是小于等于target的。 第二题是一个array里面只有0-9的digits, 有一个target， 判断是否存在一种组合可以等于target。eg: [6,3,1,0,5]  target=78,这个return True. 63+10+5 = 78 如果target= 636 return True. 631+0+5 = 636. 1point 3acres 璁哄潧
+4.烙印小哥。 rearrange array，使得相邻两个字符是不一样的。
+5. 俄罗斯小哥？长得像格格巫。。。LRU~~
+
+
+http://www.1point3acres.com/bbs/thread-141304-1-1.html
+
+国人小哥shadow，白人geek主面。问题：将一个image mirror一下。image是用bit表示的。白人小哥不太理人。
+国人小哥，不知道结果怎么样，不过感觉就在一直提醒我，给我感觉挺好的。问题是一个文件，一个set的word，让你找出出现次数最多的word。
+
+午饭，国人小哥很好。一直跟我聊天。这轮不算在面试之中。
+白人，感觉人很好。问题是： longest consecutive sequence in array。followup： longest consecutive sequence in tree,但是是简化版，只要求从parent 到root的longest sequence。
+白人小哥。问了我一曾经onsite的时候面过的题目。就是一个matrix存value。两种操作，一种是query（x1,y1, x2, y2）返回此区间的value的和。 第二种是update（x, y, v），要求更新matrix的值。followup 分别是如果你想要query快，如果你想要update快。如果你想即让query快，又想要update快。怎么办？
+感觉整体下来面试不难，但是我每一轮都没有bugfree，每当我说我想要过一个例子来看一下有没有bug，面试官都是觉得没时间了，然后就帮我指出来哪里可能有问题。这个也是我担心的一点。
+
+
+
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=141623&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
+1. longest consective increasing sequence in binary tree.(start point happen anywhere in the node, not necessary start from root), 白人小哥
+2. 中国北大姐，说是和我同一届本科毕业的，人家就是屌，国内直接来工作的。determine binary tree is complete tree. 感觉被low ball了， 也怪自己，对complete tree 不熟悉。
+3. 美国匹兹堡小哥（因为在匹兹堡读书，他顺带聊了下匹兹堡的事，他爸干啥干啥的） url list with relevance score sorted in descending order from two difference sources, how to organize and return unique url with descending order. (merge sort with de-duplicate) 简单题， 用merge sort的思想就完了。 代码里有个list.get(i), get element by index, pre-assume it would be arraylist. 结果在被问到what's assumption 时懵了。别的总体还好。
+4.三哥，迟到15分钟， 急匆匆的进来了，给了个generate all possible complete tree with number of nodes is N. 然后中途还电话两次。 递归生成所有树，f(n) = { f(n-1) + attach two child nodes to any leaf of tree in f(n-1)}。在递归的时候要de-duplicate,用 serialize tree来保证树结构唯一性，(in-order + pre-order sequence).走了一遍serialization的例子。写的伪代码，因为没有时间写全所有的了，期间还有clone tree的操作。. more info on 1point3acres.com
+5. 中国小哥，CMU毕业的。问了到 number的题。不知道怎么描述， given increase/decrease trend sequence, generate one possible sequence with minimal value.
+for example, given sequence order "iddi" ->34215, "iii" -> 1234, "ddd"-> 4321. (solution有空在写， 直接慢慢琢磨出来的是O(n2)的solution, 小哥直接给hint说用链表结构能improve 到O(n) ).

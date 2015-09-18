@@ -1,8 +1,6 @@
 http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=141633&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
 1. 印度女生，虽然是印度的，但女生还是比较友善的。题目大致是BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string，这题要用到heap
 
-2. 用尽量短的string生成4位数密码的所有组合
-
 3. 生成palindrome number， 然后寻找最相近的palindrome number，最简单的了，不过要注意奇数个digits和偶数个digits, 本以为就这么水过，结果最后遇到阿三
 
 4. 黑白2D array表示的image。边长是2^n。设计一个class来存它，用尽量少的space。提示是可以不断把图形分割成四块，分完继续分。如果其中一块里面所有格都是黑，那一块就是黑。
@@ -20,7 +18,6 @@ http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=140903&extra=page%3
 
 http://www.1point3acres.com/bbs/thread-141304-1-1.html
 
-国人小哥shadow，白人geek主面。问题：将一个image mirror一下。image是用bit表示的。白人小哥不太理人。
 国人小哥，不知道结果怎么样，不过感觉就在一直提醒我，给我感觉挺好的。问题是一个文件，一个set的word，让你找出出现次数最多的word。
 
 午饭，国人小哥很好。一直跟我聊天。这轮不算在面试之中。

@@ -53,45 +53,37 @@ public class ShortestSequence {
     List<Integer> ans = new ArrayList<>();
 
 
-    GraphNode node = graphs.get(0);
-    while (!node.neighbors.isEmpty()) {
-      node = search(node, points.length, ans, new HashSet<>());
-    }
-    ans.add(graphs.get(0).val);
+    search(graphs.get(0), points.length * (points.length - 1), ans);
+
 
     return ans;
   }
 
-  private GraphNode search(GraphNode node, int n, List<Integer> ans, HashSet<GraphNode> visited) {
-    if (n == 0) {
-      return node;
-    }
-
-    if (visited.contains(node)) {
-      return null;
-    }
+  private boolean search(GraphNode node, int n, List<Integer> ans) {
 
     ans.add(node.val);
-    visited.add(node);
+
+    if (n == 0) {
+      return true;
+    }
 
     for (int i = 0; i < node.neighbors.size(); i++) {
       GraphNode neighbor = node.neighbors.get(i);
-      GraphNode next = search(neighbor, n - 1, ans, visited);
       node.neighbors.remove(neighbor);
-      if (next != null) {
-        return next;
-
+      if (search(neighbor, n - 1, ans)) {
+        return true;
       }
-      node.neighbors.add(neighbor);
+      node.neighbors.add(i, neighbor);
     }
 
-    visited.remove(node);
     ans.remove(ans.size() - 1);
 
-    return null;
+    return false;
   }
 
   public static void main(String[] args) {
-    System.out.println(new ShortestSequence().shortestSequence(new int[]{0, 1, 2, 3, 4, 5, 6}));
+    System.out.println(new ShortestSequence().shortestSequence(new int[]{0, 1, 2, 3, 4, 5, 6, 7,
+        8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+    }));
   }
 }

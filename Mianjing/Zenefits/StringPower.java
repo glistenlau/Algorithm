@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by YiLIU on 9/1/15.
  */
@@ -45,4 +47,6 @@ public class StringPower {
   public static void main(String[] args) {
     System.out.println(new StringPower().StringPower("XYZ", "XXadhflakjhelXXzzqqkkpoYYadadfhgakheZafhajkefhlZadhflkejhZfagjhfebhh"));
   }
+  Scanner in = new Scanner(System.in);
+  int n = in.nextInt();
 }

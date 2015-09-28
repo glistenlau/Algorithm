@@ -34,3 +34,32 @@ http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=141623&extra=page%3
 4.三哥，迟到15分钟， 急匆匆的进来了，给了个generate all possible complete tree with number of nodes is N. 然后中途还电话两次。 递归生成所有树，f(n) = { f(n-1) + attach two child nodes to any leaf of tree in f(n-1)}。在递归的时候要de-duplicate,用 serialize tree来保证树结构唯一性，(in-order + pre-order sequence).走了一遍serialization的例子。写的伪代码，因为没有时间写全所有的了，期间还有clone tree的操作。. more info on 1point3acres.com
 5. 中国小哥，CMU毕业的。问了到 number的题。不知道怎么描述， given increase/decrease trend sequence, generate one possible sequence with minimal value.
 for example, given sequence order "iddi" ->34215, "iii" -> 1234, "ddd"-> 4321. (solution有空在写， 直接慢慢琢磨出来的是O(n2)的solution, 小哥直接给hint说用链表结构能improve 到O(n) ).
+
+
+一轮：白人小哥，我校友，上来寒暄了下学校的事儿，问了你最喜欢什么课，说了个课他似乎没听过。。。
+1，encode and decode list of strings。
+>标准题，不过是讨论性质的。我先说run length encoding，然后再提到了leetcode里的选取delimiter然后对原字符串的delimiter进行特殊处理的办法，感觉还挺满意，我提到可能用escape character也可以做到，他说是可以，也还有其他办法。然后让我不用写代码，"lets make it more complicated"
+2，follow up，binary tree of strings，就是每个node上写一个string，依然是encode和decode，可以基于上面的encode和decode函数。
+>先讨论如何表示这个tree，提到可以用类似leetcode（当然没说leetcode）那样的用＃来表示空叶子的方式进行前序遍历＋补全空叶子。表示空间消耗太大(2 ^ h)，然后直接提示我可以用array来存，每个元素存node和他的两个孩子的index。并且简单讨论了下为啥一次遍历无法restore（包括反例）。追加讨论了下如果用array的方式存，要如何encode和decode。
+>然后讨论如何序列化和反序列化一个树，因为想起来了双遍历序列化＋反序列化的算法，直接说可以两次序列化（前序＋中序或者后序＋中序），然后恢复的时候就用两个序列化恢复。表示很有兴趣，同时表示这样的空间消耗是两份的，不过可以用这个办法。
+>最后时间不是很多，就让我写了下从双遍历结果恢复tree的伪代码就结束了。（restore tree from post-order + in-order / pre-order + in-order)。
+
+二轮：白人大叔，上来先聊了下project，问了下我暑假做的东西，然后和他做的东西很类似。
+1，iterator design。
+>也是挺标准的iterator，他们家就那么几种iterator（横的，竖的，斜的），主要是处理好boundary condition和各种null check。因为聊项目花了大概20分钟，这里写完白板代码就差不多没时间了，他拍照了下就lunch break了。
+
+三轮：西班牙小哥，带着一个shadow旁观。上来就出题。
+1，給一个matrix，里面不同cell写着不同的数字，给你一个起点，然后只要上下左右的cell的数字和你目前位置的数字相同就可以继续走，最后给出能到达的区域的周长，边缘的周长不用算。（因为原题是说你想把这个区域用篱笆围起来，但是边上篱笆已经围好了）。
+>很基本的dfs，走过的格子可以改成负数或者特殊字符来防止重复计算。每走一格＋4个周长，然后如果访问到一个已经访问过的，就减2，然后访问到边缘就减1。写出白板代码，自带边界检查，但是一开始以为是算格子数，估计这里扣分不少。被提醒是算周长之后，简单想了下就改好了。
+>是否可以优化：可以，记录目前移动的方向，然后下一步不需要走回来直接减2。
+>是否可以不修改原matrix来纪录访问状态：我提出用比特类的元素来记录（比如bitmap和bitset），表示这样空间使用还是会和matrix的m*n相关。回答用额外数组或者set只记录访问过的格子，表示可以，问这个set要如何实现。表示可以用hashset，问这个hash函数如何写，表示用m + n来做mod操作，具体hash公式写不出来，后来想想果然不太对。
+>看起来复杂度是O(|需要包围的区域的cell数|)，问是否可以优化。想了几分钟感觉不太可能，和他问hint，他说你未必找得到，也可以想想证明这个无法优化。尝试对算法用数学分析来证明这是最低的复杂度，哪怕减少也不会改变大O复杂度。小哥似是而非地接受了。
+
+
+http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=142465&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
+四轮：白人小哥，上来一脸笑容说我们来聊一道题吧。心想不妙。
+1，給一个n * n的matrix，代表一个区域，每个格子里的数字是那个格子的高度。现在matrix的右边第一列有一条河，高度是H，如果第一列有格子高度低于H，水就会灌进来，然后蔓延到区域里所有联通的且高度低于H的格子。然后给你一个起点一个终点P1和P2，试问要在K步之内从P1走到P2（走的时候无所谓区域高度，可以4个方向随便走），河的高度最大是多少。比如第一列高度都是100，然后剩下都是1（并且假设P1到P2的距离不到k），那么河的最大高度是就是101（101之前水都淹不进来）. more info on 1point3acres.com
+>直接看傻了几秒，心想好多条件啊。然后对方倒是没让我直接做，开始问我怎么分解问题。
+>提取出一个基础问题，假设河的高度是H，是否P1可以在K步之内达到P2。表示先做一个dfs完成灌水（一开始说成从边上一行行扫描，后来想到要dfs才行），然后从P1开始bfs，所有被灌水的区域不考虑，看看是否能在K步之内到达P2。表示可以。问这两步的复杂度，表示前者是O(n^2)，后者是O(k)，所以还是O(n^2)了。
+>然后如果有了基础问题的解，如何找到合适的H。表示H的上下限不是0和正无穷，至少应该是matrix里的最高点和最低点，然后进行二分查找。如果mid的高度可以让P1走到P2，那么就low = mid，不然就hi = mid - 1。表示可以。这样这一步的复杂度就是log(|min - max|)了。
+>写了下bfs和二分搜索步骤的伪代码，时间快没了，问我是否可以进一步优化，表示想不到。于是告诉我上下限可以进一步根据P1和P2本身的高度进行压缩，而不是全局的上下限。这里说实话没太明白，万一我地形很诡异，用最大值隔开了河，或者用最小值包住了P1和P2，那么P1和P2本身的高度似乎无所谓啊。总之时间到了。. 1point

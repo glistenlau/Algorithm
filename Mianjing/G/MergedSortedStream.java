@@ -1,35 +1,27 @@
-//import java.util.Queue;
-//import java.util.stream.Stream;
+import java.util.List;
+import java.util.Queue;
+import java.util.stream.Stream;
+
+/**
+ * Created by YiLIU on 9/11/15.
+ */
+public class MergedSortedStream {
 //
-///**
-// * Created by YiLIU on 9/11/15.
-// */
-//public class MergedSortedStream {
-//  private class SortedStreamWithPeek {
-//    private Comparable next;
-//    private SortedStream stream;
-//    SortedStreamWithPeek(SortedStream stream) {
-//      this.stream = stream;
-//      if (this.stream.hasNext()) {
-//        next = this.stream.next();
-//      }
-//    }
-//    Comparable next() {
-//      Comparable ans = next;
-//      next = null;
-//      if (stream.hasNext()) {
-//        next = stream.next();
-//      }
+//  private class SortedStreamWithPeek implements SortedStream {
 //
-//      return ans;
+//
+//    SortedStreamWithPeek(List<Integer> list) {
+//
 //    }
 //
-//    Comparable peek() {
-//      return peek();
+//    @Override
+//    public Comparable next() {
+//
 //    }
 //
-//    boolean hasNext() {
-//      return next != null;
+//    @Override
+//    public boolean hasNext() {
+//
 //    }
 //  }
-//}
+}

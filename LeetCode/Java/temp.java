@@ -12,25 +12,53 @@ import java.util.*;
  * }
  */
 public class temp {
-  public int lengthOfLongestSubstring(String s) {
-    HashSet<Character> map = new HashSet<>();
-    int max = 1;
-    int left = 0;
-    for (int right = 0; right < s.length(); right++) {
-      char cur = s.charAt(right);
-      if (map.contains(cur)) {
-        for (; left < right && s.charAt(left) != cur; left++) {
-          map.remove(s.charAt(left));
+  public int numIslands(char[][] grid) {
+    if (grid == null || grid.length == 0) {
+      return 0;
+    }
+    if (grid[0] == null || grid[0].length == 0) {
+      return 0;
+    }
+
+    int count = 0;
+    for (int r = 0; r < grid.length; r++) {
+      for (int c = 0; c < grid[0].length; c++) {
+        if (grid[r][c] == '1') {
+          bfs(grid, r, c);
+          count++;
         }
-        left++;
-      } else {
-        map.add(cur);
-        max = Math.max(max, right - left + 1);
       }
     }
 
-    return max;
+    return count;
   }
+
+  private void bfs(char[][] grid, int r, int c) {
+    Queue<Integer> myQ = new LinkedList<>();
+    myQ.offer(r * grid[0].length + c);
+    int[] dx = {0, 0, -1, 1};
+    int[] dy = {1, -1, 0, 0};
+
+    while (!myQ.isEmpty()) {
+      int cur = myQ.poll();
+      int row = cur / grid[0].length;
+      int col = cur % grid[0].length;
+      grid[row][col] = '2';
+      for (int i = 0; i < 4; i++) {
+        int nr = row + dx[i];
+        int nc = col + dy[i];
+
+        if (nr >= 0 && nr < grid.length && nc >= 0 && nc < grid[0].length) {
+          if (grid[nr][nc] == '1') {
+            myQ.offer(nr * grid[0].length + nc);
+          }
+        }
+      }
+    }
+
+  }
+
+
 
 
 
@@ -54,10 +82,10 @@ public class temp {
     int i = 0;
 
 
-    char[][] sodoku = {{'X', 'X', 'X', 'X'},
-        {'X', 'O', 'O', 'X'},
-        {'X', 'X', 'O', 'X'},
-        {'X', 'O', 'X', 'X'}};
+    char[][] sodoku = {{'1', '1', '1', '0'},
+        {'1', '1', '0', '1'},
+        {'1', '1', '0', '0'},
+        {'0', '0', '0', '0'}};
     int[] A = {3, 2, 1, 3, 3, 3, 5, 6, 3, 7};
     int[] BB = {5, 6, 7, 3, 2, 1, 0};
     int[][] matrix1 = {{1,1,1,1,1,1,1,1,1,1,1,-10,1,1,1,1,1,1,1,1,1,1,1}};
@@ -100,9 +128,10 @@ public class temp {
     List<Integer> a1 = new ArrayList<>(B);
     List<Integer> a2 = new ArrayList<>(B);
 
+    for (int offset = 0; offset < 9; offset++) {
+      System.out.println(new temp().numIslands(sodoku));
+    }
 
-//    System.out.println(new temp().postorderTraversal(root));
-    return;
   }
 }
 

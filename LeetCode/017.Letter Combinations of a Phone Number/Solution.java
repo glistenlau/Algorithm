@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
   public List<String> letterCombinarions(String digits) {
     List<String> result = new ArrayList<String>();
     if (digits == null || digits.length() == 0) {
       return result;
     }
-    String[] lookup = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}
+    String[] lookup = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     helper(digits, 0, new StringBuilder(), result, lookup);
     return result;

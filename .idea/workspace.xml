@@ -5,135 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e60d10a-c657-4216-94e5-366fa6879265" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/FillSpring.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/KStreamMean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/LineLocation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/148.Sort List/Solution.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/SpringFill.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/TreeNode.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace (YI’s MacBook Pro's conflicted copy 2015-06-04).xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LeetCode/Java/test/MaximumSumSubarrayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LeetCode/Java/test/RegularExpressionMatchingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/AddTwoNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/AvoidRoads.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BadNeighbors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BalancedBinaryTree$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BalancedBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinarySearch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeLevelOrderTraversal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeLevelOrderTraversalII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeMaximumPathSum$ResultType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeMaximumPathSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreePreorderTraversal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeSerialization.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/BinaryTreeUpsideDown.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ChessMetric.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ChessMetricTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ClimbingStairs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/CloneGraph$UndirectedGraphNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/CloneGraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/CollectApple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ContainerWithMostWater.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ConvertSortedArraytoBST$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ConvertSortedArraytoBST.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ConvertSortedListtoBST$ListNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ConvertSortedListtoBST$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ConvertSortedListtoBST.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/CopyListWithRandomPointer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/FindMinimumInRotatedSortedArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/FindMinimumInRotatedSortedArrayII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/FlowerGarden.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/FourSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/GenerateParentheses.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/Implement_strStr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/IntegerToRoman.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/Interval.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/IsABinarySearchTree$result.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/IsABinarySearchTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/Jewelry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/JewelryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LIS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LetterCombinationsOfAPhoneNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ListNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ListNodeSerilization.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LongestCommonPrefix.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LongestPalindromicSubstring.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LongestSubstringWithAtMostKDistinctCharactors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LongestSubstringWithAtMostTwoDistinctCharacters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LongestSubstringWithoutRepeatingCharacters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/LowestCommonAncestor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaxDepthOfBinaryTree$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaxDepthOfBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaximumDepthOfBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaximumProductSubarray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaximumSumSubarray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MaximumSumSubarrayTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MedianOfTwoSortedArrays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MergeKSortedLists.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MergeSortedArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MergeSortedArrayII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MergeTwoSortedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MinDepthOfBinaryTree$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MinDepthOfBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/MissingRanges.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/OneEditDistance.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/PalindromeNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/Permutations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/PlusOne.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ProjectEuler074_DigitFactorialChains.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RandomListNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReadNCharGivenRead4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReadNCharGivenRead4Multi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/Reader4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RegularExpressionMatching.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RegularExpressionMatchingTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RemoveDuplicatesFromSortedArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RemoveDuplicatesFromSortedArrayII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RemoveNthNodeFromEndOfList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReverseInteger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReverseNodesInKGroup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReverseWords.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ReverseWordsII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RomanToInteger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/RotateArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SearchA2DMatrix.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SearchForARange.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SearchInRotatedSortedArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SearchInsertPosition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SingleNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SingleNumberII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SpiralMatrix.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/SwapNodesInPairs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ThreeSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ThreeSumClosest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/TreeLinkNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/TwoSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/UniquePaths.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/UniquePathsII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ValidBinarySearchTree$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ValidBinarySearchTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ValidNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ValidParentheses.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ZigZag.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/ZigZagConversion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/atoi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/findPeakElement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Algorithm/temp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LeetCode/ProjectEuler074_DigitFactorialChains.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/Algorithm/ChessMetricTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/Algorithm/JewelryTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LeetCode/LongestSubstringWithAtMostTwoDistinctCharacters.class" afterPath="$PROJECT_DIR$/out/production/LeetCode/LongestSubstringWithAtMostTwoDistinctCharacters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LeetCode/MissingRanges.class" afterPath="$PROJECT_DIR$/out/production/LeetCode/MissingRanges.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm.iml" afterPath="$PROJECT_DIR$/Algorithm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/017.Letter Combinations of a Phone Number/Solution.java" afterPath="$PROJECT_DIR$/LeetCode/017.Letter Combinations of a Phone Number/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/Java/temp.java" afterPath="$PROJECT_DIR$/LeetCode/Java/temp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mianjing/G/todo" afterPath="$PROJECT_DIR$/Mianjing/G/todo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mianjing/G/MazeGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mianjing/todo" afterPath="$PROJECT_DIR$/out/production/Mianjing/todo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -147,6 +20,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Algorithm$MazeGenerator.coverage" NAME="MazeGenerator Coverage Results" MODIFIED="1444617913538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -168,11 +44,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo" pinned="false" current-in-tab="true">
+      <file leaf-file-name="todo" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mianjing/G/todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81751823">
+            <state vertical-scroll-proportion="0.0">
               <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MazeGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mianjing/G/MazeGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3091537">
+              <caret line="168" column="43" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#829#837#0" expanded="true" />
+                <element signature="e#3209#3210#0" expanded="true" />
+                <element signature="e#3230#3231#0" expanded="true" />
+                <element signature="e#4115#4116#0" expanded="true" />
+                <element signature="e#4147#4148#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -267,6 +170,7 @@
         <option value="$PROJECT_DIR$/Mianjing/G/LineLocation.java" />
         <option value="$PROJECT_DIR$/LeetCode/Java/temp.java" />
         <option value="$PROJECT_DIR$/Mianjing/G/todo" />
+        <option value="$PROJECT_DIR$/Mianjing/G/MazeGenerator.java" />
       </list>
     </option>
   </component>
@@ -274,9 +178,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="44" />
+    <option name="x" value="30" />
     <option name="y" value="23" />
-    <option name="width" value="1636" />
+    <option name="width" value="1641" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -302,9 +206,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -373,40 +274,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,7 +292,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.temp">
+  <component name="RunManager" selected="Application.MazeGenerator">
     <configuration default="false" name="KStreamMean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="KStreamMean" />
@@ -454,6 +326,21 @@
     <configuration default="false" name="LineLocation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="LineLocation" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Mianjing" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="MazeGenerator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -661,16 +548,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.KStreamMean" />
       <item index="1" class="java.lang.String" itemvalue="Application.temp" />
       <item index="2" class="java.lang.String" itemvalue="Application.LineLocation" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MazeGenerator" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.temp" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LineLocation" />
-        <item index="2" class="java.lang.String" itemvalue="Application.KStreamMean" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.MazeGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.temp" />
+        <item index="2" class="java.lang.String" itemvalue="Application.LineLocation" />
+        <item index="3" class="java.lang.String" itemvalue="Application.KStreamMean" />
       </list>
     </recent_temporary>
   </component>
@@ -690,7 +579,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="23" width="1636" height="1027" extended-state="6" />
+    <frame x="30" y="23" width="1641" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -701,10 +590,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978058" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24890283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -761,8 +651,14 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Mianjing/G/MazeGenerator.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -771,11 +667,78 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/GetNLeafTrees.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/LineLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/GeneratePassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/FindDuplicateSubtreesInABinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/Java/temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/BSTIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mianjing/G/KStreamMean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6378132">
           <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56947607">
           <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37996545">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,9 +1010,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mianjing/G/todo">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81751823">
+        <state vertical-scroll-proportion="0.0">
           <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mianjing/G/MazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3091537">
+          <caret line="168" column="43" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#829#837#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
+            <element signature="e#3230#3231#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4147#4148#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

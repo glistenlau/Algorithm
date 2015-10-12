@@ -85,32 +85,24 @@ leetcode那个找循环小数的题。
 第二题是怎么在二叉树里随机一个数（等概率），提示说可以增加node的data。。比如。。size。。.
 
 
+http://www.1point3acres.com/bbs/thread-143259-1-1.html
+上来小哥跟我打了个招呼，不知道说啥了。然后就等小哥问问题。。-google 1point3acres
+小哥首先问我c++有什么缺点。没准备脑子堵了 说一点 然后就没了
+第二道题有点像lc的 trapping raining water。（考之前还想刷一篇来着）
+但是又不同
+给两个vector 一个是地面的高度，一个是泉水的位置，那些index的地面不能被泉水fill。return那些index。
+举个例子。
+----       -----. From 1point 3acres bbs
+     |      |
+     |_*__|. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+*是泉水的位置
+输入input array是 地表 2，0，2
+                              泉水 1（表示index1上有）
+那么output是0 2
+. 鍥磋鎴戜滑@1point 3 acres
+在假设地表是 2 1 0 2. 1point 3acres 璁哄潧
+           泉水是 2。. more info on 1point3acres.com
+           那么输出是 0 3 因为在2的泉水可以覆盖index1 但是由于漫不u过index0
 
-刚刚挂了电话，面试官貌似是个烙印，不过没有口音。一开始讲了一下面试流程，然后是问简历上暑期实习的问题，就是大概讲一下都做了什么。
-题目：
-给你一个以String形式存储的文件，每行有一些字符串，结尾是\n，然后给你一个offset，问是在第几行。
-. Waral 鍗氬鏈夋洿澶氭枃绔�,
-比如：
-abc\n
-de\n
-efg\n
-h\n. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
-offset = 0 的话是a，在第1行。offset = 3 为\n，还在第一行。offset = 8 是f，在第三行。
-
-非常简单的题目，用循环做就行，每次遇到一个\n就加1，注意不要count最后一个字母，因为可能是结尾的\n。
-. 1point 3acres 璁哄潧
-follow up：
-接上题，让你设计一种数据结构，用比O(n)快的方法找到line number。-google 1point3acres
-
-方法：建一个int[]，存每一行字符数的加和，然后binary search，跟之前leetcode insert position的题一模一样。也跟地里之前出现过的“每次调用一个函数，按照数组里面的数字的大小，返回相应的Index”一样。
-
-
-比如：
-abc\n. visit 1point3acres.com for more.
-de\n
-efg\n
-h\n
-. more info on 1point3acres.com
-就建立一个array：[4， 7，11， 13]，然后按照给的offset搜索。
-. Waral 鍗氬鏈夋洿澶氭枃绔�,
-感谢地里的面经，祝大家都拿到好offer！
+写完后debug了一下 还被小哥找出两个bug 问了下running time 时间就结束了。。。第二题都还没问呢 感觉惨惨的。
+保佑拿到onsite，攒人品

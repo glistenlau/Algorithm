@@ -99,7 +99,6 @@ http://www.1point3acres.com/bbs/thread-143259-1-1.html
 输入input array是 地表 2，0，2
                               泉水 1（表示index1上有）
 那么output是0 2
-. 鍥磋鎴戜滑@1point 3 acres
 在假设地表是 2 1 0 2. 1point 3acres 璁哄潧
            泉水是 2。. more info on 1point3acres.com
            那么输出是 0 3 因为在2的泉水可以覆盖index1 但是由于漫不u过index0

@@ -166,15 +166,13 @@ public class MazeGenerator extends Canvas {
 
 
   public static void main(String[] args) {
-    MazeGenerator mg = new MazeGenerator(80);
-    mg.mazeGenerator();
     Frame frame = new Frame("Maze");
     frame.addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent e) {
         System.exit(0);
       }
     });
-    frame.add(mg, BorderLayout.CENTER);
+    frame.add(new MazeGenerator(80), BorderLayout.CENTER);
     frame.pack();
     frame.setVisible(true);
   }

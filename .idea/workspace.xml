@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e60d10a-c657-4216-94e5-366fa6879265" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mianjing/G/MazeGenerator.java" afterPath="$PROJECT_DIR$/Mianjing/G/MazeGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -55,15 +56,15 @@
       <file leaf-file-name="MazeGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mianjing/G/MazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0328152">
-              <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.37823835">
+              <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#829#837#0" expanded="true" />
                 <element signature="e#3209#3210#0" expanded="true" />
                 <element signature="e#3230#3231#0" expanded="true" />
-                <element signature="e#4115#4116#0" expanded="true" />
-                <element signature="e#4147#4148#0" expanded="true" />
+                <element signature="e#4097#4098#0" expanded="true" />
+                <element signature="e#4129#4130#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1024,15 +1025,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mianjing/G/MazeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0328152">
-          <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.37823835">
+          <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#829#837#0" expanded="true" />
             <element signature="e#3209#3210#0" expanded="true" />
             <element signature="e#3230#3231#0" expanded="true" />
-            <element signature="e#4115#4116#0" expanded="true" />
-            <element signature="e#4147#4148#0" expanded="true" />
+            <element signature="e#4097#4098#0" expanded="true" />
+            <element signature="e#4129#4130#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -69,7 +69,61 @@ public class SpringFill {
   return ans;
  }
 
+
+ public List<Integer> springFillB(int[] grounds, int[] springs) {
+  List<Integer> ans = new ArrayList<>();
+  if (springs == null || springs.length == 0) {
+   return ans;
+  }
+  if (grounds == null || grounds.length == 0) {
+   return ans;
+  }
+
+  for (int spring: springs) {
+   findLeft(grounds, spring);
+   findRight(grounds, spring);
+  }
+
+  for (int i = 0; i < grounds.length; i++) {
+   if (grounds[i] != -1) {
+    ans.add(i);
+   }
+  }
+
+  return ans;
+ }
+
+ private void findLeft(int[] grounds, int right) {
+  if (grounds[right] == -1) {
+   return;
+  }
+  for (int i = right - 1; i >= 0; i--) {
+   if (grounds[i] <= grounds[right]) {
+    grounds[i] = -1;
+   } else {
+    break;
+   }
+  }
+  grounds[right] = -1;
+ }
+
+ private void findRight(int[] grounds, int left) {
+  if (grounds[left] == -1) {
+   return;
+  }
+  for (int i = left + 1; i < grounds.length; i++) {
+   if (grounds[i] <= grounds[left]) {
+    grounds[i] = -1;
+   } else {
+    break;
+   }
+  }
+
+  grounds[left] = -1;
+ }
+
  public static void main(String[] args) {
   System.out.println(new SpringFill().springFill(new int[]{2, 0, 1, 2}, new int[]{2}));
+  System.out.println(new SpringFill().springFillB(new int[]{2, 0, 1, 2}, new int[]{2}));
  }
 }

@@ -172,7 +172,7 @@ public class MazeGenerator extends Canvas {
         System.exit(0);
       }
     });
-    MazeGenerator mg = new MazeGenerator(10);
+    MazeGenerator mg = new MazeGenerator(80);
     mg.mazeGenerator();
     frame.add(mg, BorderLayout.CENTER);
     frame.pack();

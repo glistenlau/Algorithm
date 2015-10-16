@@ -1,5 +1,4 @@
 http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=141633&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
-1. 印度女生，虽然是印度的，但女生还是比较友善的。题目大致是BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string，这题要用到heap
 
 3. 生成palindrome number， 然后寻找最相近的palindrome number，最简单的了，不过要注意奇数个digits和偶数个digits, 本以为就这么水过，结果最后遇到阿三
 
@@ -84,24 +83,3 @@ leetcode那个找循环小数的题。
 先写了个array变BST，followup是改成iterate，然后又写了个模拟栈的版本。
 第二题是怎么在二叉树里随机一个数（等概率），提示说可以增加node的data。。比如。。size。。.
 
-
-http://www.1point3acres.com/bbs/thread-143259-1-1.html
-上来小哥跟我打了个招呼，不知道说啥了。然后就等小哥问问题。。-google 1point3acres
-小哥首先问我c++有什么缺点。没准备脑子堵了 说一点 然后就没了
-第二道题有点像lc的 trapping raining water。（考之前还想刷一篇来着）
-但是又不同
-给两个vector 一个是地面的高度，一个是泉水的位置，那些index的地面不能被泉水fill。return那些index。
-举个例子。
-----       -----. From 1point 3acres bbs
-     |      |
-     |_*__|. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
-*是泉水的位置
-输入input array是 地表 2，0，2
-                              泉水 1（表示index1上有）
-那么output是0 2
-在假设地表是 2 1 0 2. 1point 3acres 璁哄潧
-           泉水是 2。. more info on 1point3acres.com
-           那么输出是 0 3 因为在2的泉水可以覆盖index1 但是由于漫不u过index0
-
-写完后debug了一下 还被小哥找出两个bug 问了下running time 时间就结束了。。。第二题都还没问呢 感觉惨惨的。
-保佑拿到onsite，攒人品
